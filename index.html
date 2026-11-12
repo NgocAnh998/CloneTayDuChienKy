@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17111f">
+  <title>Tây Du Chiến Ký – JavaScript Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">西</span><div><strong>TÂY DU CHIẾN KÝ</strong><small>JAVASCRIPT EDITION · OFFLINE PROTOTYPE</small></div></div>
+      <div class="top-actions"><span class="status"><i></i> Đang chơi offline</span><button id="helpBtn" class="ghost">Điều khiển</button></div>
+    </header>
+    <section class="game-frame">
+      <canvas id="game" width="960" height="600" aria-label="Màn chơi Tây Du Chiến Ký"></canvas>
+      <div class="hud">
+        <div class="player-card">
+          <div class="avatar">悟</div><div class="player-info"><strong>Ngộ Không</strong><small>Cấp <b id="level">1</b> · Võ hành giả</small><div class="bar hp"><span id="hpBar"></span></div><small id="hpText">100 / 100 HP</small></div>
+        </div>
+        <div class="hud-right"><div class="stat-chip">EXP <b id="expText">0 / 50</b></div><div class="stat-chip">VÀNG <b id="goldText">0</b></div></div>
+      </div>
+      <div class="quest-panel"><div class="quest-heading">NHIỆM VỤ HIỆN TẠI</div><strong id="questTitle">Dọn dẹp sơn đạo</strong><p id="questDesc">Đánh bại 3 Sơn Tặc quanh khu vực.</p><div class="quest-progress"><span id="questProgress"></span></div><small id="questCount">0 / 3</small></div>
+      <div id="toast" class="toast" aria-live="polite"></div>
+      <div id="dialog" class="dialog hidden"><div class="dialog-title" id="dialogTitle">NPC</div><p id="dialogText"></p><button id="dialogClose">Đóng</button></div>
+      <div id="help" class="help hidden"><button id="helpClose" class="close">×</button><h2>Điều khiển</h2><p><kbd>W A S D</kbd> / <kbd>↑ ↓ ← →</kbd> Di chuyển</p><p><kbd>J</kbd> Đánh thường · <kbd>K</kbd> Hỏa quyền</p><p><kbd>Shift</kbd> Lướt né · <kbd>E</kbd> Nói chuyện / nhận nhiệm vụ</p><p>Đánh quái để nhận EXP và vàng. Lên cấp sẽ hồi đầy HP.</p></div>
+    </section>
+    <footer><span>Prototype 0.1 · Canvas 2D</span><span>Tiến trình tự lưu trên trình duyệt</span><button id="resetBtn" class="text-button">Xóa tiến trình</button></footer>
+  </main>
+  <script src="src/game.js"></script>
+</body>
+</html>
