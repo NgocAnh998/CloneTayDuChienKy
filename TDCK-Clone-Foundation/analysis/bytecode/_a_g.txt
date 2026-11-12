@@ -1,0 +1,26 @@
+public final class _a.g extends java.lang.RuntimeException {
+  private static final long a;
+
+  public java.lang.Object a;
+
+  private _a.g(java.lang.Object);
+    Code:
+       0: aload_0
+       1: invokespecial #9                  // Method java/lang/RuntimeException."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field a:Ljava/lang/Object;
+       9: return
+
+  public final java.lang.String getMessage();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field a:Ljava/lang/Object;
+       4: ifnonnull     10
+       7: ldc           #1                  // String nil
+       9: areturn
+      10: aload_0
+      11: getfield      #7                  // Field a:Ljava/lang/Object;
+      14: invokevirtual #8                  // Method java/lang/Object.toString:()Ljava/lang/String;
+      17: areturn
+}

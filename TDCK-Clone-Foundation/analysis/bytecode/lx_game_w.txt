@@ -1,0 +1,165 @@
+public final class lx.game.w implements javax.microedition.lcdui.CommandListener {
+  private static java.lang.String a;
+
+  private static java.lang.String b;
+
+  private static javax.microedition.lcdui.Form c;
+
+  private static javax.microedition.lcdui.TextField d;
+
+  private static javax.microedition.lcdui.TextField e;
+
+  private static javax.microedition.lcdui.TextField f;
+
+  private static javax.microedition.lcdui.StringItem g;
+
+  private static javax.microedition.lcdui.Command h;
+
+  private static javax.microedition.lcdui.Command i;
+
+  public lx.game.w();
+    Code:
+       0: aload_0
+       1: invokespecial #35                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public final void a(java.lang.String);
+    Code:
+       0: new           #17                 // class javax/microedition/lcdui/Form
+       3: dup
+       4: aload_1
+       5: invokespecial #46                 // Method javax/microedition/lcdui/Form."<init>":(Ljava/lang/String;)V
+       8: putstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+      11: getstatic     #26                 // Field a:Ljava/lang/String;
+      14: ldc           #1                  // String
+      16: invokevirtual #36                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      19: ifeq          43
+      22: new           #12                 // class java/lang/StringBuffer
+      25: dup
+      26: invokespecial #37                 // Method java/lang/StringBuffer."<init>":()V
+      29: ldc           #5                  // String d
+      31: invokestatic  #53                 // Method lx/game/af.i:(Ljava/lang/String;)I
+      34: invokevirtual #39                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+      37: invokevirtual #41                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      40: putstatic     #26                 // Field a:Ljava/lang/String;
+      43: new           #19                 // class javax/microedition/lcdui/TextField
+      46: dup
+      47: ldc           #4                  // String MAP
+      49: getstatic     #26                 // Field a:Ljava/lang/String;
+      52: bipush        20
+      54: iconst_0
+      55: invokespecial #49                 // Method javax/microedition/lcdui/TextField."<init>":(Ljava/lang/String;Ljava/lang/String;II)V
+      58: putstatic     #29                 // Field d:Ljavax/microedition/lcdui/TextField;
+      61: new           #19                 // class javax/microedition/lcdui/TextField
+      64: dup
+      65: ldc           #8                  // String đưa vào thay đổi lượng tên
+      67: getstatic     #27                 // Field b:Ljava/lang/String;
+      70: bipush        20
+      72: iconst_0
+      73: invokespecial #49                 // Method javax/microedition/lcdui/TextField."<init>":(Ljava/lang/String;Ljava/lang/String;II)V
+      76: putstatic     #31                 // Field f:Ljavax/microedition/lcdui/TextField;
+      79: new           #19                 // class javax/microedition/lcdui/TextField
+      82: dup
+      83: getstatic     #27                 // Field b:Ljava/lang/String;
+      86: new           #12                 // class java/lang/StringBuffer
+      89: dup
+      90: invokespecial #37                 // Method java/lang/StringBuffer."<init>":()V
+      93: getstatic     #27                 // Field b:Ljava/lang/String;
+      96: invokestatic  #53                 // Method lx/game/af.i:(Ljava/lang/String;)I
+      99: invokevirtual #39                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     102: invokevirtual #41                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     105: bipush        20
+     107: iconst_0
+     108: invokespecial #49                 // Method javax/microedition/lcdui/TextField."<init>":(Ljava/lang/String;Ljava/lang/String;II)V
+     111: putstatic     #30                 // Field e:Ljavax/microedition/lcdui/TextField;
+     114: new           #18                 // class javax/microedition/lcdui/StringItem
+     117: dup
+     118: ldc           #1                  // String
+     120: ldc           #1                  // String
+     122: invokespecial #48                 // Method javax/microedition/lcdui/StringItem."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     125: putstatic     #32                 // Field g:Ljavax/microedition/lcdui/StringItem;
+     128: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     131: getstatic     #29                 // Field d:Ljavax/microedition/lcdui/TextField;
+     134: invokevirtual #47                 // Method javax/microedition/lcdui/Form.append:(Ljavax/microedition/lcdui/Item;)I
+     137: pop
+     138: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     141: getstatic     #30                 // Field e:Ljavax/microedition/lcdui/TextField;
+     144: invokevirtual #47                 // Method javax/microedition/lcdui/Form.append:(Ljavax/microedition/lcdui/Item;)I
+     147: pop
+     148: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     151: getstatic     #31                 // Field f:Ljavax/microedition/lcdui/TextField;
+     154: invokevirtual #47                 // Method javax/microedition/lcdui/Form.append:(Ljavax/microedition/lcdui/Item;)I
+     157: pop
+     158: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     161: getstatic     #32                 // Field g:Ljavax/microedition/lcdui/StringItem;
+     164: invokevirtual #47                 // Method javax/microedition/lcdui/Form.append:(Ljavax/microedition/lcdui/Item;)I
+     167: pop
+     168: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     171: getstatic     #34                 // Field i:Ljavax/microedition/lcdui/Command;
+     174: invokevirtual #44                 // Method javax/microedition/lcdui/Displayable.addCommand:(Ljavax/microedition/lcdui/Command;)V
+     177: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     180: getstatic     #33                 // Field h:Ljavax/microedition/lcdui/Command;
+     183: invokevirtual #44                 // Method javax/microedition/lcdui/Displayable.addCommand:(Ljavax/microedition/lcdui/Command;)V
+     186: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     189: aload_0
+     190: invokevirtual #45                 // Method javax/microedition/lcdui/Displayable.setCommandListener:(Ljavax/microedition/lcdui/CommandListener;)V
+     193: getstatic     #23                 // Field lx/game/XMidlet.b:Ljavax/microedition/lcdui/Display;
+     196: getstatic     #28                 // Field c:Ljavax/microedition/lcdui/Form;
+     199: invokevirtual #43                 // Method javax/microedition/lcdui/Display.setCurrent:(Ljavax/microedition/lcdui/Displayable;)V
+     202: return
+
+  public final void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);
+    Code:
+       0: aload_1
+       1: getstatic     #34                 // Field i:Ljavax/microedition/lcdui/Command;
+       4: if_acmpne     64
+       7: getstatic     #29                 // Field d:Ljavax/microedition/lcdui/TextField;
+      10: invokevirtual #50                 // Method javax/microedition/lcdui/TextField.getString:()Ljava/lang/String;
+      13: putstatic     #26                 // Field a:Ljava/lang/String;
+      16: getstatic     #31                 // Field f:Ljavax/microedition/lcdui/TextField;
+      19: invokevirtual #50                 // Method javax/microedition/lcdui/TextField.getString:()Ljava/lang/String;
+      22: dup
+      23: putstatic     #27                 // Field b:Ljava/lang/String;
+      26: getstatic     #30                 // Field e:Ljavax/microedition/lcdui/TextField;
+      29: invokevirtual #50                 // Method javax/microedition/lcdui/TextField.getString:()Ljava/lang/String;
+      32: invokestatic  #54                 // Method lx/game/af.m:(Ljava/lang/String;)I
+      35: invokestatic  #51                 // Method lx/game/af.e:(Ljava/lang/String;I)V
+      38: new           #12                 // class java/lang/StringBuffer
+      41: dup
+      42: ldc           #3                  // String /
+      44: invokespecial #38                 // Method java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+      47: getstatic     #26                 // Field a:Ljava/lang/String;
+      50: invokevirtual #40                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      53: ldc           #2                  // String .ms
+      55: invokevirtual #40                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      58: invokevirtual #41                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      61: invokestatic  #52                 // Method lx/game/af.f:(Ljava/lang/String;)V
+      64: getstatic     #23                 // Field lx/game/XMidlet.b:Ljavax/microedition/lcdui/Display;
+      67: getstatic     #24                 // Field lx/game/XMidlet.c:Llx/game/af;
+      70: invokevirtual #43                 // Method javax/microedition/lcdui/Display.setCurrent:(Ljavax/microedition/lcdui/Displayable;)V
+      73: iconst_0
+      74: putstatic     #25                 // Field lx/game/af.aG:Z
+      77: return
+
+  static {};
+    Code:
+       0: ldc           #1                  // String
+       2: putstatic     #26                 // Field a:Ljava/lang/String;
+       5: ldc           #6                  // String gs
+       7: putstatic     #27                 // Field b:Ljava/lang/String;
+      10: new           #13                 // class javax/microedition/lcdui/Command
+      13: dup
+      14: ldc           #9                  // String Trở về
+      16: iconst_2
+      17: iconst_0
+      18: invokespecial #42                 // Method javax/microedition/lcdui/Command."<init>":(Ljava/lang/String;II)V
+      21: putstatic     #33                 // Field h:Ljavax/microedition/lcdui/Command;
+      24: new           #13                 // class javax/microedition/lcdui/Command
+      27: dup
+      28: ldc           #7                  // String Xác nhận
+      30: iconst_4
+      31: iconst_0
+      32: invokespecial #42                 // Method javax/microedition/lcdui/Command."<init>":(Ljava/lang/String;II)V
+      35: putstatic     #34                 // Field i:Ljavax/microedition/lcdui/Command;
+      38: return
+}

@@ -1,0 +1,15 @@
+public final class lx.game.am {
+  java.lang.String a;
+
+  int b;
+
+  int c;
+
+  int d;
+
+  public lx.game.am();
+    Code:
+       0: aload_0
+       1: invokespecial #3                  // Method java/lang/Object."<init>":()V
+       4: return
+}

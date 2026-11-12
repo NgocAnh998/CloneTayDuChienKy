@@ -1,0 +1,67 @@
+public final class lx.game.s {
+  public static java.lang.String a;
+
+  public lx.game.s();
+    Code:
+       0: aload_0
+       1: invokespecial #17                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a();
+    Code:
+       0: aconst_null
+       1: astore_0
+       2: getstatic     #14                 // Field lx/game/XMidlet.a:Llx/game/XMidlet;
+       5: ldc           #2                  // String MIDlet-Description
+       7: invokevirtual #26                 // Method javax/microedition/midlet/MIDlet.getAppProperty:(Ljava/lang/String;)Ljava/lang/String;
+      10: dup
+      11: astore_0
+      12: ifnull        37
+      15: aload_0
+      16: aload_0
+      17: bipush        44
+      19: invokevirtual #19                 // Method java/lang/String.lastIndexOf:(I)I
+      22: iconst_1
+      23: iadd
+      24: aload_0
+      25: invokevirtual #20                 // Method java/lang/String.length:()I
+      28: invokevirtual #21                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+      31: invokevirtual #22                 // Method java/lang/String.trim:()Ljava/lang/String;
+      34: putstatic     #15                 // Field a:Ljava/lang/String;
+      37: goto          41
+      40: pop
+      41: getstatic     #13                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      44: new           #8                  // class java/lang/StringBuffer
+      47: dup
+      48: ldc           #3                  // String device=
+      50: invokespecial #23                 // Method java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+      53: getstatic     #15                 // Field a:Ljava/lang/String;
+      56: invokevirtual #24                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      59: invokevirtual #25                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      62: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      65: return
+    Exception table:
+       from    to  target type
+           2    37    40   Class java/lang/Exception
+
+  public static boolean a(java.lang.String);
+    Code:
+       0: getstatic     #15                 // Field a:Ljava/lang/String;
+       3: ifnonnull     8
+       6: iconst_0
+       7: ireturn
+       8: getstatic     #15                 // Field a:Ljava/lang/String;
+      11: aload_0
+      12: invokevirtual #18                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      15: ifeq          20
+      18: iconst_1
+      19: ireturn
+      20: iconst_0
+      21: ireturn
+
+  static {};
+    Code:
+       0: ldc           #1                  // String
+       2: putstatic     #15                 // Field a:Ljava/lang/String;
+       5: return
+}

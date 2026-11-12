@@ -1,0 +1,18 @@
+public class _a.n {
+  public int a(_a.e);
+    Code:
+       0: aload_1
+       1: new           #3                  // class _a/p
+       4: dup
+       5: invokespecial #6                  // Method _a/p."<init>":()V
+       8: invokevirtual #5                  // Method _a/e.a:(Ljava/lang/Object;)I
+      11: pop
+      12: iconst_1
+      13: ireturn
+
+  _a.n();
+    Code:
+       0: aload_0
+       1: invokespecial #7                  // Method java/lang/Object."<init>":()V
+       4: return
+}

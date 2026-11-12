@@ -1,0 +1,24 @@
+public final class lx.game.ai {
+  public lx.game.ai();
+    Code:
+       0: aload_0
+       1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public final void a(boolean);
+    Code:
+       0: iload_1
+       1: putstatic     #9                  // Field lx/game/au.a:Z
+       4: iconst_0
+       5: putstatic     #10                 // Field lx/game/au.b:Z
+       8: iload_1
+       9: ifeq          21
+      12: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      15: ldc           #1                  // String callback----- trả thành công
+      17: invokevirtual #11                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      20: return
+      21: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      24: ldc           #2                  // String callback----- không hoàn thành trả
+      26: invokevirtual #11                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      29: return
+}

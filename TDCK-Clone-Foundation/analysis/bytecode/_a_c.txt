@@ -1,0 +1,28 @@
+public final class _a.c implements _a.b {
+  private _a.d a;
+
+  private int a;
+
+  public _a.c(_a.d, int);
+    Code:
+       0: aload_0
+       1: invokespecial #6                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #5                  // Field a:L_a/d;
+       9: aload_0
+      10: iload_2
+      11: putfield      #4                  // Field a:I
+      14: return
+
+  public final int a(_a.e, int);
+    Code:
+       0: aload_0
+       1: getfield      #5                  // Field a:L_a/d;
+       4: pop
+       5: aload_0
+       6: getfield      #4                  // Field a:I
+       9: pop
+      10: iconst_0
+      11: ireturn
+}

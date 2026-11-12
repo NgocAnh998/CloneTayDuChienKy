@@ -1,0 +1,3 @@
+public interface _a.d {
+  public abstract int a(int);
+}

@@ -1,0 +1,252 @@
+public final class lx.game.av {
+  private static int b;
+
+  public static int c;
+
+  public static byte[][] a;
+
+  public static int[] ws;
+
+  public static int[] xs;
+
+  public static java.util.Hashtable cs;
+
+  static char lc;
+
+  static int lwc;
+
+  public lx.game.av(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #21                 // Method java/lang/Object."<init>":()V
+       4: aload_1
+       5: invokestatic  #24                 // Method a:(Ljava/lang/String;)V
+       8: return
+
+  private static void a(java.lang.String);
+    Code:
+       0: getstatic     #26                 // Field a:[[B
+       3: ifnull        7
+       6: return
+       7: new           #28                 // class java/util/Hashtable
+      10: dup
+      11: invokespecial #30                 // Method java/util/Hashtable."<init>":()V
+      14: putstatic     #31                 // Field cs:Ljava/util/Hashtable;
+      17: new           #33                 // class java/io/DataInputStream
+      20: dup
+      21: ldc           #35                 // String
+      23: invokevirtual #37                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      26: aload_0
+      27: invokevirtual #41                 // Method java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+      30: invokespecial #47                 // Method java/io/DataInputStream."<init>":(Ljava/io/InputStream;)V
+      33: astore_1
+      34: aload_1
+      35: invokevirtual #50                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+      38: astore_2
+      39: aload_1
+      40: invokevirtual #54                 // Method java/io/DataInputStream.readByte:()B
+      43: dup
+      44: putstatic     #58                 // Field c:I
+      47: istore_3
+      48: aload_2
+      49: invokevirtual #60                 // Method java/lang/String.length:()I
+      52: istore        4
+      54: iload         4
+      56: newarray       int
+      58: putstatic     #66                 // Field ws:[I
+      61: iload         4
+      63: newarray       int
+      65: putstatic     #68                 // Field xs:[I
+      68: iconst_0
+      69: istore        5
+      71: iconst_0
+      72: istore        6
+      74: goto          138
+      77: getstatic     #66                 // Field ws:[I
+      80: iload         6
+      82: aload_1
+      83: invokevirtual #54                 // Method java/io/DataInputStream.readByte:()B
+      86: iastore
+      87: getstatic     #68                 // Field xs:[I
+      90: iload         6
+      92: iload         5
+      94: iastore
+      95: iload         5
+      97: getstatic     #66                 // Field ws:[I
+     100: iload         6
+     102: iaload
+     103: iadd
+     104: istore        5
+     106: getstatic     #31                 // Field cs:Ljava/util/Hashtable;
+     109: new           #70                 // class java/lang/Integer
+     112: dup
+     113: aload_2
+     114: iload         6
+     116: invokevirtual #72                 // Method java/lang/String.charAt:(I)C
+     119: invokespecial #76                 // Method java/lang/Integer."<init>":(I)V
+     122: new           #70                 // class java/lang/Integer
+     125: dup
+     126: iload         6
+     128: invokespecial #76                 // Method java/lang/Integer."<init>":(I)V
+     131: invokevirtual #79                 // Method java/util/Hashtable.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     134: pop
+     135: iinc          6, 1
+     138: iload         6
+     140: iload         4
+     142: if_icmplt     77
+     145: iload_3
+     146: iload         5
+     148: multianewarray #83,  2            // class "[[B"
+     152: putstatic     #26                 // Field a:[[B
+     155: bipush        7
+     157: istore        6
+     159: iconst_0
+     160: istore        7
+     162: iconst_0
+     163: istore        8
+     165: goto          230
+     168: iconst_0
+     169: istore        9
+     171: goto          220
+     174: iinc          6, 1
+     177: iload         6
+     179: bipush        8
+     181: if_icmplt     193
+     184: iconst_0
+     185: istore        6
+     187: aload_1
+     188: invokevirtual #54                 // Method java/io/DataInputStream.readByte:()B
+     191: istore        7
+     193: iload         7
+     195: iconst_1
+     196: iand
+     197: ifeq          210
+     200: getstatic     #26                 // Field a:[[B
+     203: iload         8
+     205: aaload
+     206: iload         9
+     208: iconst_1
+     209: bastore
+     210: iload         7
+     212: iconst_1
+     213: ishr
+     214: i2b
+     215: istore        7
+     217: iinc          9, 1
+     220: iload         9
+     222: iload         5
+     224: if_icmplt     174
+     227: iinc          8, 1
+     230: iload         8
+     232: iload_3
+     233: if_icmplt     168
+     236: aload_1
+     237: invokevirtual #84                 // Method java/io/DataInputStream.close:()V
+     240: goto          248
+     243: astore_2
+     244: aload_2
+     245: invokevirtual #87                 // Method java/lang/Throwable.printStackTrace:()V
+     248: return
+    Exception table:
+       from    to  target type
+          34   240   243   Class java/lang/Exception
+
+  public static int a(char);
+    Code:
+       0: iload_0
+       1: getstatic     #95                 // Field lc:C
+       4: if_icmpne     11
+       7: getstatic     #97                 // Field lwc:I
+      10: ireturn
+      11: iload_0
+      12: putstatic     #95                 // Field lc:C
+      15: getstatic     #66                 // Field ws:[I
+      18: getstatic     #31                 // Field cs:Ljava/util/Hashtable;
+      21: new           #70                 // class java/lang/Integer
+      24: dup
+      25: iload_0
+      26: invokespecial #76                 // Method java/lang/Integer."<init>":(I)V
+      29: invokevirtual #99                 // Method java/util/Hashtable.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      32: checkcast     #70                 // class java/lang/Integer
+      35: invokevirtual #103                // Method java/lang/Integer.intValue:()I
+      38: iaload
+      39: dup
+      40: putstatic     #97                 // Field lwc:I
+      43: ireturn
+      44: astore_1
+      45: iconst_0
+      46: dup
+      47: putstatic     #97                 // Field lwc:I
+      50: ireturn
+    Exception table:
+       from    to  target type
+          11    43    44   Class java/lang/Exception
+
+  public final void a(javax.microedition.lcdui.Graphics, char, int, int);
+    Code:
+       0: new           #70                 // class java/lang/Integer
+       3: dup
+       4: iload_2
+       5: invokespecial #76                 // Method java/lang/Integer."<init>":(I)V
+       8: astore        5
+      10: getstatic     #31                 // Field cs:Ljava/util/Hashtable;
+      13: aload         5
+      15: invokevirtual #99                 // Method java/util/Hashtable.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      18: checkcast     #70                 // class java/lang/Integer
+      21: invokevirtual #103                // Method java/lang/Integer.intValue:()I
+      24: istore        6
+      26: getstatic     #66                 // Field ws:[I
+      29: iload         6
+      31: iaload
+      32: istore        7
+      34: getstatic     #68                 // Field xs:[I
+      37: iload         6
+      39: iaload
+      40: istore        8
+      42: getstatic     #58                 // Field c:I
+      45: istore        9
+      47: iconst_0
+      48: istore        10
+      50: goto          113
+      53: getstatic     #26                 // Field a:[[B
+      56: iload         10
+      58: aaload
+      59: astore        11
+      61: iconst_0
+      62: istore        12
+      64: goto          103
+      67: aload         11
+      69: iload         12
+      71: iload         8
+      73: iadd
+      74: baload
+      75: ifeq          100
+      78: aload_1
+      79: iload_3
+      80: iload         12
+      82: iadd
+      83: iload         4
+      85: iload         10
+      87: iadd
+      88: iload_3
+      89: iload         12
+      91: iadd
+      92: iload         4
+      94: iload         10
+      96: iadd
+      97: invokevirtual #107                // Method javax/microedition/lcdui/Graphics.drawLine:(IIII)V
+     100: iinc          12, 1
+     103: iload         12
+     105: iload         7
+     107: if_icmplt     67
+     110: iinc          10, 1
+     113: iload         10
+     115: iload         9
+     117: if_icmplt     53
+     120: goto          125
+     123: astore        6
+     125: return
+    Exception table:
+       from    to  target type
+          10   120   123   Class java/lang/Exception
+}

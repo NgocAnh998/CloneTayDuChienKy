@@ -1,0 +1,142 @@
+public final class lx.game.o {
+  private static java.util.Vector a;
+
+  private static int b;
+
+  public lx.game.o();
+    Code:
+       0: aload_0
+       1: invokespecial #10                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  static void a();
+    Code:
+       0: getstatic     #8                  // Field a:Ljava/util/Vector;
+       3: invokevirtual #20                 // Method java/util/Vector.removeAllElements:()V
+       6: iconst_0
+       7: istore_0
+       8: iload_0
+       9: getstatic     #9                  // Field b:I
+      12: if_icmpge     29
+      15: getstatic     #8                  // Field a:Ljava/util/Vector;
+      18: ldc           #1                  // String
+      20: invokevirtual #18                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      23: iinc          0, 1
+      26: goto          8
+      29: return
+
+  static boolean a(java.lang.String);
+    Code:
+       0: aload_0
+       1: ifnonnull     6
+       4: iconst_0
+       5: ireturn
+       6: aload_0
+       7: invokevirtual #12                 // Method java/lang/String.length:()I
+      10: iconst_2
+      11: if_icmpne     26
+      14: aload_0
+      15: iconst_0
+      16: invokevirtual #11                 // Method java/lang/String.charAt:(I)C
+      19: bipush        83
+      21: if_icmpne     26
+      24: iconst_1
+      25: ireturn
+      26: iconst_0
+      27: ireturn
+
+  static void b();
+    Code:
+       0: iconst_0
+       1: istore_0
+       2: iload_0
+       3: iconst_3
+       4: if_icmpge     24
+       7: ldc           #1                  // String
+       9: astore_1
+      10: getstatic     #8                  // Field a:Ljava/util/Vector;
+      13: aload_1
+      14: iload_0
+      15: invokevirtual #21                 // Method java/util/Vector.setElementAt:(Ljava/lang/Object;I)V
+      18: iinc          0, 1
+      21: goto          2
+      24: return
+
+  static void a(int, int);
+    Code:
+       0: iload_0
+       1: getstatic     #8                  // Field a:Ljava/util/Vector;
+       4: invokestatic  #22                 // Method lx/game/z.a:(ILjava/util/Vector;)Z
+       7: ifeq          11
+      10: return
+      11: getstatic     #8                  // Field a:Ljava/util/Vector;
+      14: iload_0
+      15: invokevirtual #19                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      18: checkcast     #3                  // class java/lang/String
+      21: astore_2
+      22: new           #4                  // class java/lang/StringBuffer
+      25: dup
+      26: invokespecial #13                 // Method java/lang/StringBuffer."<init>":()V
+      29: aload_2
+      30: invokevirtual #15                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      33: iload_1
+      34: invokevirtual #14                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+      37: invokevirtual #16                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      40: astore_2
+      41: getstatic     #8                  // Field a:Ljava/util/Vector;
+      44: aload_2
+      45: iload_0
+      46: invokevirtual #21                 // Method java/util/Vector.setElementAt:(Ljava/lang/Object;I)V
+      49: return
+
+  static void a(int, java.lang.String);
+    Code:
+       0: iload_0
+       1: getstatic     #8                  // Field a:Ljava/util/Vector;
+       4: invokestatic  #22                 // Method lx/game/z.a:(ILjava/util/Vector;)Z
+       7: ifeq          11
+      10: return
+      11: getstatic     #8                  // Field a:Ljava/util/Vector;
+      14: iload_0
+      15: invokevirtual #19                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      18: checkcast     #3                  // class java/lang/String
+      21: astore_2
+      22: new           #4                  // class java/lang/StringBuffer
+      25: dup
+      26: invokespecial #13                 // Method java/lang/StringBuffer."<init>":()V
+      29: aload_2
+      30: invokevirtual #15                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      33: aload_1
+      34: invokevirtual #15                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      37: invokevirtual #16                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      40: astore_2
+      41: getstatic     #8                  // Field a:Ljava/util/Vector;
+      44: aload_2
+      45: iload_0
+      46: invokevirtual #21                 // Method java/util/Vector.setElementAt:(Ljava/lang/Object;I)V
+      49: return
+
+  static java.lang.String a(int);
+    Code:
+       0: iload_0
+       1: getstatic     #8                  // Field a:Ljava/util/Vector;
+       4: invokestatic  #22                 // Method lx/game/z.a:(ILjava/util/Vector;)Z
+       7: ifeq          13
+      10: ldc           #1                  // String
+      12: areturn
+      13: getstatic     #8                  // Field a:Ljava/util/Vector;
+      16: iload_0
+      17: invokevirtual #19                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      20: checkcast     #3                  // class java/lang/String
+      23: areturn
+
+  static {};
+    Code:
+       0: new           #5                  // class java/util/Vector
+       3: dup
+       4: invokespecial #17                 // Method java/util/Vector."<init>":()V
+       7: putstatic     #8                  // Field a:Ljava/util/Vector;
+      10: bipush        10
+      12: putstatic     #9                  // Field b:I
+      15: return
+}

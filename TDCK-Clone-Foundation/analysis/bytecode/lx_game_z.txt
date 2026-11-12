@@ -1,0 +1,1106 @@
+public final class lx.game.z {
+  private static int a;
+
+  public lx.game.z();
+    Code:
+       0: aload_0
+       1: invokespecial #18                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a(javax.microedition.lcdui.Graphics, int, int, int, int, int, int);
+    Code:
+       0: iload         5
+       2: bipush        16
+       4: ishr
+       5: sipush        255
+       8: iand
+       9: istore_1
+      10: iload         5
+      12: bipush        8
+      14: ishr
+      15: sipush        255
+      18: iand
+      19: istore_2
+      20: iload         5
+      22: sipush        255
+      25: iand
+      26: istore        5
+      28: iload_1
+      29: iconst_2
+      30: isub
+      31: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      34: iload         4
+      36: idiv
+      37: istore        6
+      39: iload_2
+      40: bipush        57
+      42: isub
+      43: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      46: iload         4
+      48: idiv
+      49: istore        7
+      51: iload         5
+      53: sipush        254
+      56: isub
+      57: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      60: iload         4
+      62: idiv
+      63: istore        8
+      65: iload         6
+      67: ifgt          73
+      70: iconst_1
+      71: istore        6
+      73: iload         7
+      75: ifgt          81
+      78: iconst_1
+      79: istore        7
+      81: iload         8
+      83: ifgt          89
+      86: iconst_1
+      87: istore        8
+      89: iconst_0
+      90: istore        9
+      92: iload         9
+      94: iload         4
+      96: if_icmpge     242
+      99: iload_1
+     100: iconst_2
+     101: if_icmple     112
+     104: iload_1
+     105: iload         6
+     107: isub
+     108: istore_1
+     109: goto          117
+     112: iload_1
+     113: iload         6
+     115: iadd
+     116: istore_1
+     117: iload_2
+     118: bipush        57
+     120: if_icmple     131
+     123: iload_2
+     124: iload         7
+     126: isub
+     127: istore_2
+     128: goto          136
+     131: iload_2
+     132: iload         7
+     134: iadd
+     135: istore_2
+     136: iload         5
+     138: sipush        254
+     141: if_icmple     154
+     144: iload         5
+     146: iload         8
+     148: isub
+     149: istore        5
+     151: goto          161
+     154: iload         5
+     156: iload         8
+     158: iadd
+     159: istore        5
+     161: iload_1
+     162: ifge          167
+     165: iconst_0
+     166: istore_1
+     167: iload_1
+     168: sipush        255
+     171: if_icmple     178
+     174: sipush        255
+     177: istore_1
+     178: iload_2
+     179: ifge          184
+     182: iconst_0
+     183: istore_2
+     184: iload_2
+     185: sipush        255
+     188: if_icmple     195
+     191: sipush        255
+     194: istore_2
+     195: iload         5
+     197: ifge          203
+     200: iconst_0
+     201: istore        5
+     203: iload         5
+     205: sipush        255
+     208: if_icmple     216
+     211: sipush        255
+     214: istore        5
+     216: aload_0
+     217: iload_1
+     218: iload_2
+     219: iload         5
+     221: invokevirtual #23                 // Method javax/microedition/lcdui/Graphics.setColor:(III)V
+     224: aload_0
+     225: iconst_0
+     226: iload         9
+     228: iload_3
+     229: iconst_1
+     230: isub
+     231: iload         9
+     233: invokevirtual #20                 // Method javax/microedition/lcdui/Graphics.drawLine:(IIII)V
+     236: iinc          9, 1
+     239: goto          92
+     242: return
+
+  public static void b(javax.microedition.lcdui.Graphics, int, int, int, int, int, int);
+    Code:
+       0: getstatic     #16                 // Field a:I
+       3: iconst_1
+       4: iadd
+       5: putstatic     #16                 // Field a:I
+       8: sipush        194
+      11: istore_1
+      12: sipush        243
+      15: istore_2
+      16: sipush        253
+      19: istore        7
+      21: iload         6
+      23: bipush        16
+      25: ishr
+      26: sipush        255
+      29: iand
+      30: istore        8
+      32: iload         6
+      34: bipush        8
+      36: ishr
+      37: sipush        255
+      40: iand
+      41: istore        9
+      43: iload         6
+      45: sipush        255
+      48: iand
+      49: istore        6
+      51: sipush        194
+      54: iload         8
+      56: isub
+      57: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      60: iload         4
+      62: bipush        15
+      64: idiv
+      65: idiv
+      66: istore        10
+      68: sipush        243
+      71: iload         9
+      73: isub
+      74: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      77: iload         4
+      79: bipush        15
+      81: idiv
+      82: idiv
+      83: istore        11
+      85: sipush        253
+      88: iload         6
+      90: isub
+      91: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      94: iload         4
+      96: bipush        15
+      98: idiv
+      99: idiv
+     100: istore        12
+     102: iload         10
+     104: ifgt          110
+     107: iconst_1
+     108: istore        10
+     110: iload         11
+     112: ifgt          118
+     115: iconst_1
+     116: istore        11
+     118: iload         12
+     120: ifgt          126
+     123: iconst_1
+     124: istore        12
+     126: iconst_0
+     127: istore        13
+     129: iload         13
+     131: iload         4
+     133: bipush        15
+     135: idiv
+     136: if_icmpge     329
+     139: iload_1
+     140: iload         8
+     142: if_icmple     153
+     145: iload_1
+     146: iload         10
+     148: isub
+     149: istore_1
+     150: goto          158
+     153: iload_1
+     154: iload         10
+     156: iadd
+     157: istore_1
+     158: iload_2
+     159: iload         9
+     161: if_icmple     172
+     164: iload_2
+     165: iload         11
+     167: isub
+     168: istore_2
+     169: goto          177
+     172: iload_2
+     173: iload         11
+     175: iadd
+     176: istore_2
+     177: iload         7
+     179: iload         6
+     181: if_icmple     194
+     184: iload         7
+     186: iload         12
+     188: isub
+     189: istore        7
+     191: goto          201
+     194: iload         7
+     196: iload         12
+     198: iadd
+     199: istore        7
+     201: iload_1
+     202: ifge          207
+     205: iconst_0
+     206: istore_1
+     207: iload_1
+     208: sipush        255
+     211: if_icmple     218
+     214: sipush        255
+     217: istore_1
+     218: iload_2
+     219: ifge          224
+     222: iconst_0
+     223: istore_2
+     224: iload_2
+     225: sipush        255
+     228: if_icmple     235
+     231: sipush        255
+     234: istore_2
+     235: iload         7
+     237: ifge          243
+     240: iconst_0
+     241: istore        7
+     243: iload         7
+     245: sipush        255
+     248: if_icmple     256
+     251: sipush        255
+     254: istore        7
+     256: aload_0
+     257: iload_1
+     258: iload_2
+     259: iload         7
+     261: invokevirtual #23                 // Method javax/microedition/lcdui/Graphics.setColor:(III)V
+     264: aload_0
+     265: iconst_0
+     266: iload_3
+     267: isub
+     268: iload_3
+     269: iconst_2
+     270: idiv
+     271: iadd
+     272: iload         13
+     274: bipush        15
+     276: imul
+     277: iadd
+     278: iconst_0
+     279: iload         4
+     281: isub
+     282: iload         4
+     284: iconst_2
+     285: idiv
+     286: iadd
+     287: iload         13
+     289: bipush        15
+     291: imul
+     292: iadd
+     293: iload_3
+     294: iconst_1
+     295: ishl
+     296: iload         13
+     298: bipush        15
+     300: imul
+     301: iconst_1
+     302: ishl
+     303: isub
+     304: iload         4
+     306: iconst_1
+     307: ishl
+     308: iload         13
+     310: bipush        15
+     312: imul
+     313: iconst_1
+     314: ishl
+     315: isub
+     316: iconst_0
+     317: sipush        360
+     320: invokevirtual #21                 // Method javax/microedition/lcdui/Graphics.fillArc:(IIIIII)V
+     323: iinc          13, 1
+     326: goto          129
+     329: iconst_0
+     330: istore_1
+     331: iload_1
+     332: bipush        10
+     334: if_icmpge     409
+     337: aload_0
+     338: iload         5
+     340: invokevirtual #22                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     343: iload_1
+     344: bipush        36
+     346: imul
+     347: iconst_2
+     348: getstatic     #16                 // Field a:I
+     351: bipush        10
+     353: irem
+     354: iadd
+     355: bipush        36
+     357: imul
+     358: iadd
+     359: istore_2
+     360: iconst_1
+     361: iload_1
+     362: iconst_3
+     363: irem
+     364: iadd
+     365: istore        6
+     367: aload_0
+     368: iconst_0
+     369: iload_3
+     370: isub
+     371: iload_3
+     372: iconst_2
+     373: idiv
+     374: iadd
+     375: iconst_0
+     376: iload         4
+     378: isub
+     379: iload         4
+     381: iconst_2
+     382: idiv
+     383: iadd
+     384: iload_3
+     385: iconst_1
+     386: ishl
+     387: iload         4
+     389: iconst_1
+     390: ishl
+     391: iload_2
+     392: getstatic     #16                 // Field a:I
+     395: iconst_2
+     396: ishl
+     397: iadd
+     398: iload         6
+     400: invokevirtual #21                 // Method javax/microedition/lcdui/Graphics.fillArc:(IIIIII)V
+     403: iinc          1, 1
+     406: goto          331
+     409: return
+
+  public static void c(javax.microedition.lcdui.Graphics, int, int, int, int, int, int);
+    Code:
+       0: sipush        194
+       3: istore_1
+       4: sipush        243
+       7: istore_2
+       8: sipush        253
+      11: istore        5
+      13: iload         6
+      15: bipush        16
+      17: ishr
+      18: sipush        255
+      21: iand
+      22: istore        7
+      24: iload         6
+      26: bipush        8
+      28: ishr
+      29: sipush        255
+      32: iand
+      33: istore        8
+      35: iload         6
+      37: sipush        255
+      40: iand
+      41: istore        6
+      43: sipush        194
+      46: iload         7
+      48: isub
+      49: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      52: iload         4
+      54: bipush        15
+      56: idiv
+      57: idiv
+      58: istore        9
+      60: sipush        243
+      63: iload         8
+      65: isub
+      66: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      69: iload         4
+      71: bipush        15
+      73: idiv
+      74: idiv
+      75: istore        10
+      77: sipush        253
+      80: iload         6
+      82: isub
+      83: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      86: iload         4
+      88: bipush        15
+      90: idiv
+      91: idiv
+      92: istore        11
+      94: iload         9
+      96: ifgt          102
+      99: iconst_1
+     100: istore        9
+     102: iload         10
+     104: ifgt          110
+     107: iconst_1
+     108: istore        10
+     110: iload         11
+     112: ifgt          118
+     115: iconst_1
+     116: istore        11
+     118: iconst_0
+     119: istore        12
+     121: iload         12
+     123: iload         4
+     125: bipush        15
+     127: idiv
+     128: if_icmpge     323
+     131: iload_1
+     132: iload         7
+     134: if_icmple     145
+     137: iload_1
+     138: iload         9
+     140: isub
+     141: istore_1
+     142: goto          150
+     145: iload_1
+     146: iload         9
+     148: iadd
+     149: istore_1
+     150: iload_2
+     151: iload         8
+     153: if_icmple     164
+     156: iload_2
+     157: iload         10
+     159: isub
+     160: istore_2
+     161: goto          169
+     164: iload_2
+     165: iload         10
+     167: iadd
+     168: istore_2
+     169: iload         5
+     171: iload         6
+     173: if_icmple     186
+     176: iload         5
+     178: iload         11
+     180: isub
+     181: istore        5
+     183: goto          193
+     186: iload         5
+     188: iload         11
+     190: iadd
+     191: istore        5
+     193: iload_1
+     194: ifge          199
+     197: iconst_0
+     198: istore_1
+     199: iload_1
+     200: sipush        255
+     203: if_icmple     210
+     206: sipush        255
+     209: istore_1
+     210: iload_2
+     211: ifge          216
+     214: iconst_0
+     215: istore_2
+     216: iload_2
+     217: sipush        255
+     220: if_icmple     227
+     223: sipush        255
+     226: istore_2
+     227: iload         5
+     229: ifge          235
+     232: iconst_0
+     233: istore        5
+     235: iload         5
+     237: sipush        255
+     240: if_icmple     248
+     243: sipush        255
+     246: istore        5
+     248: aload_0
+     249: iload_1
+     250: iload_2
+     251: iload         5
+     253: invokevirtual #23                 // Method javax/microedition/lcdui/Graphics.setColor:(III)V
+     256: aload_0
+     257: iconst_0
+     258: iload_3
+     259: isub
+     260: iload_3
+     261: iconst_2
+     262: idiv
+     263: iadd
+     264: iload         12
+     266: bipush        15
+     268: imul
+     269: iadd
+     270: iconst_0
+     271: iload         4
+     273: isub
+     274: iload         4
+     276: iconst_2
+     277: idiv
+     278: iadd
+     279: iload         12
+     281: bipush        15
+     283: imul
+     284: iadd
+     285: iload_3
+     286: iconst_1
+     287: ishl
+     288: iload         12
+     290: bipush        15
+     292: imul
+     293: iconst_1
+     294: ishl
+     295: isub
+     296: iload         4
+     298: iconst_1
+     299: ishl
+     300: iload         12
+     302: bipush        15
+     304: imul
+     305: iconst_1
+     306: ishl
+     307: isub
+     308: iload         12
+     310: iload         4
+     312: imul
+     313: iconst_1
+     314: invokevirtual #21                 // Method javax/microedition/lcdui/Graphics.fillArc:(IIIIII)V
+     317: iinc          12, 1
+     320: goto          121
+     323: return
+
+  public static javax.microedition.lcdui.Image[] a(javax.microedition.lcdui.Image[]);
+    Code:
+       0: aload_0
+       1: ifnonnull     6
+       4: aconst_null
+       5: areturn
+       6: aload_0
+       7: arraylength
+       8: anewarray     #11                 // class javax/microedition/lcdui/Image
+      11: astore_1
+      12: iconst_0
+      13: istore_2
+      14: iload_2
+      15: aload_1
+      16: arraylength
+      17: if_icmpge     241
+      20: aload_0
+      21: iload_2
+      22: aaload
+      23: invokevirtual #27                 // Method javax/microedition/lcdui/Image.getWidth:()I
+      26: aload_0
+      27: iload_2
+      28: aaload
+      29: invokevirtual #25                 // Method javax/microedition/lcdui/Image.getHeight:()I
+      32: imul
+      33: newarray       int
+      35: astore_3
+      36: aload_0
+      37: iload_2
+      38: aaload
+      39: aload_3
+      40: iconst_0
+      41: aload_0
+      42: iload_2
+      43: aaload
+      44: invokevirtual #27                 // Method javax/microedition/lcdui/Image.getWidth:()I
+      47: iconst_0
+      48: iconst_0
+      49: aload_0
+      50: iload_2
+      51: aaload
+      52: invokevirtual #27                 // Method javax/microedition/lcdui/Image.getWidth:()I
+      55: aload_0
+      56: iload_2
+      57: aaload
+      58: invokevirtual #25                 // Method javax/microedition/lcdui/Image.getHeight:()I
+      61: invokevirtual #26                 // Method javax/microedition/lcdui/Image.getRGB:([IIIIIII)V
+      64: iconst_0
+      65: istore        4
+      67: iload         4
+      69: aload_3
+      70: arraylength
+      71: if_icmpge     215
+      74: aload_3
+      75: iload         4
+      77: iaload
+      78: ldc           #2                  // int -16777216
+      80: if_icmpeq     109
+      83: aload_3
+      84: iload         4
+      86: iaload
+      87: iconst_m1
+      88: if_icmpeq     109
+      91: aload_3
+      92: iload         4
+      94: iaload
+      95: ldc           #4                  // int 16777215
+      97: if_icmpeq     109
+     100: aload_3
+     101: iload         4
+     103: iaload
+     104: ldc           #3                  // int 16579836
+     106: if_icmpne     114
+     109: aload_3
+     110: iload         4
+     112: iconst_0
+     113: iastore
+     114: aload_3
+     115: iload         4
+     117: iaload
+     118: ifeq          209
+     121: aload_3
+     122: iload         4
+     124: iaload
+     125: bipush        16
+     127: ishr
+     128: sipush        255
+     131: iand
+     132: istore        5
+     134: aload_3
+     135: iload         4
+     137: iaload
+     138: bipush        8
+     140: ishr
+     141: sipush        255
+     144: iand
+     145: istore        6
+     147: aload_3
+     148: iload         4
+     150: iaload
+     151: sipush        255
+     154: iand
+     155: istore        7
+     157: iload         5
+     159: bipush        30
+     161: imul
+     162: iload         6
+     164: bipush        59
+     166: imul
+     167: iadd
+     168: iload         7
+     170: bipush        11
+     172: imul
+     173: iadd
+     174: bipush        100
+     176: idiv
+     177: istore        5
+     179: aload_3
+     180: iload         4
+     182: ldc           #1                  // int -1778384896
+     184: iload         5
+     186: sipush        255
+     189: iand
+     190: bipush        16
+     192: ishl
+     193: ior
+     194: iload         5
+     196: sipush        255
+     199: iand
+     200: bipush        8
+     202: ishl
+     203: ior
+     204: sipush        255
+     207: ior
+     208: iastore
+     209: iinc          4, 1
+     212: goto          67
+     215: aload_1
+     216: iload_2
+     217: aload_3
+     218: aload_0
+     219: iload_2
+     220: aaload
+     221: invokevirtual #27                 // Method javax/microedition/lcdui/Image.getWidth:()I
+     224: aload_0
+     225: iload_2
+     226: aaload
+     227: invokevirtual #25                 // Method javax/microedition/lcdui/Image.getHeight:()I
+     230: iconst_1
+     231: invokestatic  #24                 // Method javax/microedition/lcdui/Image.createRGBImage:([IIIZ)Ljavax/microedition/lcdui/Image;
+     234: aastore
+     235: iinc          2, 1
+     238: goto          14
+     241: aload_1
+     242: areturn
+
+  public static int a(lx.game.v, lx.game.v, lx.game.v, lx.game.v);
+    Code:
+       0: new           #12                 // class lx/game/v
+       3: dup
+       4: iconst_0
+       5: iconst_0
+       6: invokespecial #28                 // Method lx/game/v."<init>":(II)V
+       9: astore        4
+      11: aload_1
+      12: getfield      #15                 // Field lx/game/v.b:I
+      15: aload_0
+      16: getfield      #15                 // Field lx/game/v.b:I
+      19: isub
+      20: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      23: aload_1
+      24: getfield      #14                 // Field lx/game/v.a:I
+      27: aload_0
+      28: getfield      #14                 // Field lx/game/v.a:I
+      31: isub
+      32: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      35: iadd
+      36: aload_3
+      37: getfield      #15                 // Field lx/game/v.b:I
+      40: aload_2
+      41: getfield      #15                 // Field lx/game/v.b:I
+      44: isub
+      45: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      48: iadd
+      49: aload_3
+      50: getfield      #14                 // Field lx/game/v.a:I
+      53: aload_2
+      54: getfield      #14                 // Field lx/game/v.a:I
+      57: isub
+      58: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      61: iadd
+      62: ifne          67
+      65: iconst_0
+      66: ireturn
+      67: aload_1
+      68: getfield      #15                 // Field lx/game/v.b:I
+      71: aload_0
+      72: getfield      #15                 // Field lx/game/v.b:I
+      75: isub
+      76: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      79: aload_1
+      80: getfield      #14                 // Field lx/game/v.a:I
+      83: aload_0
+      84: getfield      #14                 // Field lx/game/v.a:I
+      87: isub
+      88: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+      91: iadd
+      92: ifne          97
+      95: iconst_0
+      96: ireturn
+      97: aload_3
+      98: getfield      #15                 // Field lx/game/v.b:I
+     101: aload_2
+     102: getfield      #15                 // Field lx/game/v.b:I
+     105: isub
+     106: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+     109: aload_3
+     110: getfield      #14                 // Field lx/game/v.a:I
+     113: aload_2
+     114: getfield      #14                 // Field lx/game/v.a:I
+     117: isub
+     118: invokestatic  #17                 // Method java/lang/Math.abs:(I)I
+     121: iadd
+     122: ifne          127
+     125: iconst_0
+     126: ireturn
+     127: aload_1
+     128: getfield      #15                 // Field lx/game/v.b:I
+     131: aload_0
+     132: getfield      #15                 // Field lx/game/v.b:I
+     135: isub
+     136: aload_2
+     137: getfield      #14                 // Field lx/game/v.a:I
+     140: aload_3
+     141: getfield      #14                 // Field lx/game/v.a:I
+     144: isub
+     145: imul
+     146: aload_1
+     147: getfield      #14                 // Field lx/game/v.a:I
+     150: aload_0
+     151: getfield      #14                 // Field lx/game/v.a:I
+     154: isub
+     155: aload_2
+     156: getfield      #15                 // Field lx/game/v.b:I
+     159: aload_3
+     160: getfield      #15                 // Field lx/game/v.b:I
+     163: isub
+     164: imul
+     165: isub
+     166: ifne          171
+     169: iconst_0
+     170: ireturn
+     171: aload         4
+     173: aload_1
+     174: getfield      #14                 // Field lx/game/v.a:I
+     177: aload_0
+     178: getfield      #14                 // Field lx/game/v.a:I
+     181: isub
+     182: aload_2
+     183: getfield      #14                 // Field lx/game/v.a:I
+     186: aload_3
+     187: getfield      #14                 // Field lx/game/v.a:I
+     190: isub
+     191: imul
+     192: aload_2
+     193: getfield      #15                 // Field lx/game/v.b:I
+     196: aload_0
+     197: getfield      #15                 // Field lx/game/v.b:I
+     200: isub
+     201: imul
+     202: aload_2
+     203: getfield      #14                 // Field lx/game/v.a:I
+     206: aload_1
+     207: getfield      #14                 // Field lx/game/v.a:I
+     210: aload_0
+     211: getfield      #14                 // Field lx/game/v.a:I
+     214: isub
+     215: imul
+     216: aload_2
+     217: getfield      #15                 // Field lx/game/v.b:I
+     220: aload_3
+     221: getfield      #15                 // Field lx/game/v.b:I
+     224: isub
+     225: imul
+     226: isub
+     227: aload_0
+     228: getfield      #14                 // Field lx/game/v.a:I
+     231: aload_1
+     232: getfield      #15                 // Field lx/game/v.b:I
+     235: aload_0
+     236: getfield      #15                 // Field lx/game/v.b:I
+     239: isub
+     240: imul
+     241: aload_2
+     242: getfield      #14                 // Field lx/game/v.a:I
+     245: aload_3
+     246: getfield      #14                 // Field lx/game/v.a:I
+     249: isub
+     250: imul
+     251: iadd
+     252: aload_1
+     253: getfield      #15                 // Field lx/game/v.b:I
+     256: aload_0
+     257: getfield      #15                 // Field lx/game/v.b:I
+     260: isub
+     261: aload_2
+     262: getfield      #14                 // Field lx/game/v.a:I
+     265: aload_3
+     266: getfield      #14                 // Field lx/game/v.a:I
+     269: isub
+     270: imul
+     271: aload_1
+     272: getfield      #14                 // Field lx/game/v.a:I
+     275: aload_0
+     276: getfield      #14                 // Field lx/game/v.a:I
+     279: isub
+     280: aload_2
+     281: getfield      #15                 // Field lx/game/v.b:I
+     284: aload_3
+     285: getfield      #15                 // Field lx/game/v.b:I
+     288: isub
+     289: imul
+     290: isub
+     291: idiv
+     292: putfield      #14                 // Field lx/game/v.a:I
+     295: aload         4
+     297: aload_1
+     298: getfield      #15                 // Field lx/game/v.b:I
+     301: aload_0
+     302: getfield      #15                 // Field lx/game/v.b:I
+     305: isub
+     306: aload_2
+     307: getfield      #15                 // Field lx/game/v.b:I
+     310: aload_3
+     311: getfield      #15                 // Field lx/game/v.b:I
+     314: isub
+     315: imul
+     316: aload_2
+     317: getfield      #14                 // Field lx/game/v.a:I
+     320: aload_0
+     321: getfield      #14                 // Field lx/game/v.a:I
+     324: isub
+     325: imul
+     326: aload_2
+     327: getfield      #15                 // Field lx/game/v.b:I
+     330: aload_1
+     331: getfield      #15                 // Field lx/game/v.b:I
+     334: aload_0
+     335: getfield      #15                 // Field lx/game/v.b:I
+     338: isub
+     339: imul
+     340: aload_2
+     341: getfield      #14                 // Field lx/game/v.a:I
+     344: aload_3
+     345: getfield      #14                 // Field lx/game/v.a:I
+     348: isub
+     349: imul
+     350: isub
+     351: aload_0
+     352: getfield      #15                 // Field lx/game/v.b:I
+     355: aload_1
+     356: getfield      #14                 // Field lx/game/v.a:I
+     359: aload_0
+     360: getfield      #14                 // Field lx/game/v.a:I
+     363: isub
+     364: imul
+     365: aload_2
+     366: getfield      #15                 // Field lx/game/v.b:I
+     369: aload_3
+     370: getfield      #15                 // Field lx/game/v.b:I
+     373: isub
+     374: imul
+     375: iadd
+     376: aload_1
+     377: getfield      #14                 // Field lx/game/v.a:I
+     380: aload_0
+     381: getfield      #14                 // Field lx/game/v.a:I
+     384: isub
+     385: aload_2
+     386: getfield      #15                 // Field lx/game/v.b:I
+     389: aload_3
+     390: getfield      #15                 // Field lx/game/v.b:I
+     393: isub
+     394: imul
+     395: aload_1
+     396: getfield      #15                 // Field lx/game/v.b:I
+     399: aload_0
+     400: getfield      #15                 // Field lx/game/v.b:I
+     403: isub
+     404: aload_2
+     405: getfield      #14                 // Field lx/game/v.a:I
+     408: aload_3
+     409: getfield      #14                 // Field lx/game/v.a:I
+     412: isub
+     413: imul
+     414: isub
+     415: idiv
+     416: putfield      #15                 // Field lx/game/v.b:I
+     419: aload         4
+     421: getfield      #14                 // Field lx/game/v.a:I
+     424: aload_0
+     425: getfield      #14                 // Field lx/game/v.a:I
+     428: isub
+     429: aload         4
+     431: getfield      #14                 // Field lx/game/v.a:I
+     434: aload_1
+     435: getfield      #14                 // Field lx/game/v.a:I
+     438: isub
+     439: imul
+     440: ifgt          517
+     443: aload         4
+     445: getfield      #14                 // Field lx/game/v.a:I
+     448: aload_2
+     449: getfield      #14                 // Field lx/game/v.a:I
+     452: isub
+     453: aload         4
+     455: getfield      #14                 // Field lx/game/v.a:I
+     458: aload_3
+     459: getfield      #14                 // Field lx/game/v.a:I
+     462: isub
+     463: imul
+     464: ifgt          517
+     467: aload         4
+     469: getfield      #15                 // Field lx/game/v.b:I
+     472: aload_0
+     473: getfield      #15                 // Field lx/game/v.b:I
+     476: isub
+     477: aload         4
+     479: getfield      #15                 // Field lx/game/v.b:I
+     482: aload_1
+     483: getfield      #15                 // Field lx/game/v.b:I
+     486: isub
+     487: imul
+     488: ifgt          517
+     491: aload         4
+     493: getfield      #15                 // Field lx/game/v.b:I
+     496: aload_2
+     497: getfield      #15                 // Field lx/game/v.b:I
+     500: isub
+     501: aload         4
+     503: getfield      #15                 // Field lx/game/v.b:I
+     506: aload_3
+     507: getfield      #15                 // Field lx/game/v.b:I
+     510: isub
+     511: imul
+     512: ifgt          517
+     515: iconst_1
+     516: ireturn
+     517: iconst_m1
+     518: ireturn
+
+  public static boolean a(int, java.util.Vector);
+    Code:
+       0: aload_1
+       1: ifnull        16
+       4: iload_0
+       5: iflt          16
+       8: iload_0
+       9: aload_1
+      10: invokevirtual #19                 // Method java/util/Vector.size:()I
+      13: if_icmplt     18
+      16: iconst_1
+      17: ireturn
+      18: iconst_0
+      19: ireturn
+
+  public static boolean a(int, java.lang.Object[]);
+    Code:
+       0: aload_1
+       1: ifnull        14
+       4: iload_0
+       5: iflt          14
+       8: iload_0
+       9: aload_1
+      10: arraylength
+      11: if_icmplt     16
+      14: iconst_1
+      15: ireturn
+      16: iconst_0
+      17: ireturn
+
+  public static boolean a(int, int[]);
+    Code:
+       0: aload_1
+       1: ifnull        14
+       4: iload_0
+       5: iflt          14
+       8: iload_0
+       9: aload_1
+      10: arraylength
+      11: if_icmplt     16
+      14: iconst_1
+      15: ireturn
+      16: iconst_0
+      17: ireturn
+
+  public static boolean a(int, int, int, int, int, int, int, int);
+    Code:
+       0: iload         5
+       2: bipush        30
+       4: iadd
+       5: iload_1
+       6: if_icmple     34
+       9: iload         5
+      11: iload_1
+      12: iload_3
+      13: iadd
+      14: if_icmpge     34
+      17: iload         4
+      19: bipush        30
+      21: iadd
+      22: iload_0
+      23: if_icmple     34
+      26: iload         4
+      28: iload_0
+      29: iload_2
+      30: iadd
+      31: if_icmplt     36
+      34: iconst_0
+      35: ireturn
+      36: iconst_1
+      37: ireturn
+
+  static {};
+    Code:
+       0: return
+}

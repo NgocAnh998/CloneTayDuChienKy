@@ -1,0 +1,15 @@
+public interface _a.j {
+  public abstract void a(java.lang.Object, java.lang.Object);
+
+  public abstract java.lang.Object a(java.lang.Object);
+
+  public abstract void a(int, java.lang.Object);
+
+  public abstract java.lang.Object a(int);
+
+  public abstract java.lang.Object b(java.lang.Object);
+
+  public abstract int a();
+
+  public abstract void a(boolean, boolean);
+}

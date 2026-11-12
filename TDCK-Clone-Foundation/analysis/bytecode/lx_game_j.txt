@@ -1,0 +1,282 @@
+public final class lx.game.j {
+  static lx.game.b a;
+
+  static int[] b;
+
+  static int[] c;
+
+  static int[] d;
+
+  static int[] e;
+
+  static int[] f;
+
+  static int g;
+
+  static int h;
+
+  java.lang.String i;
+
+  int j;
+
+  int k;
+
+  int l;
+
+  int m;
+
+  int n;
+
+  int o;
+
+  int p;
+
+  int q;
+
+  int r;
+
+  int s;
+
+  byte t;
+
+  public lx.game.j(int);
+    Code:
+       0: aload_0
+       1: invokespecial #30                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_m1
+       6: putfield      #29                 // Field t:B
+       9: aload_0
+      10: iload_1
+      11: putfield      #19                 // Field j:I
+      14: aload_0
+      15: getstatic     #15                 // Field a:Llx/game/b;
+      18: iconst_0
+      19: iload_1
+      20: invokevirtual #36                 // Method lx/game/b.a:(II)Ljava/lang/String;
+      23: putfield      #18                 // Field i:Ljava/lang/String;
+      26: aload_0
+      27: getstatic     #15                 // Field a:Llx/game/b;
+      30: iload_1
+      31: iconst_2
+      32: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      35: putfield      #20                 // Field k:I
+      38: aload_0
+      39: getstatic     #15                 // Field a:Llx/game/b;
+      42: iload_1
+      43: iconst_3
+      44: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      47: putfield      #21                 // Field l:I
+      50: aload_0
+      51: getstatic     #15                 // Field a:Llx/game/b;
+      54: iload_1
+      55: iconst_5
+      56: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      59: putfield      #22                 // Field m:I
+      62: aload_0
+      63: getstatic     #15                 // Field a:Llx/game/b;
+      66: iload_1
+      67: bipush        6
+      69: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      72: putfield      #25                 // Field p:I
+      75: aload_0
+      76: getstatic     #15                 // Field a:Llx/game/b;
+      79: iload_1
+      80: bipush        7
+      82: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      85: putfield      #26                 // Field q:I
+      88: aload_0
+      89: getstatic     #15                 // Field a:Llx/game/b;
+      92: iload_1
+      93: bipush        8
+      95: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      98: putfield      #27                 // Field r:I
+     101: aload_0
+     102: getstatic     #15                 // Field a:Llx/game/b;
+     105: iload_1
+     106: bipush        9
+     108: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     111: putfield      #23                 // Field n:I
+     114: aload_0
+     115: getstatic     #15                 // Field a:Llx/game/b;
+     118: iload_1
+     119: bipush        10
+     121: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     124: putfield      #24                 // Field o:I
+     127: aload_0
+     128: getstatic     #15                 // Field a:Llx/game/b;
+     131: iload_1
+     132: bipush        11
+     134: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     137: putfield      #28                 // Field s:I
+     140: return
+
+  public static void a();
+    Code:
+       0: iconst_0
+       1: istore_0
+       2: iload_0
+       3: bipush        10
+       5: if_icmpge     63
+       8: getstatic     #14                 // Field lx/game/g.a:I
+      11: bipush        10
+      13: imul
+      14: iload_0
+      15: iadd
+      16: istore_1
+      17: getstatic     #16                 // Field d:[I
+      20: iload_1
+      21: iaload
+      22: ifle          57
+      25: getstatic     #15                 // Field a:Llx/game/b;
+      28: iload_1
+      29: iconst_2
+      30: invokevirtual #37                 // Method lx/game/b.b:(II)I
+      33: getstatic     #13                 // Field lx/game/af.au:I
+      36: if_icmpgt     57
+      39: getstatic     #17                 // Field g:I
+      42: getstatic     #16                 // Field d:[I
+      45: iload_0
+      46: iaload
+      47: iadd
+      48: putstatic     #17                 // Field g:I
+      51: getstatic     #16                 // Field d:[I
+      54: iload_0
+      55: iconst_0
+      56: iastore
+      57: iinc          0, 1
+      60: goto          2
+      63: return
+
+  public static java.lang.String a(int);
+    Code:
+       0: ldc           #1                  // String
+       2: astore_1
+       3: getstatic     #16                 // Field d:[I
+       6: iload_0
+       7: iaload
+       8: istore_2
+       9: new           #8                  // class java/lang/StringBuffer
+      12: dup
+      13: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+      16: aload_1
+      17: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      20: ldc           #2                  // String {3LV
+      22: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      25: iload_2
+      26: invokevirtual #32                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+      29: ldc           #5                  // String }|
+      31: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      34: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      37: astore_1
+      38: getstatic     #15                 // Field a:Llx/game/b;
+      41: iconst_1
+      42: iload_0
+      43: invokevirtual #36                 // Method lx/game/b.a:(II)Ljava/lang/String;
+      46: astore_3
+      47: new           #8                  // class java/lang/StringBuffer
+      50: dup
+      51: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+      54: aload_1
+      55: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      58: aload_3
+      59: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      62: ldc           #3                  // String |
+      64: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      67: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      70: astore_1
+      71: new           #8                  // class java/lang/StringBuffer
+      74: dup
+      75: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+      78: aload_1
+      79: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      82: getstatic     #15                 // Field a:Llx/game/b;
+      85: iconst_3
+      86: invokevirtual #35                 // Method lx/game/b.a:(I)Ljava/lang/String;
+      89: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      92: getstatic     #15                 // Field a:Llx/game/b;
+      95: iload_0
+      96: iconst_2
+      97: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     100: invokevirtual #32                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     103: ldc           #3                  // String |
+     105: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     108: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     111: astore_1
+     112: getstatic     #15                 // Field a:Llx/game/b;
+     115: iload_0
+     116: bipush        8
+     118: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     121: iload_2
+     122: imul
+     123: istore_2
+     124: new           #8                  // class java/lang/StringBuffer
+     127: dup
+     128: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+     131: aload_1
+     132: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     135: getstatic     #15                 // Field a:Llx/game/b;
+     138: bipush        6
+     140: invokevirtual #35                 // Method lx/game/b.a:(I)Ljava/lang/String;
+     143: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     146: getstatic     #15                 // Field a:Llx/game/b;
+     149: iload_0
+     150: iconst_5
+     151: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     154: iload_2
+     155: isub
+     156: invokevirtual #32                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     159: ldc           #3                  // String |
+     161: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     164: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     167: astore_1
+     168: bipush        6
+     170: istore_2
+     171: iload_2
+     172: bipush        9
+     174: if_icmpge     248
+     177: getstatic     #15                 // Field a:Llx/game/b;
+     180: iload_0
+     181: iload_2
+     182: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     185: dup
+     186: istore_3
+     187: ifle          242
+     190: iload_3
+     191: getstatic     #15                 // Field a:Llx/game/b;
+     194: iload_0
+     195: bipush        10
+     197: invokevirtual #37                 // Method lx/game/b.b:(II)I
+     200: iadd
+     201: istore_3
+     202: getstatic     #15                 // Field a:Llx/game/b;
+     205: iload_2
+     206: iconst_1
+     207: iadd
+     208: invokevirtual #35                 // Method lx/game/b.a:(I)Ljava/lang/String;
+     211: astore        4
+     213: new           #8                  // class java/lang/StringBuffer
+     216: dup
+     217: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+     220: aload_1
+     221: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     224: aload         4
+     226: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     229: iload_3
+     230: invokevirtual #32                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     233: ldc           #3                  // String |
+     235: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     238: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     241: astore_1
+     242: iinc          2, 1
+     245: goto          171
+     248: new           #8                  // class java/lang/StringBuffer
+     251: dup
+     252: invokespecial #31                 // Method java/lang/StringBuffer."<init>":()V
+     255: aload_1
+     256: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     259: ldc           #4                  // String |{2 Thăng cấp có thể giảm bớt tổn thương}|
+     261: invokevirtual #33                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     264: invokevirtual #34                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     267: areturn
+}

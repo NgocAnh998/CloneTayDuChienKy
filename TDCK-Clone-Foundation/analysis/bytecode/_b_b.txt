@@ -1,0 +1,328 @@
+public final class _b.b {
+  public _b.b();
+    Code:
+       0: aload_0
+       1: invokespecial #57                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  private static javax.microedition.rms.RecordStore b(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: aconst_null
+       1: astore        5
+       3: aload_0
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: astore_3
+       8: astore_2
+       9: astore_1
+      10: astore_0
+      11: aload_2
+      12: ifnull        22
+      15: aload_2
+      16: invokevirtual #58                 // Method java/lang/String.length:()I
+      19: ifne          25
+      22: ldc           #1                  // String 00
+      24: astore_2
+      25: aload_3
+      26: ifnull        34
+      29: aload_3
+      30: invokevirtual #58                 // Method java/lang/String.length:()I
+      33: pop
+      34: new           #13                 // class java/lang/StringBuffer
+      37: dup
+      38: invokespecial #59                 // Method java/lang/StringBuffer."<init>":()V
+      41: dup
+      42: astore_3
+      43: ldc           #2                  // String dcn
+      45: invokevirtual #61                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      48: aload_0
+      49: invokevirtual #61                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      52: aload_1
+      53: invokevirtual #61                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      56: aload_2
+      57: invokevirtual #61                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      60: iload         4
+      62: invokevirtual #60                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+      65: pop
+      66: aload_3
+      67: invokevirtual #62                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      70: iconst_1
+      71: iconst_1
+      72: iconst_1
+      73: invokestatic  #69                 // Method javax/microedition/rms/RecordStore.openRecordStore:(Ljava/lang/String;ZIZ)Ljavax/microedition/rms/RecordStore;
+      76: astore        5
+      78: goto          84
+      81: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+      84: aload         5
+      86: areturn
+    Exception table:
+       from    to  target type
+           3    78    81   Class java/lang/Exception
+
+  public static _b.a a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: iload         4
+       6: invokestatic  #41                 // Method b:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljavax/microedition/rms/RecordStore;
+       9: dup
+      10: astore_0
+      11: ifnonnull     16
+      14: aconst_null
+      15: areturn
+      16: aload_0
+      17: invokevirtual #66                 // Method javax/microedition/rms/RecordStore.getNumRecords:()I
+      20: ifne          35
+      23: aload_0
+      24: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+      27: goto          33
+      30: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+      33: aconst_null
+      34: areturn
+      35: aload_0
+      36: iconst_1
+      37: invokevirtual #68                 // Method javax/microedition/rms/RecordStore.getRecordSize:(I)I
+      40: newarray       byte
+      42: astore_1
+      43: aload_0
+      44: iconst_1
+      45: aload_1
+      46: iconst_0
+      47: invokevirtual #67                 // Method javax/microedition/rms/RecordStore.getRecord:(I[BI)I
+      50: istore_2
+      51: new           #6                  // class java/io/ByteArrayInputStream
+      54: dup
+      55: aload_1
+      56: iconst_0
+      57: iload_2
+      58: invokespecial #42                 // Method java/io/ByteArrayInputStream."<init>":([BII)V
+      61: astore_2
+      62: new           #8                  // class java/io/DataInputStream
+      65: dup
+      66: aload_2
+      67: invokespecial #46                 // Method java/io/DataInputStream."<init>":(Ljava/io/InputStream;)V
+      70: astore_3
+      71: new           #4                  // class _b/a
+      74: dup
+      75: invokespecial #18                 // Method _b/a."<init>":()V
+      78: astore        5
+      80: aload_3
+      81: invokevirtual #49                 // Method java/io/DataInputStream.readInt:()I
+      84: istore        6
+      86: aload         5
+      88: iload         6
+      90: invokevirtual #28                 // Method _b/a.c:(I)V
+      93: iload         6
+      95: iload         4
+      97: if_icmpge     196
+     100: aload_1
+     101: arraylength
+     102: iconst_4
+     103: if_icmple     196
+     106: aload         5
+     108: aload_3
+     109: invokevirtual #49                 // Method java/io/DataInputStream.readInt:()I
+     112: invokevirtual #20                 // Method _b/a.a:(I)V
+     115: aload         5
+     117: aload_3
+     118: invokevirtual #51                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     121: invokevirtual #29                 // Method _b/a.c:(Ljava/lang/String;)V
+     124: aload         5
+     126: aload_3
+     127: invokevirtual #51                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     130: invokevirtual #32                 // Method _b/a.d:(Ljava/lang/String;)V
+     133: aload         5
+     135: aload_3
+     136: invokevirtual #51                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     139: invokevirtual #34                 // Method _b/a.e:(Ljava/lang/String;)V
+     142: aload         5
+     144: aload_3
+     145: invokevirtual #49                 // Method java/io/DataInputStream.readInt:()I
+     148: invokevirtual #25                 // Method _b/a.b:(I)V
+     151: aload         5
+     153: aload_3
+     154: invokevirtual #51                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     157: invokevirtual #22                 // Method _b/a.a:(Ljava/lang/String;)V
+     160: aload         5
+     162: aload_3
+     163: invokevirtual #51                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     166: invokevirtual #26                 // Method _b/a.b:(Ljava/lang/String;)V
+     169: aload         5
+     171: aload_3
+     172: invokevirtual #48                 // Method java/io/DataInputStream.readBoolean:()Z
+     175: invokevirtual #23                 // Method _b/a.a:(Z)V
+     178: aload         5
+     180: aload_3
+     181: invokevirtual #49                 // Method java/io/DataInputStream.readInt:()I
+     184: invokevirtual #31                 // Method _b/a.d:(I)V
+     187: aload         5
+     189: aload_3
+     190: invokevirtual #50                 // Method java/io/DataInputStream.readLong:()J
+     193: invokevirtual #21                 // Method _b/a.a:(J)V
+     196: aload_2
+     197: invokevirtual #43                 // Method java/io/ByteArrayInputStream.close:()V
+     200: aload_3
+     201: invokevirtual #47                 // Method java/io/DataInputStream.close:()V
+     204: aload         5
+     206: astore_1
+     207: aload_0
+     208: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     211: goto          217
+     214: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     217: aload_1
+     218: areturn
+     219: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     222: aload_0
+     223: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     226: goto          248
+     229: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     232: goto          248
+     235: astore_1
+     236: aload_0
+     237: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     240: goto          246
+     243: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     246: aload_1
+     247: athrow
+     248: aconst_null
+     249: areturn
+    Exception table:
+       from    to  target type
+          23    27    30   Class java/lang/Exception
+         207   211   214   Class java/lang/Exception
+          16    23   219   Class java/lang/Exception
+          35   207   219   Class java/lang/Exception
+         222   226   229   Class java/lang/Exception
+          16    23   235   any
+          35   207   235   any
+         219   222   235   any
+         236   240   243   Class java/lang/Exception
+
+  public static void a(_b.a, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: aload_3
+       3: aload         4
+       5: iload         5
+       7: invokestatic  #41                 // Method b:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljavax/microedition/rms/RecordStore;
+      10: dup
+      11: astore_1
+      12: ifnull        212
+      15: new           #7                  // class java/io/ByteArrayOutputStream
+      18: dup
+      19: invokespecial #44                 // Method java/io/ByteArrayOutputStream."<init>":()V
+      22: astore_2
+      23: new           #9                  // class java/io/DataOutputStream
+      26: dup
+      27: aload_2
+      28: invokespecial #52                 // Method java/io/DataOutputStream."<init>":(Ljava/io/OutputStream;)V
+      31: dup
+      32: astore_3
+      33: aload_0
+      34: invokevirtual #38                 // Method _b/a.i:()I
+      37: invokevirtual #54                 // Method java/io/DataOutputStream.writeInt:(I)V
+      40: aload_0
+      41: invokevirtual #38                 // Method _b/a.i:()I
+      44: iload         5
+      46: if_icmpge     129
+      49: aload_3
+      50: aload_0
+      51: invokevirtual #30                 // Method _b/a.d:()I
+      54: invokevirtual #54                 // Method java/io/DataOutputStream.writeInt:(I)V
+      57: aload_3
+      58: aload_0
+      59: invokevirtual #27                 // Method _b/a.c:()Ljava/lang/String;
+      62: invokevirtual #56                 // Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+      65: aload_3
+      66: aload_0
+      67: invokevirtual #24                 // Method _b/a.b:()Ljava/lang/String;
+      70: invokevirtual #56                 // Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+      73: aload_3
+      74: aload_0
+      75: invokevirtual #36                 // Method _b/a.g:()Ljava/lang/String;
+      78: invokevirtual #56                 // Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+      81: aload_3
+      82: aload_0
+      83: invokevirtual #19                 // Method _b/a.a:()I
+      86: invokevirtual #54                 // Method java/io/DataOutputStream.writeInt:(I)V
+      89: aload_3
+      90: aload_0
+      91: invokevirtual #35                 // Method _b/a.f:()Ljava/lang/String;
+      94: invokevirtual #56                 // Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+      97: aload_3
+      98: aload_0
+      99: invokevirtual #33                 // Method _b/a.e:()Ljava/lang/String;
+     102: invokevirtual #56                 // Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+     105: aload_3
+     106: aload_0
+     107: invokevirtual #37                 // Method _b/a.h:()Z
+     110: invokevirtual #53                 // Method java/io/DataOutputStream.writeBoolean:(Z)V
+     113: aload_3
+     114: aload_0
+     115: invokevirtual #39                 // Method _b/a.j:()I
+     118: invokevirtual #54                 // Method java/io/DataOutputStream.writeInt:(I)V
+     121: aload_3
+     122: aload_0
+     123: invokevirtual #40                 // Method _b/a.k:()J
+     126: invokevirtual #55                 // Method java/io/DataOutputStream.writeLong:(J)V
+     129: aload_2
+     130: invokevirtual #45                 // Method java/io/ByteArrayOutputStream.toByteArray:()[B
+     133: astore_0
+     134: aload_1
+     135: invokevirtual #66                 // Method javax/microedition/rms/RecordStore.getNumRecords:()I
+     138: ifne          153
+     141: aload_1
+     142: aload_0
+     143: iconst_0
+     144: aload_0
+     145: arraylength
+     146: invokevirtual #64                 // Method javax/microedition/rms/RecordStore.addRecord:([BII)I
+     149: pop
+     150: goto          200
+     153: aload_1
+     154: iconst_1
+     155: aload_0
+     156: iconst_0
+     157: aload_0
+     158: arraylength
+     159: invokevirtual #70                 // Method javax/microedition/rms/RecordStore.setRecord:(I[BII)V
+     162: goto          200
+     165: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     168: aload_1
+     169: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     172: return
+     173: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     176: return
+     177: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     180: return
+     181: astore_0
+     182: aload_1
+     183: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     186: goto          198
+     189: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     192: goto          198
+     195: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     198: aload_0
+     199: athrow
+     200: aload_1
+     201: invokevirtual #65                 // Method javax/microedition/rms/RecordStore.closeRecordStore:()V
+     204: return
+     205: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     208: return
+     209: invokevirtual #63                 // Method java/lang/Throwable.printStackTrace:()V
+     212: return
+    Exception table:
+       from    to  target type
+          15   162   165   Class java/lang/Exception
+         168   172   173   Class javax/microedition/rms/RecordStoreNotOpenException
+         168   172   177   Class javax/microedition/rms/RecordStoreException
+          15   168   181   any
+         182   186   189   Class javax/microedition/rms/RecordStoreNotOpenException
+         182   186   195   Class javax/microedition/rms/RecordStoreException
+         200   204   205   Class javax/microedition/rms/RecordStoreNotOpenException
+         200   204   209   Class javax/microedition/rms/RecordStoreException
+}

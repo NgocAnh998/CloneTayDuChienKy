@@ -1,0 +1,22 @@
+public final class lx.game.aj {
+  java.lang.String a;
+
+  java.lang.Object b;
+
+  int c;
+
+  public lx.game.aj(java.lang.String, java.lang.Object, int);
+    Code:
+       0: aload_0
+       1: invokespecial #6                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #3                  // Field a:Ljava/lang/String;
+       9: aload_0
+      10: aload_2
+      11: putfield      #4                  // Field b:Ljava/lang/Object;
+      14: aload_0
+      15: iload_3
+      16: putfield      #5                  // Field c:I
+      19: return
+}

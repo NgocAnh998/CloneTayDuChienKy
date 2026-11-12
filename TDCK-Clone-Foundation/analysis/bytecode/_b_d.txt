@@ -1,0 +1,1497 @@
+public final class _b.d {
+  private static final java.util.Random a;
+
+  static {};
+    Code:
+       0: new           #59                 // class java/util/Random
+       3: dup
+       4: invokespecial #122                // Method java/util/Random."<init>":()V
+       7: putstatic     #67                 // Field a:Ljava/util/Random;
+      10: return
+
+  public _b.d();
+    Code:
+       0: aload_0
+       1: invokespecial #97                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static _b.a a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: astore        8
+       6: astore        7
+       8: astore        6
+      10: dup
+      11: astore        5
+      13: ifnull        55
+      16: aload         6
+      18: ifnull        55
+      21: aload         5
+      23: invokevirtual #106                // Method java/lang/String.length:()I
+      26: iconst_3
+      27: if_icmpne     55
+      30: aload         6
+      32: invokevirtual #106                // Method java/lang/String.length:()I
+      35: iconst_3
+      36: if_icmpne     55
+      39: aload         5
+      41: invokestatic  #80                 // Method a:(Ljava/lang/String;)Z
+      44: ifeq          55
+      47: aload         6
+      49: invokestatic  #80                 // Method a:(Ljava/lang/String;)Z
+      52: ifne          65
+      55: new           #52                 // class java/lang/IllegalArgumentException
+      58: dup
+      59: ldc           #38                 // String không có hiệu quả hán thương 、 trò chơi ID!
+      61: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      64: athrow
+      65: aload         7
+      67: ifnull        97
+      70: aload         7
+      72: invokevirtual #106                // Method java/lang/String.length:()I
+      75: iconst_2
+      76: if_icmpne     87
+      79: aload         7
+      81: invokestatic  #80                 // Method a:(Ljava/lang/String;)Z
+      84: ifne          97
+      87: new           #52                 // class java/lang/IllegalArgumentException
+      90: dup
+      91: ldc           #37                 // String không có hiệu quả động tác ID!
+      93: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      96: athrow
+      97: aload         8
+      99: ifnull        129
+     102: aload         8
+     104: invokevirtual #106                // Method java/lang/String.length:()I
+     107: iconst_3
+     108: if_icmpne     119
+     111: aload         8
+     113: invokestatic  #80                 // Method a:(Ljava/lang/String;)Z
+     116: ifne          129
+     119: new           #52                 // class java/lang/IllegalArgumentException
+     122: dup
+     123: ldc           #39                 // String không có hiệu quả ky hình ID!
+     125: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     128: athrow
+     129: iload         4
+     131: ifle          141
+     134: iload         4
+     136: bipush        30
+     138: if_icmple     151
+     141: new           #52                 // class java/lang/IllegalArgumentException
+     144: dup
+     145: ldc           #40                 // String không có hiệu quả kế phí số tiền!
+     147: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     150: athrow
+     151: iload         4
+     153: iconst_2
+     154: irem
+     155: ifeq          168
+     158: new           #52                 // class java/lang/IllegalArgumentException
+     161: dup
+     162: ldc           #40                 // String không có hiệu quả kế phí số tiền!
+     164: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     167: athrow
+     168: new           #45                 // class _b/a
+     171: dup
+     172: invokespecial #68                 // Method _b/a."<init>":()V
+     175: astore        5
+     177: aload_3
+     178: ifnonnull     186
+     181: ldc           #10                 // String 000
+     183: goto          187
+     186: aload_3
+     187: astore_3
+     188: aload_2
+     189: ifnonnull     197
+     192: ldc           #9                  // String 00
+     194: goto          198
+     197: aload_2
+     198: astore_2
+     199: aload_0
+     200: aload_1
+     201: aload_2
+     202: aload_3
+     203: iload         4
+     205: invokestatic  #87                 // Method b:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)[Ljava/lang/String;
+     208: astore        6
+     210: aload         5
+     212: aload         6
+     214: iconst_0
+     215: aaload
+     216: invokevirtual #75                 // Method _b/a.c:(Ljava/lang/String;)V
+     219: aload         5
+     221: aload         6
+     223: iconst_1
+     224: aaload
+     225: invokevirtual #76                 // Method _b/a.d:(Ljava/lang/String;)V
+     228: aload         6
+     230: iconst_2
+     231: aaload
+     232: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+     235: istore        7
+     237: aload         5
+     239: iload         7
+     241: invokevirtual #69                 // Method _b/a.a:(I)V
+     244: aload         5
+     246: aload         6
+     248: iconst_3
+     249: aaload
+     250: invokevirtual #77                 // Method _b/a.e:(Ljava/lang/String;)V
+     253: aload         5
+     255: iload         4
+     257: iload         7
+     259: idiv
+     260: invokevirtual #73                 // Method _b/a.b:(I)V
+     263: ldc           #11                 // String 1
+     265: aload         6
+     267: iconst_4
+     268: aaload
+     269: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     272: ifeq          304
+     275: aload_0
+     276: aload_1
+     277: aload_2
+     278: aload_3
+     279: iload         4
+     281: invokestatic  #88                 // Method c:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)[Ljava/lang/String;
+     284: astore_0
+     285: aload         5
+     287: aload_0
+     288: iconst_0
+     289: aaload
+     290: invokevirtual #70                 // Method _b/a.a:(Ljava/lang/String;)V
+     293: aload         5
+     295: aload_0
+     296: iconst_1
+     297: aaload
+     298: invokevirtual #74                 // Method _b/a.b:(Ljava/lang/String;)V
+     301: goto          341
+     304: ldc           #12                 // String 2
+     306: aload         6
+     308: iconst_4
+     309: aaload
+     310: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     313: ifeq          341
+     316: aload         5
+     318: aload         6
+     320: iconst_5
+     321: aaload
+     322: invokevirtual #70                 // Method _b/a.a:(Ljava/lang/String;)V
+     325: aload         5
+     327: aload         5
+     329: invokevirtual #72                 // Method _b/a.b:()Ljava/lang/String;
+     332: invokevirtual #74                 // Method _b/a.b:(Ljava/lang/String;)V
+     335: aload         5
+     337: iconst_1
+     338: invokevirtual #71                 // Method _b/a.a:(Z)V
+     341: aload         5
+     343: areturn
+
+  private static java.lang.String[] b(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: invokestatic  #78                 // Method a:()Ljava/lang/String;
+       3: dup
+       4: astore        5
+       6: ldc           #19                 // String DJSMSCode3
+       8: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      11: astore        6
+      13: iconst_0
+      14: istore        7
+      16: aconst_null
+      17: astore        8
+      19: iconst_0
+      20: istore        9
+      22: aload         6
+      24: ifnull        312
+      27: aload         6
+      29: invokevirtual #106                // Method java/lang/String.length:()I
+      32: ifeq          312
+      35: aload         6
+      37: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+      40: dup
+      41: astore        6
+      43: ldc           #13                 // String ;
+      45: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+      48: dup
+      49: astore        6
+      51: dup
+      52: astore        8
+      54: arraylength
+      55: istore        10
+      57: iconst_0
+      58: istore        11
+      60: goto          182
+      63: iload         11
+      65: iconst_1
+      66: iadd
+      67: istore        12
+      69: goto          172
+      72: aload         8
+      74: iload         12
+      76: aaload
+      77: astore        13
+      79: aload         8
+      81: iload         11
+      83: aaload
+      84: astore        14
+      86: aload         13
+      88: ldc           #35                 // String |
+      90: invokevirtual #104                // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      93: istore        15
+      95: aload         14
+      97: ldc           #35                 // String |
+      99: invokevirtual #104                // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+     102: istore        16
+     104: iconst_m1
+     105: istore        17
+     107: iconst_m1
+     108: istore        18
+     110: iload         15
+     112: ifle          129
+     115: aload         13
+     117: iload         15
+     119: iconst_1
+     120: iadd
+     121: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     124: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+     127: istore        17
+     129: iload         16
+     131: ifle          148
+     134: aload         14
+     136: iload         16
+     138: iconst_1
+     139: iadd
+     140: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     143: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+     146: istore        18
+     148: iload         17
+     150: iload         18
+     152: if_icmpge     169
+     155: aload         8
+     157: iload         12
+     159: aload         14
+     161: aastore
+     162: aload         8
+     164: iload         11
+     166: aload         13
+     168: aastore
+     169: iinc          12, 1
+     172: iload         12
+     174: iload         10
+     176: if_icmplt     72
+     179: iinc          11, 1
+     182: iload         11
+     184: iload         10
+     186: if_icmplt     63
+     189: new           #60                 // class java/util/Vector
+     192: dup
+     193: invokespecial #124                // Method java/util/Vector."<init>":()V
+     196: astore        8
+     198: aload         6
+     200: arraylength
+     201: iconst_1
+     202: isub
+     203: istore        12
+     205: goto          307
+     208: aload         6
+     210: iload         12
+     212: aaload
+     213: ldc           #35                 // String |
+     215: invokevirtual #104                // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+     218: dup
+     219: istore        11
+     221: ifle          304
+     224: aload         6
+     226: iload         12
+     228: aaload
+     229: iconst_0
+     230: iload         11
+     232: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+     235: astore        10
+     237: aload         6
+     239: iload         12
+     241: aaload
+     242: iload         11
+     244: iconst_1
+     245: iadd
+     246: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     249: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+     252: dup
+     253: istore        11
+     255: ifle          304
+     258: iload         4
+     260: iload         11
+     262: if_icmplt     304
+     265: iload         4
+     267: iload         11
+     269: irem
+     270: ifne          304
+     273: iload         9
+     275: ifeq          290
+     278: iload         9
+     280: ifle          304
+     283: iload         9
+     285: iload         11
+     287: if_icmpne     304
+     290: iconst_1
+     291: istore        7
+     293: iload         11
+     295: istore        9
+     297: aload         8
+     299: aload         10
+     301: invokevirtual #125                // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+     304: iinc          12, -1
+     307: iload         12
+     309: ifge          208
+     312: iload         7
+     314: ifeq          358
+     317: iload         9
+     319: iconst_2
+     320: if_icmple     358
+     323: aload         8
+     325: aload         8
+     327: invokevirtual #128                // Method java/util/Vector.size:()I
+     330: invokestatic  #79                 // Method a:(I)I
+     333: invokevirtual #127                // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+     336: checkcast     #55                 // class java/lang/String
+     339: astore        6
+     341: aload         5
+     343: aload         6
+     345: iload         9
+     347: invokestatic  #113                // Method java/lang/String.valueOf:(I)Ljava/lang/String;
+     350: aload_0
+     351: aload_1
+     352: aload_2
+     353: aload_3
+     354: invokestatic  #83                 // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     357: areturn
+     358: aload         5
+     360: ldc           #17                 // String DJSMSCode1
+     362: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     365: astore        6
+     367: aload         5
+     369: ldc           #18                 // String DJSMSCode2
+     371: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     374: astore        10
+     376: iload         7
+     378: ifeq          449
+     381: iload         9
+     383: iconst_2
+     384: if_icmpne     449
+     387: aload         10
+     389: ifnull        414
+     392: aload         10
+     394: invokevirtual #106                // Method java/lang/String.length:()I
+     397: ifeq          414
+     400: invokestatic  #120                // Method java/lang/System.currentTimeMillis:()J
+     403: ldc2_w        #65                 // long 10l
+     406: lrem
+     407: ldc2_w        #61                 // long 5l
+     410: lcmp
+     411: ifge          449
+     414: aload         8
+     416: aload         8
+     418: invokevirtual #128                // Method java/util/Vector.size:()I
+     421: invokestatic  #79                 // Method a:(I)I
+     424: invokevirtual #127                // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+     427: checkcast     #55                 // class java/lang/String
+     430: astore        11
+     432: aload         5
+     434: aload         11
+     436: iload         9
+     438: invokestatic  #113                // Method java/lang/String.valueOf:(I)Ljava/lang/String;
+     441: aload_0
+     442: aload_1
+     443: aload_2
+     444: aload_3
+     445: invokestatic  #83                 // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     448: areturn
+     449: aload         10
+     451: ifnull        830
+     454: aload         10
+     456: invokevirtual #106                // Method java/lang/String.length:()I
+     459: ifle          830
+     462: aload         6
+     464: ifnull        489
+     467: aload         6
+     469: invokevirtual #106                // Method java/lang/String.length:()I
+     472: ifeq          489
+     475: invokestatic  #120                // Method java/lang/System.currentTimeMillis:()J
+     478: ldc2_w        #65                 // long 10l
+     481: lrem
+     482: ldc2_w        #63                 // long 8l
+     485: lcmp
+     486: ifge          830
+     489: aload         5
+     491: aload         10
+     493: aload_0
+     494: aload_1
+     495: aload_2
+     496: aload_3
+     497: astore        14
+     499: astore        13
+     501: astore        12
+     503: astore        11
+     505: astore        10
+     507: astore        8
+     509: aload         10
+     511: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     514: astore        10
+     516: aload         8
+     518: ldc           #24                 // String DJSMSDest2
+     520: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     523: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     526: astore        15
+     528: aload         8
+     530: ldc           #21                 // String DJSMSDesc2
+     532: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     535: astore        16
+     537: aload         8
+     539: ldc           #28                 // String DJSMSShortCode2
+     541: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     544: astore        17
+     546: ldc           #11                 // String 1
+     548: aload         17
+     550: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     553: istore        18
+     555: aload         10
+     557: bipush        59
+     559: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+     562: ifle          646
+     565: aload         10
+     567: ldc           #13                 // String ;
+     569: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     572: astore_0
+     573: aload         15
+     575: ldc           #13                 // String ;
+     577: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     580: astore_1
+     581: aload         16
+     583: ldc           #13                 // String ;
+     585: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     588: astore_2
+     589: invokestatic  #120                // Method java/lang/System.currentTimeMillis:()J
+     592: aload_0
+     593: arraylength
+     594: i2l
+     595: lrem
+     596: l2i
+     597: istore_3
+     598: aload         17
+     600: ifnull        631
+     603: aload         17
+     605: invokevirtual #106                // Method java/lang/String.length:()I
+     608: ifle          631
+     611: aload         17
+     613: ldc           #13                 // String ;
+     615: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     618: astore        4
+     620: ldc           #11                 // String 1
+     622: aload         4
+     624: iload_3
+     625: aaload
+     626: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     629: istore        18
+     631: aload_0
+     632: iload_3
+     633: aaload
+     634: astore        10
+     636: aload_1
+     637: iload_3
+     638: aaload
+     639: astore        15
+     641: aload_2
+     642: iload_3
+     643: aaload
+     644: astore        16
+     646: aload         10
+     648: bipush        124
+     650: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+     653: istore_0
+     654: aload         15
+     656: invokevirtual #111                // Method java/lang/String.toUpperCase:()Ljava/lang/String;
+     659: ldc           #31                 // String X
+     661: invokevirtual #108                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+     664: dup
+     665: istore_1
+     666: ifeq          680
+     669: aload         10
+     671: iconst_0
+     672: iload_0
+     673: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+     676: astore_2
+     677: goto          779
+     680: iload         18
+     682: ifeq          727
+     685: new           #56                 // class java/lang/StringBuffer
+     688: dup
+     689: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+     692: aload         10
+     694: iconst_0
+     695: iload_0
+     696: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+     699: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     702: aload         11
+     704: aload         12
+     706: aload         10
+     708: iload_0
+     709: iconst_1
+     710: iadd
+     711: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     714: invokestatic  #82                 // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     717: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     720: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     723: astore_2
+     724: goto          779
+     727: new           #56                 // class java/lang/StringBuffer
+     730: dup
+     731: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+     734: aload         10
+     736: iconst_0
+     737: iload_0
+     738: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+     741: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     744: aload         11
+     746: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     749: aload         12
+     751: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     754: aload         13
+     756: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     759: aload         14
+     761: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     764: aload         10
+     766: iload_0
+     767: iconst_1
+     768: iadd
+     769: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     772: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     775: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     778: astore_2
+     779: iconst_5
+     780: anewarray     #55                 // class java/lang/String
+     783: dup
+     784: iconst_0
+     785: iload_1
+     786: ifeq          798
+     789: aload         15
+     791: iconst_1
+     792: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     795: goto          800
+     798: aload         15
+     800: aastore
+     801: dup
+     802: iconst_1
+     803: aload_2
+     804: aastore
+     805: dup
+     806: iconst_2
+     807: ldc           #12                 // String 2
+     809: aastore
+     810: dup
+     811: iconst_3
+     812: aload         16
+     814: aastore
+     815: dup
+     816: iconst_4
+     817: iload_1
+     818: ifeq          826
+     821: ldc           #11                 // String 1
+     823: goto          828
+     826: ldc           #8                  // String 0
+     828: aastore
+     829: areturn
+     830: aload         6
+     832: ifnull        1184
+     835: aload         6
+     837: invokevirtual #106                // Method java/lang/String.length:()I
+     840: ifle          1184
+     843: aload         5
+     845: aload         6
+     847: aload_0
+     848: aload_1
+     849: aload_2
+     850: aload_3
+     851: astore        14
+     853: astore        13
+     855: astore        12
+     857: astore        11
+     859: astore        10
+     861: astore        8
+     863: aload         10
+     865: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     868: astore        10
+     870: aload         8
+     872: ldc           #23                 // String DJSMSDest1
+     874: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     877: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     880: astore        15
+     882: aload         8
+     884: ldc           #20                 // String DJSMSDesc1
+     886: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     889: astore        16
+     891: aload         8
+     893: ldc           #27                 // String DJSMSShortCode1
+     895: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     898: astore        17
+     900: ldc           #11                 // String 1
+     902: aload         17
+     904: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     907: istore        18
+     909: aload         10
+     911: bipush        59
+     913: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+     916: ifle          1000
+     919: aload         10
+     921: ldc           #13                 // String ;
+     923: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     926: astore_0
+     927: aload         15
+     929: ldc           #13                 // String ;
+     931: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     934: astore_1
+     935: aload         16
+     937: ldc           #13                 // String ;
+     939: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     942: astore_2
+     943: invokestatic  #120                // Method java/lang/System.currentTimeMillis:()J
+     946: aload_0
+     947: arraylength
+     948: i2l
+     949: lrem
+     950: l2i
+     951: istore_3
+     952: aload         17
+     954: ifnull        985
+     957: aload         17
+     959: invokevirtual #106                // Method java/lang/String.length:()I
+     962: ifle          985
+     965: aload         17
+     967: ldc           #13                 // String ;
+     969: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+     972: astore        4
+     974: ldc           #11                 // String 1
+     976: aload         4
+     978: iload_3
+     979: aaload
+     980: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     983: istore        18
+     985: aload_0
+     986: iload_3
+     987: aaload
+     988: astore        10
+     990: aload_1
+     991: iload_3
+     992: aaload
+     993: astore        15
+     995: aload_2
+     996: iload_3
+     997: aaload
+     998: astore        16
+    1000: aload         15
+    1002: invokevirtual #111                // Method java/lang/String.toUpperCase:()Ljava/lang/String;
+    1005: ldc           #31                 // String X
+    1007: invokevirtual #108                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+    1010: istore_0
+    1011: aload         10
+    1013: bipush        124
+    1015: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+    1018: istore_1
+    1019: iload_0
+    1020: ifeq          1034
+    1023: aload         10
+    1025: iconst_0
+    1026: iload_1
+    1027: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+    1030: astore_2
+    1031: goto          1133
+    1034: iload         18
+    1036: ifeq          1081
+    1039: new           #56                 // class java/lang/StringBuffer
+    1042: dup
+    1043: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+    1046: aload         10
+    1048: iconst_0
+    1049: iload_1
+    1050: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+    1053: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1056: aload         11
+    1058: aload         12
+    1060: aload         10
+    1062: iload_1
+    1063: iconst_1
+    1064: iadd
+    1065: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+    1068: invokestatic  #82                 // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    1071: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1074: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+    1077: astore_2
+    1078: goto          1133
+    1081: new           #56                 // class java/lang/StringBuffer
+    1084: dup
+    1085: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+    1088: aload         10
+    1090: iconst_0
+    1091: iload_1
+    1092: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+    1095: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1098: aload         11
+    1100: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1103: aload         12
+    1105: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1108: aload         13
+    1110: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1113: aload         14
+    1115: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1118: aload         10
+    1120: iload_1
+    1121: iconst_1
+    1122: iadd
+    1123: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+    1126: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    1129: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+    1132: astore_2
+    1133: iconst_5
+    1134: anewarray     #55                 // class java/lang/String
+    1137: dup
+    1138: iconst_0
+    1139: iload_0
+    1140: ifeq          1152
+    1143: aload         15
+    1145: iconst_1
+    1146: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+    1149: goto          1154
+    1152: aload         15
+    1154: aastore
+    1155: dup
+    1156: iconst_1
+    1157: aload_2
+    1158: aastore
+    1159: dup
+    1160: iconst_2
+    1161: ldc           #11                 // String 1
+    1163: aastore
+    1164: dup
+    1165: iconst_3
+    1166: aload         16
+    1168: aastore
+    1169: dup
+    1170: iconst_4
+    1171: iload_0
+    1172: ifeq          1180
+    1175: ldc           #11                 // String 1
+    1177: goto          1182
+    1180: ldc           #8                  // String 0
+    1182: aastore
+    1183: areturn
+    1184: new           #52                 // class java/lang/IllegalArgumentException
+    1187: dup
+    1188: ldc           #36                 // String nhất định phải cung cấp ít nhất một thu lệ phí đại mã!
+    1190: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+    1193: athrow
+    1194: invokevirtual #121                // Method java/lang/Throwable.printStackTrace:()V
+    1197: new           #52                 // class java/lang/IllegalArgumentException
+    1200: dup
+    1201: ldc           #42                 // String không tìm được thu lệ phí đại mã!
+    1203: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+    1206: athrow
+    Exception table:
+       from    to  target type
+           0   357  1194   Class java/io/IOException
+         358   448  1194   Class java/io/IOException
+         449   829  1194   Class java/io/IOException
+         830  1183  1194   Class java/io/IOException
+        1184  1194  1194   Class java/io/IOException
+
+  private static java.lang.String[] a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: ldc           #25                 // String DJSMSDest3
+       3: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       6: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+       9: astore        7
+      11: aload_0
+      12: ldc           #22                 // String DJSMSDesc3
+      14: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      17: astore        8
+      19: new           #56                 // class java/lang/StringBuffer
+      22: dup
+      23: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+      26: astore        9
+      28: ldc           #4                  // String #MONEY#
+      30: astore        10
+      32: aload         8
+      34: aload         10
+      36: invokevirtual #104                // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+      39: dup
+      40: istore        11
+      42: iconst_m1
+      43: if_icmpeq     93
+      46: aload         9
+      48: aload         8
+      50: iconst_0
+      51: iload         11
+      53: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+      56: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      59: pop
+      60: aload         9
+      62: aload_2
+      63: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      66: pop
+      67: aload         9
+      69: aload         8
+      71: iload         11
+      73: aload         10
+      75: invokevirtual #106                // Method java/lang/String.length:()I
+      78: iadd
+      79: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+      82: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      85: pop
+      86: aload         9
+      88: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      91: astore        8
+      93: ldc           #11                 // String 1
+      95: aload_0
+      96: ldc           #29                 // String DJSMSShortCode3
+      98: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     101: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     104: istore        9
+     106: aload_0
+     107: ldc           #16                 // String DJSMSChan3
+     109: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     112: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     115: astore        10
+     117: iload         9
+     119: ifeq          151
+     122: new           #56                 // class java/lang/StringBuffer
+     125: dup
+     126: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+     129: aload_1
+     130: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     133: aload_3
+     134: aload         4
+     136: aload         10
+     138: invokestatic  #82                 // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     141: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     144: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     147: astore_1
+     148: goto          190
+     151: new           #56                 // class java/lang/StringBuffer
+     154: dup
+     155: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+     158: aload_1
+     159: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     162: aload_3
+     163: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     166: aload         4
+     168: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     171: aload         5
+     173: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     176: aload         6
+     178: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     181: aload         10
+     183: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     186: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     189: astore_1
+     190: aload_0
+     191: ldc           #26                 // String DJSMSFree3
+     193: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     196: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+     199: astore_0
+     200: bipush        6
+     202: anewarray     #55                 // class java/lang/String
+     205: dup
+     206: iconst_0
+     207: aload         7
+     209: aastore
+     210: dup
+     211: iconst_1
+     212: aload_1
+     213: aastore
+     214: dup
+     215: iconst_2
+     216: aload_2
+     217: aastore
+     218: dup
+     219: iconst_3
+     220: aload         8
+     222: aastore
+     223: dup
+     224: iconst_4
+     225: ldc           #12                 // String 2
+     227: aastore
+     228: dup
+     229: iconst_5
+     230: aload_0
+     231: aastore
+     232: areturn
+
+  private static boolean a(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       4: pop
+       5: goto          11
+       8: pop
+       9: iconst_0
+      10: ireturn
+      11: iconst_1
+      12: ireturn
+    Exception table:
+       from    to  target type
+           0     5     8   Class java/lang/Exception
+
+  private static java.lang.String a();
+    Code:
+       0: new           #56                 // class java/lang/StringBuffer
+       3: dup
+       4: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+       7: astore_0
+       8: aconst_null
+       9: astore_1
+      10: new           #54                 // class java/lang/Object
+      13: dup
+      14: invokespecial #97                 // Method java/lang/Object."<init>":()V
+      17: invokevirtual #98                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      20: ldc           #7                  // String /dcn.bin
+      22: invokevirtual #94                 // Method java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+      25: astore_1
+      26: sipush        512
+      29: newarray       byte
+      31: astore_2
+      32: iconst_0
+      33: istore_3
+      34: new           #47                 // class java/io/ByteArrayOutputStream
+      37: dup
+      38: invokespecial #89                 // Method java/io/ByteArrayOutputStream."<init>":()V
+      41: astore        4
+      43: goto          54
+      46: aload         4
+      48: aload_2
+      49: iconst_0
+      50: iload_3
+      51: invokevirtual #91                 // Method java/io/ByteArrayOutputStream.write:([BII)V
+      54: aload_1
+      55: aload_2
+      56: invokevirtual #93                 // Method java/io/InputStream.read:([B)I
+      59: dup
+      60: istore_3
+      61: ifgt          46
+      64: aload_0
+      65: new           #55                 // class java/lang/String
+      68: dup
+      69: aload         4
+      71: invokevirtual #90                 // Method java/io/ByteArrayOutputStream.toByteArray:()[B
+      74: ldc           #30                 // String UTF-8
+      76: invokespecial #100                // Method java/lang/String."<init>":([BLjava/lang/String;)V
+      79: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      82: pop
+      83: goto          97
+      86: astore_0
+      87: aload_1
+      88: ifnull        95
+      91: aload_1
+      92: invokevirtual #92                 // Method java/io/InputStream.close:()V
+      95: aload_0
+      96: athrow
+      97: aload_1
+      98: ifnull        105
+     101: aload_1
+     102: invokevirtual #92                 // Method java/io/InputStream.close:()V
+     105: aload_0
+     106: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     109: bipush        13
+     111: bipush        32
+     113: invokevirtual #107                // Method java/lang/String.replace:(CC)Ljava/lang/String;
+     116: areturn
+    Exception table:
+       from    to  target type
+          10    86    86   any
+
+  private static java.lang.String a(java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: ldc           #3                  // String \n
+       3: invokevirtual #104                // Method java/lang/String.indexOf:(Ljava/lang/String;)I
+       6: istore_2
+       7: iconst_0
+       8: istore_3
+       9: aconst_null
+      10: astore        4
+      12: goto          79
+      15: aload_0
+      16: iload_3
+      17: iload_2
+      18: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+      21: invokevirtual #112                // Method java/lang/String.trim:()Ljava/lang/String;
+      24: dup
+      25: astore        4
+      27: aload_1
+      28: invokevirtual #108                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+      31: ifeq          49
+      34: aload         4
+      36: aload         4
+      38: bipush        58
+      40: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+      43: iconst_1
+      44: iadd
+      45: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+      48: areturn
+      49: iload_2
+      50: iconst_1
+      51: iadd
+      52: istore_3
+      53: aload_0
+      54: ldc           #3                  // String \n
+      56: iload_3
+      57: invokevirtual #105                // Method java/lang/String.indexOf:(Ljava/lang/String;I)I
+      60: dup
+      61: istore_2
+      62: iconst_m1
+      63: if_icmpne     79
+      66: iload_3
+      67: aload_0
+      68: invokevirtual #106                // Method java/lang/String.length:()I
+      71: if_icmpge     79
+      74: aload_0
+      75: invokevirtual #106                // Method java/lang/String.length:()I
+      78: istore_2
+      79: iload_2
+      80: ifgt          15
+      83: aconst_null
+      84: areturn
+
+  private static java.lang.String[] b(java.lang.String, java.lang.String);
+    Code:
+       0: new           #60                 // class java/util/Vector
+       3: dup
+       4: invokespecial #124                // Method java/util/Vector."<init>":()V
+       7: astore_2
+       8: aload_1
+       9: invokevirtual #106                // Method java/lang/String.length:()I
+      12: istore_3
+      13: iconst_0
+      14: istore        4
+      16: goto          61
+      19: aload_0
+      20: aload_1
+      21: iload         4
+      23: invokevirtual #105                // Method java/lang/String.indexOf:(Ljava/lang/String;I)I
+      26: dup
+      27: istore        5
+      29: iload         4
+      31: if_icmpne     43
+      34: aload_2
+      35: ldc           #2                  // String
+      37: invokevirtual #125                // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      40: goto          55
+      43: aload_2
+      44: aload_0
+      45: iload         4
+      47: iload         5
+      49: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+      52: invokevirtual #125                // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      55: iload         5
+      57: iload_3
+      58: iadd
+      59: istore        4
+      61: aload_0
+      62: aload_1
+      63: iload         4
+      65: invokevirtual #105                // Method java/lang/String.indexOf:(Ljava/lang/String;I)I
+      68: iload         4
+      70: if_icmpge     19
+      73: iload         4
+      75: aload_0
+      76: invokevirtual #106                // Method java/lang/String.length:()I
+      79: if_icmpge     95
+      82: aload_2
+      83: aload_0
+      84: iload         4
+      86: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+      89: invokevirtual #125                // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      92: goto          101
+      95: aload_2
+      96: ldc           #2                  // String
+      98: invokevirtual #125                // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+     101: aload_2
+     102: invokevirtual #128                // Method java/util/Vector.size:()I
+     105: anewarray     #55                 // class java/lang/String
+     108: astore_0
+     109: aload_2
+     110: aload_0
+     111: invokevirtual #126                // Method java/util/Vector.copyInto:([Ljava/lang/Object;)V
+     114: aload_0
+     115: areturn
+
+  private static java.lang.String b(java.lang.String);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: aload_0
+       3: invokevirtual #106                // Method java/lang/String.length:()I
+       6: iconst_1
+       7: isub
+       8: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+      11: invokevirtual #102                // Method java/lang/String.getBytes:()[B
+      14: dup
+      15: astore_0
+      16: arraylength
+      17: newarray       byte
+      19: astore_1
+      20: iconst_0
+      21: istore_2
+      22: goto          97
+      25: aload_0
+      26: iload_2
+      27: baload
+      28: dup
+      29: istore_3
+      30: bipush        48
+      32: if_icmplt     61
+      35: iload_3
+      36: bipush        57
+      38: if_icmpgt     61
+      41: iload_3
+      42: iload_3
+      43: bipush        50
+      45: if_icmpgt     53
+      48: bipush        7
+      50: goto          55
+      53: bipush        -3
+      55: iadd
+      56: i2b
+      57: istore_3
+      58: goto          90
+      61: iload_3
+      62: bipush        65
+      64: if_icmplt     90
+      67: iload_3
+      68: bipush        90
+      70: if_icmpgt     90
+      73: iload_3
+      74: iload_3
+      75: bipush        67
+      77: if_icmpgt     85
+      80: bipush        23
+      82: goto          87
+      85: bipush        -3
+      87: iadd
+      88: i2b
+      89: istore_3
+      90: aload_1
+      91: iload_2
+      92: iload_3
+      93: bastore
+      94: iinc          2, 1
+      97: iload_2
+      98: aload_0
+      99: arraylength
+     100: if_icmplt     25
+     103: new           #55                 // class java/lang/String
+     106: dup
+     107: aload_1
+     108: invokespecial #99                 // Method java/lang/String."<init>":([B)V
+     111: areturn
+
+  private static java.lang.String a(java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: new           #56                 // class java/lang/StringBuffer
+       3: dup
+       4: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+       7: aload_0
+       8: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      11: aload_1
+      12: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      15: aload_2
+      16: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      19: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      22: invokestatic  #96                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+      25: dup
+      26: istore_3
+      27: ldc           #1                  // int 916132831
+      29: if_icmple     79
+      32: new           #52                 // class java/lang/IllegalArgumentException
+      35: dup
+      36: new           #56                 // class java/lang/StringBuffer
+      39: dup
+      40: ldc           #33                 // String cpId:
+      42: invokespecial #115                // Method java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+      45: aload_0
+      46: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      49: ldc           #34                 // String gameId:
+      51: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      54: aload_1
+      55: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      58: ldc           #32                 // String channelId:
+      60: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      63: aload_2
+      64: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      67: ldc           #5                  // String , too large! unsupports!@_@
+      69: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      72: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      75: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      78: athrow
+      79: sipush        200
+      82: newarray       byte
+      84: astore_0
+      85: iconst_0
+      86: istore_1
+      87: iload_3
+      88: bipush        62
+      90: irem
+      91: dup
+      92: istore_2
+      93: bipush        10
+      95: if_icmplt     117
+      98: iload_2
+      99: bipush        36
+     101: if_icmpge     117
+     104: iload_2
+     105: bipush        10
+     107: isub
+     108: bipush        65
+     110: iadd
+     111: i2b
+     112: istore        4
+     114: goto          149
+     117: iload_2
+     118: bipush        36
+     120: if_icmplt     142
+     123: iload_2
+     124: bipush        62
+     126: if_icmpge     142
+     129: iload_2
+     130: bipush        36
+     132: isub
+     133: bipush        97
+     135: iadd
+     136: i2b
+     137: istore        4
+     139: goto          149
+     142: iload_2
+     143: bipush        48
+     145: iadd
+     146: i2b
+     147: istore        4
+     149: aload_0
+     150: iload_1
+     151: iinc          1, 1
+     154: iload         4
+     156: bastore
+     157: iload_3
+     158: bipush        62
+     160: if_icmplt     173
+     163: iload_3
+     164: iload_2
+     165: isub
+     166: bipush        62
+     168: idiv
+     169: istore_3
+     170: goto          87
+     173: new           #55                 // class java/lang/String
+     176: dup
+     177: aload_0
+     178: invokestatic  #84                 // Method a:([B)[B
+     181: invokespecial #99                 // Method java/lang/String."<init>":([B)V
+     184: astore_2
+     185: iconst_5
+     186: aload_2
+     187: invokevirtual #106                // Method java/lang/String.length:()I
+     190: isub
+     191: dup
+     192: istore        4
+     194: ifne          199
+     197: aload_2
+     198: areturn
+     199: new           #56                 // class java/lang/StringBuffer
+     202: dup
+     203: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+     206: astore_0
+     207: iconst_0
+     208: istore_1
+     209: goto          222
+     212: aload_0
+     213: bipush        48
+     215: invokevirtual #116                // Method java/lang/StringBuffer.append:(C)Ljava/lang/StringBuffer;
+     218: pop
+     219: iinc          1, 1
+     222: iload_1
+     223: iload         4
+     225: if_icmplt     212
+     228: aload_0
+     229: aload_2
+     230: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     233: pop
+     234: aload_0
+     235: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     238: areturn
+
+  private static int a(int);
+    Code:
+       0: getstatic     #67                 // Field a:Ljava/util/Random;
+       3: invokevirtual #123                // Method java/util/Random.nextInt:()I
+       6: dup
+       7: istore_1
+       8: ifge          14
+      11: iload_1
+      12: ineg
+      13: istore_1
+      14: iload_1
+      15: iload_0
+      16: irem
+      17: ireturn
+
+  private static byte[] a(byte[]);
+    Code:
+       0: aload_0
+       1: arraylength
+       2: newarray       byte
+       4: astore_1
+       5: iconst_0
+       6: istore_2
+       7: iconst_0
+       8: istore_3
+       9: goto          37
+      12: aload_0
+      13: iload_3
+      14: baload
+      15: dup
+      16: istore        4
+      18: ifle          24
+      21: iinc          2, 1
+      24: aload_1
+      25: aload_0
+      26: arraylength
+      27: iload_3
+      28: isub
+      29: iconst_1
+      30: isub
+      31: iload         4
+      33: bastore
+      34: iinc          3, 1
+      37: iload_3
+      38: aload_0
+      39: arraylength
+      40: if_icmplt     12
+      43: iload_2
+      44: newarray       byte
+      46: astore_3
+      47: iconst_0
+      48: istore        4
+      50: goto          69
+      53: aload_3
+      54: iload         4
+      56: aload_1
+      57: aload_1
+      58: arraylength
+      59: iload_2
+      60: isub
+      61: iload         4
+      63: iadd
+      64: baload
+      65: bastore
+      66: iinc          4, 1
+      69: iload         4
+      71: iload_2
+      72: if_icmplt     53
+      75: aload_3
+      76: areturn
+
+  private static java.lang.String[] c(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int);
+    Code:
+       0: invokestatic  #78                 // Method a:()Ljava/lang/String;
+       3: dup
+       4: astore        5
+       6: ldc           #14                 // String DJFreeCode
+       8: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      11: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+      14: astore        6
+      16: aload         5
+      18: ldc           #15                 // String DJFreeDest
+      20: invokestatic  #81                 // Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      23: invokestatic  #85                 // Method b:(Ljava/lang/String;)Ljava/lang/String;
+      26: astore        5
+      28: aload         6
+      30: bipush        59
+      32: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+      35: ifle          81
+      38: aload         6
+      40: ldc           #13                 // String ;
+      42: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+      45: astore        7
+      47: aload         5
+      49: ldc           #13                 // String ;
+      51: invokestatic  #86                 // Method b:(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+      54: astore        8
+      56: invokestatic  #120                // Method java/lang/System.currentTimeMillis:()J
+      59: aload         7
+      61: arraylength
+      62: i2l
+      63: lrem
+      64: l2i
+      65: istore        5
+      67: aload         7
+      69: iload         5
+      71: aaload
+      72: astore        6
+      74: aload         8
+      76: iload         5
+      78: aaload
+      79: astore        5
+      81: aload         6
+      83: bipush        124
+      85: invokevirtual #103                // Method java/lang/String.indexOf:(I)I
+      88: istore        7
+      90: new           #56                 // class java/lang/StringBuffer
+      93: dup
+      94: invokespecial #114                // Method java/lang/StringBuffer."<init>":()V
+      97: aload         6
+      99: iconst_0
+     100: iload         7
+     102: invokevirtual #110                // Method java/lang/String.substring:(II)Ljava/lang/String;
+     105: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     108: aload_0
+     109: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     112: aload_1
+     113: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     116: aload_2
+     117: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     120: aload_3
+     121: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     124: aload         6
+     126: iload         7
+     128: iconst_1
+     129: iadd
+     130: invokevirtual #109                // Method java/lang/String.substring:(I)Ljava/lang/String;
+     133: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     136: ldc           #6                  // String -
+     138: invokevirtual #118                // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     141: iload         4
+     143: invokevirtual #117                // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     146: invokevirtual #119                // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     149: astore        8
+     151: iconst_2
+     152: anewarray     #55                 // class java/lang/String
+     155: dup
+     156: iconst_0
+     157: aload         5
+     159: aastore
+     160: dup
+     161: iconst_1
+     162: aload         8
+     164: aastore
+     165: areturn
+     166: invokevirtual #121                // Method java/lang/Throwable.printStackTrace:()V
+     169: new           #52                 // class java/lang/IllegalArgumentException
+     172: dup
+     173: ldc           #41                 // String không tìm được miễn phí đại mã!
+     175: invokespecial #95                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     178: athrow
+    Exception table:
+       from    to  target type
+           0   165   166   Class java/lang/Exception
+}

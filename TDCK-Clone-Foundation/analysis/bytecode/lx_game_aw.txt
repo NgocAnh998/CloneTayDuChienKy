@@ -1,0 +1,48 @@
+public final class lx.game.aw {
+  public lx.game.aw();
+    Code:
+       0: aload_0
+       1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a(java.lang.String, java.lang.String);
+    Code:
+       0: sipush        176
+       3: istore_2
+       4: sipush        204
+       7: istore_3
+       8: sipush        176
+      11: getstatic     #6                  // Field lx/game/c.k:I
+      14: if_icmple     21
+      17: getstatic     #6                  // Field lx/game/c.k:I
+      20: istore_2
+      21: sipush        204
+      24: getstatic     #7                  // Field lx/game/c.l:I
+      27: if_icmple     34
+      30: getstatic     #7                  // Field lx/game/c.l:I
+      33: istore_3
+      34: getstatic     #6                  // Field lx/game/c.k:I
+      37: iload_2
+      38: isub
+      39: iconst_2
+      40: idiv
+      41: istore        4
+      43: getstatic     #7                  // Field lx/game/c.l:I
+      46: iload_3
+      47: isub
+      48: iconst_2
+      49: idiv
+      50: istore        5
+      52: new           #3                  // class lx/game/aq
+      55: dup
+      56: aload_1
+      57: aload_0
+      58: iload         4
+      60: iload         5
+      62: iload_2
+      63: iload_3
+      64: iconst_1
+      65: invokespecial #9                  // Method lx/game/aq."<init>":(Ljava/lang/String;Ljava/lang/String;IIIII)V
+      68: invokestatic  #10                 // Method lx/game/aq.a:(Llx/game/aq;)V
+      71: return
+}

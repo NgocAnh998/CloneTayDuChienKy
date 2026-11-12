@@ -1,0 +1,82 @@
+public final class lx.game.ah {
+  private static java.lang.String[] a;
+
+  private static java.util.Vector b;
+
+  public lx.game.ah();
+    Code:
+       0: aload_0
+       1: invokespecial #14                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a(java.lang.String);
+    Code:
+       0: getstatic     #10                 // Field b:Ljava/util/Vector;
+       3: aload_0
+       4: invokevirtual #16                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+       7: return
+
+  public static void a();
+    Code:
+       0: iconst_0
+       1: getstatic     #10                 // Field b:Ljava/util/Vector;
+       4: invokevirtual #18                 // Method java/util/Vector.size:()I
+       7: invokestatic  #21                 // Method lx/game/af.h:(II)I
+      10: istore_0
+      11: getstatic     #10                 // Field b:Ljava/util/Vector;
+      14: iload_0
+      15: invokevirtual #17                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      18: checkcast     #3                  // class java/lang/String
+      21: getstatic     #12                 // Field lx/game/c.k:I
+      24: bipush        30
+      26: isub
+      27: invokestatic  #22                 // Method lx/game/af.h:(Ljava/lang/String;I)[Ljava/lang/String;
+      30: putstatic     #9                  // Field a:[Ljava/lang/String;
+      33: return
+
+  public static void a(javax.microedition.lcdui.Graphics);
+    Code:
+       0: aload_0
+       1: ldc           #1                  // int 16777215
+       3: invokevirtual #19                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+       6: getstatic     #9                  // Field a:[Ljava/lang/String;
+       9: ifnull        63
+      12: iconst_0
+      13: istore_1
+      14: iload_1
+      15: getstatic     #9                  // Field a:[Ljava/lang/String;
+      18: arraylength
+      19: if_icmpge     63
+      22: aload_0
+      23: getstatic     #9                  // Field a:[Ljava/lang/String;
+      26: iload_1
+      27: aaload
+      28: getstatic     #12                 // Field lx/game/c.k:I
+      31: getstatic     #9                  // Field a:[Ljava/lang/String;
+      34: iload_1
+      35: aaload
+      36: invokestatic  #23                 // Method lx/game/af.n:(Ljava/lang/String;)I
+      39: isub
+      40: iconst_2
+      41: idiv
+      42: getstatic     #13                 // Field lx/game/c.l:I
+      45: iconst_2
+      46: idiv
+      47: getstatic     #11                 // Field lx/game/c.i:I
+      50: iload_1
+      51: imul
+      52: iadd
+      53: iconst_0
+      54: invokestatic  #20                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+      57: iinc          1, 1
+      60: goto          14
+      63: return
+
+  static {};
+    Code:
+       0: new           #4                  // class java/util/Vector
+       3: dup
+       4: invokespecial #15                 // Method java/util/Vector."<init>":()V
+       7: putstatic     #10                 // Field b:Ljava/util/Vector;
+      10: return
+}

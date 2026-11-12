@@ -1,0 +1,3 @@
+public interface _a.b {
+  public abstract int a(_a.e, int);
+}

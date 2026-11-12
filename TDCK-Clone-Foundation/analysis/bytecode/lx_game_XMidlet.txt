@@ -1,0 +1,55 @@
+public class lx.game.XMidlet extends javax.microedition.midlet.MIDlet {
+  public static lx.game.XMidlet a;
+
+  public static javax.microedition.lcdui.Display b;
+
+  public static lx.game.af c;
+
+  public lx.game.XMidlet();
+    Code:
+       0: aload_0
+       1: invokespecial #13                 // Method javax/microedition/midlet/MIDlet."<init>":()V
+       4: aload_0
+       5: putstatic     #7                  // Field a:Llx/game/XMidlet;
+       8: return
+
+  public void startApp();
+    Code:
+       0: getstatic     #9                  // Field c:Llx/game/af;
+       3: ifnonnull     16
+       6: new           #6                  // class lx/game/af
+       9: dup
+      10: invokespecial #15                 // Method lx/game/af."<init>":()V
+      13: putstatic     #9                  // Field c:Llx/game/af;
+      16: getstatic     #8                  // Field b:Ljavax/microedition/lcdui/Display;
+      19: ifnonnull     36
+      22: aload_0
+      23: invokestatic  #11                 // Method javax/microedition/lcdui/Display.getDisplay:(Ljavax/microedition/midlet/MIDlet;)Ljavax/microedition/lcdui/Display;
+      26: dup
+      27: putstatic     #8                  // Field b:Ljavax/microedition/lcdui/Display;
+      30: getstatic     #9                  // Field c:Llx/game/af;
+      33: invokevirtual #12                 // Method javax/microedition/lcdui/Display.setCurrent:(Ljavax/microedition/lcdui/Displayable;)V
+      36: return
+
+  public void pauseApp();
+    Code:
+       0: invokestatic  #16                 // Method lx/game/af.d:()V
+       3: return
+
+  public void destroyApp(boolean);
+    Code:
+       0: return
+
+  public static void a(java.lang.String);
+    Code:
+       0: getstatic     #7                  // Field a:Llx/game/XMidlet;
+       3: aload_0
+       4: invokevirtual #14                 // Method javax/microedition/midlet/MIDlet.platformRequest:(Ljava/lang/String;)Z
+       7: pop
+       8: return
+       9: invokevirtual #10                 // Method java/lang/Throwable.printStackTrace:()V
+      12: return
+    Exception table:
+       from    to  target type
+           0     8     9   Class java/lang/Exception
+}

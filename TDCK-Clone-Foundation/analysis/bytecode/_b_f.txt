@@ -1,0 +1,15 @@
+public final class _b.f {
+  public static int a;
+
+  public _b.f();
+    Code:
+       0: aload_0
+       1: invokespecial #4                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: iconst_0
+       1: putstatic     #3                  // Field a:I
+       4: return
+}

@@ -1,0 +1,442 @@
+public class lx.game.c extends javax.microedition.lcdui.Canvas {
+  static boolean a;
+
+  static boolean b;
+
+  static boolean c;
+
+  static boolean d;
+
+  static boolean e;
+
+  static java.util.Random f;
+
+  static javax.microedition.lcdui.Font g;
+
+  static int h;
+
+  static int i;
+
+  static int j;
+
+  static int k;
+
+  static int l;
+
+  static boolean m;
+
+  public lx.game.c();
+    Code:
+       0: aload_0
+       1: invokespecial #24                 // Method javax/microedition/lcdui/Canvas."<init>":()V
+       4: aload_0
+       5: iconst_1
+       6: invokevirtual #27                 // Method javax/microedition/lcdui/Canvas.setFullScreenMode:(Z)V
+       9: aload_0
+      10: invokevirtual #26                 // Method javax/microedition/lcdui/Canvas.getWidth:()I
+      13: putstatic     #19                 // Field k:I
+      16: aload_0
+      17: invokevirtual #25                 // Method javax/microedition/lcdui/Canvas.getHeight:()I
+      20: putstatic     #20                 // Field l:I
+      23: getstatic     #19                 // Field k:I
+      26: sipush        176
+      29: if_icmpne     47
+      32: getstatic     #20                 // Field l:I
+      35: sipush        144
+      38: if_icmpne     47
+      41: sipush        208
+      44: putstatic     #20                 // Field l:I
+      47: getstatic     #20                 // Field l:I
+      50: sipush        144
+      53: if_icmpne     71
+      56: getstatic     #19                 // Field k:I
+      59: sipush        128
+      62: if_icmpne     71
+      65: sipush        160
+      68: putstatic     #20                 // Field l:I
+      71: getstatic     #20                 // Field l:I
+      74: sipush        179
+      77: if_icmpne     89
+      80: sipush        205
+      83: putstatic     #20                 // Field l:I
+      86: goto          113
+      89: getstatic     #20                 // Field l:I
+      92: sipush        160
+      95: if_icmple     113
+      98: getstatic     #20                 // Field l:I
+     101: sipush        208
+     104: if_icmpge     113
+     107: sipush        204
+     110: putstatic     #20                 // Field l:I
+     113: getstatic     #20                 // Field l:I
+     116: sipush        128
+     119: if_icmple     137
+     122: getstatic     #20                 // Field l:I
+     125: sipush        150
+     128: if_icmpgt     137
+     131: sipush        149
+     134: putstatic     #20                 // Field l:I
+     137: getstatic     #20                 // Field l:I
+     140: bipush        127
+     142: if_icmpne     151
+     145: sipush        128
+     148: putstatic     #20                 // Field l:I
+     151: getstatic     #20                 // Field l:I
+     154: bipush        127
+     156: if_icmpge     164
+     159: bipush        116
+     161: putstatic     #20                 // Field l:I
+     164: getstatic     #20                 // Field l:I
+     167: sipush        204
+     170: if_icmpeq     199
+     173: getstatic     #20                 // Field l:I
+     176: sipush        205
+     179: if_icmpeq     199
+     182: getstatic     #20                 // Field l:I
+     185: sipush        149
+     188: if_icmpeq     199
+     191: getstatic     #20                 // Field l:I
+     194: bipush        116
+     196: if_icmpne     203
+     199: iconst_1
+     200: putstatic     #21                 // Field m:Z
+     203: return
+
+  public static int a(int);
+    Code:
+       0: iload_0
+       1: invokestatic  #22                 // Method java/lang/Math.abs:(I)I
+       4: istore_0
+       5: getstatic     #13                 // Field _b/f.a:I
+       8: iconst_1
+       9: if_icmpne     366
+      12: iload_0
+      13: dup
+      14: istore_0
+      15: tableswitch   { // 7 to 77
+                     7: 325
+                     8: 331
+                     9: 334
+                    10: 337
+                    11: 340
+                    12: 343
+                    13: 346
+                    14: 349
+                    15: 352
+                    16: 355
+                    17: 364
+                    18: 364
+                    19: 312
+                    20: 314
+                    21: 316
+                    22: 318
+                    23: 320
+                    24: 364
+                    25: 364
+                    26: 364
+                    27: 364
+                    28: 364
+                    29: 364
+                    30: 364
+                    31: 364
+                    32: 364
+                    33: 364
+                    34: 364
+                    35: 364
+                    36: 364
+                    37: 364
+                    38: 364
+                    39: 364
+                    40: 364
+                    41: 364
+                    42: 364
+                    43: 364
+                    44: 364
+                    45: 322
+                    46: 364
+                    47: 364
+                    48: 364
+                    49: 364
+                    50: 364
+                    51: 364
+                    52: 364
+                    53: 364
+                    54: 364
+                    55: 364
+                    56: 364
+                    57: 358
+                    58: 361
+                    59: 364
+                    60: 364
+                    61: 364
+                    62: 364
+                    63: 364
+                    64: 364
+                    65: 364
+                    66: 320
+                    67: 364
+                    68: 364
+                    69: 364
+                    70: 364
+                    71: 364
+                    72: 364
+                    73: 364
+                    74: 364
+                    75: 364
+                    76: 364
+                    77: 328
+               default: 364
+          }
+     312: iconst_1
+     313: ireturn
+     314: iconst_2
+     315: ireturn
+     316: iconst_3
+     317: ireturn
+     318: iconst_4
+     319: ireturn
+     320: iconst_5
+     321: ireturn
+     322: bipush        6
+     324: ireturn
+     325: bipush        7
+     327: ireturn
+     328: bipush        48
+     330: ireturn
+     331: bipush        49
+     333: ireturn
+     334: bipush        50
+     336: ireturn
+     337: bipush        51
+     339: ireturn
+     340: bipush        52
+     342: ireturn
+     343: bipush        53
+     345: ireturn
+     346: bipush        54
+     348: ireturn
+     349: bipush        55
+     351: ireturn
+     352: bipush        56
+     354: ireturn
+     355: bipush        57
+     357: ireturn
+     358: bipush        42
+     360: ireturn
+     361: bipush        35
+     363: ireturn
+     364: iload_0
+     365: ireturn
+     366: getstatic     #21                 // Field m:Z
+     369: ifeq          420
+     372: iload_0
+     373: tableswitch   { // 1 to 6
+                     1: 412
+                     2: 416
+                     3: 420
+                     4: 420
+                     5: 418
+                     6: 414
+               default: 420
+          }
+     412: iconst_1
+     413: ireturn
+     414: iconst_2
+     415: ireturn
+     416: iconst_3
+     417: ireturn
+     418: iconst_4
+     419: ireturn
+     420: ldc           #1                  // String E2
+     422: invokestatic  #30                 // Method lx/game/s.a:(Ljava/lang/String;)Z
+     425: ifne          436
+     428: ldc           #3                  // String V8
+     430: invokestatic  #30                 // Method lx/game/s.a:(Ljava/lang/String;)Z
+     433: ifeq          515
+     436: iload_0
+     437: tableswitch   { // 10 to 22
+                    10: 506
+                    11: 509
+                    12: 512
+                    13: 512
+                    14: 512
+                    15: 512
+                    16: 512
+                    17: 512
+                    18: 512
+                    19: 512
+                    20: 504
+                    21: 509
+                    22: 506
+               default: 512
+          }
+     504: iconst_5
+     505: ireturn
+     506: bipush        7
+     508: ireturn
+     509: bipush        6
+     511: ireturn
+     512: goto          592
+     515: iload_0
+     516: tableswitch   { // 10 to 22
+                    10: 586
+                    11: 589
+                    12: 592
+                    13: 592
+                    14: 592
+                    15: 592
+                    16: 592
+                    17: 592
+                    18: 592
+                    19: 592
+                    20: 584
+                    21: 586
+                    22: 589
+               default: 592
+          }
+     584: iconst_5
+     585: ireturn
+     586: bipush        7
+     588: ireturn
+     589: bipush        6
+     591: ireturn
+     592: ldc           #2                  // String E62
+     594: invokestatic  #30                 // Method lx/game/s.a:(Ljava/lang/String;)Z
+     597: ifeq          751
+     600: iload_0
+     601: tableswitch   { // 98 to 121
+                    98: 736
+                    99: 748
+                   100: 748
+                   101: 748
+                   102: 724
+                   103: 727
+                   104: 730
+                   105: 748
+                   106: 745
+                   107: 748
+                   108: 748
+                   109: 712
+                   110: 739
+                   111: 748
+                   112: 748
+                   113: 748
+                   114: 715
+                   115: 748
+                   116: 718
+                   117: 742
+                   118: 733
+                   119: 748
+                   120: 748
+                   121: 721
+               default: 748
+          }
+     712: bipush        48
+     714: ireturn
+     715: bipush        49
+     717: ireturn
+     718: bipush        50
+     720: ireturn
+     721: bipush        51
+     723: ireturn
+     724: bipush        52
+     726: ireturn
+     727: bipush        53
+     729: ireturn
+     730: bipush        54
+     732: ireturn
+     733: bipush        55
+     735: ireturn
+     736: bipush        56
+     738: ireturn
+     739: bipush        57
+     741: ireturn
+     742: bipush        42
+     744: ireturn
+     745: bipush        35
+     747: ireturn
+     748: goto          976
+     751: ldc           #4                  // String W958c
+     753: invokestatic  #30                 // Method lx/game/s.a:(Ljava/lang/String;)Z
+     756: ifeq          976
+     759: iload_0
+     760: lookupswitch  { // 21
+                    -4: 973
+                    -3: 970
+                    32: 940
+                    98: 964
+                    99: 961
+                   100: 952
+                   101: 943
+                   102: 952
+                   103: 955
+                   104: 955
+                   105: 949
+                   106: 958
+                   107: 958
+                   109: 967
+                   110: 967
+                   114: 943
+                   116: 946
+                   117: 949
+                   118: 964
+                   120: 961
+                   121: 946
+               default: 976
+          }
+     940: bipush        48
+     942: ireturn
+     943: bipush        49
+     945: ireturn
+     946: bipush        50
+     948: ireturn
+     949: bipush        51
+     951: ireturn
+     952: bipush        52
+     954: ireturn
+     955: bipush        53
+     957: ireturn
+     958: bipush        54
+     960: ireturn
+     961: bipush        55
+     963: ireturn
+     964: bipush        56
+     966: ireturn
+     967: bipush        57
+     969: ireturn
+     970: bipush        42
+     972: ireturn
+     973: bipush        35
+     975: ireturn
+     976: iload_0
+     977: ireturn
+
+  protected void paint(javax.microedition.lcdui.Graphics);
+    Code:
+       0: return
+
+  static {};
+    Code:
+       0: new           #8                  // class java/util/Random
+       3: dup
+       4: invokespecial #23                 // Method java/util/Random."<init>":()V
+       7: putstatic     #14                 // Field f:Ljava/util/Random;
+      10: iconst_0
+      11: iconst_0
+      12: bipush        8
+      14: invokestatic  #28                 // Method javax/microedition/lcdui/Font.getFont:(III)Ljavax/microedition/lcdui/Font;
+      17: dup
+      18: putstatic     #15                 // Field g:Ljavax/microedition/lcdui/Font;
+      21: ldc           #5                  // String W
+      23: invokevirtual #29                 // Method javax/microedition/lcdui/Font.stringWidth:(Ljava/lang/String;)I
+      26: dup
+      27: putstatic     #16                 // Field h:I
+      30: putstatic     #17                 // Field i:I
+      33: getstatic     #16                 // Field h:I
+      36: getstatic     #16                 // Field h:I
+      39: iconst_4
+      40: idiv
+      41: iadd
+      42: putstatic     #18                 // Field j:I
+      45: return
+}

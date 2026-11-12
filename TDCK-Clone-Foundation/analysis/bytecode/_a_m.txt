@@ -1,0 +1,20 @@
+public final class _a.m extends _a.o implements _a.b,_a.j {
+  private _a.n a;
+
+  public _a.m(_a.n);
+    Code:
+       0: aload_0
+       1: invokespecial #8                  // Method _a/o."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #6                  // Field a:L_a/n;
+       9: return
+
+  public final int a(_a.e, int);
+    Code:
+       0: aload_0
+       1: getfield      #6                  // Field a:L_a/n;
+       4: aload_1
+       5: invokevirtual #7                  // Method _a/n.a:(L_a/e;)I
+       8: ireturn
+}

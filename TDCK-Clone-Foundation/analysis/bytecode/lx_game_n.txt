@@ -1,0 +1,372 @@
+public final class lx.game.n {
+  private static java.util.Vector a;
+
+  public lx.game.n();
+    Code:
+       0: aload_0
+       1: invokespecial #53                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a(int, java.lang.String);
+    Code:
+       0: iload_0
+       1: iconst_m1
+       2: if_icmpne     12
+       5: getstatic     #49                 // Field a:Ljava/util/Vector;
+       8: invokevirtual #61                 // Method java/util/Vector.removeAllElements:()V
+      11: return
+      12: iload_0
+      13: bipush        -2
+      15: if_icmpne     637
+      18: iconst_0
+      19: istore_0
+      20: iload_0
+      21: getstatic     #49                 // Field a:Ljava/util/Vector;
+      24: invokevirtual #62                 // Method java/util/Vector.size:()I
+      27: if_icmpge     636
+      30: getstatic     #49                 // Field a:Ljava/util/Vector;
+      33: iload_0
+      34: invokevirtual #60                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      37: checkcast     #1                  // class "[Ljava/lang/String;"
+      40: dup
+      41: astore_1
+      42: iconst_0
+      43: aaload
+      44: invokestatic  #66                 // Method lx/game/af.m:(Ljava/lang/String;)I
+      47: istore_2
+      48: aload_1
+      49: iconst_1
+      50: aaload
+      51: bipush        43
+      53: invokestatic  #65                 // Method lx/game/af.b:(Ljava/lang/String;C)[Ljava/lang/String;
+      56: dup
+      57: astore_1
+      58: ifnull        630
+      61: iload_2
+      62: tableswitch   { // 1 to 9
+                     1: 112
+                     2: 167
+                     3: 183
+                     4: 222
+                     5: 246
+                     6: 471
+                     7: 579
+                     8: 582
+                     9: 630
+               default: 630
+          }
+     112: aload_1
+     113: iconst_0
+     114: aaload
+     115: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     118: putstatic     #28                 // Field lx/game/af.X:Ljavax/microedition/lcdui/Image;
+     121: aload_1
+     122: iconst_1
+     123: aaload
+     124: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     127: pop
+     128: aload_1
+     129: iconst_2
+     130: aaload
+     131: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     134: putstatic     #29                 // Field lx/game/af.aC:Ljavax/microedition/lcdui/Image;
+     137: getstatic     #40                 // Field lx/game/c.k:I
+     140: sipush        176
+     143: if_icmple     630
+     146: aload_1
+     147: iconst_3
+     148: aaload
+     149: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     152: putstatic     #30                 // Field lx/game/af.aH:Ljavax/microedition/lcdui/Image;
+     155: aload_1
+     156: iconst_4
+     157: aaload
+     158: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     161: putstatic     #31                 // Field lx/game/af.aI:Ljavax/microedition/lcdui/Image;
+     164: goto          630
+     167: new           #16                 // class lx/game/p
+     170: dup
+     171: aload_1
+     172: iconst_0
+     173: aaload
+     174: invokespecial #73                 // Method lx/game/p."<init>":(Ljava/lang/String;)V
+     177: putstatic     #21                 // Field lx/game/af.A:Llx/game/p;
+     180: goto          630
+     183: aload_1
+     184: iconst_0
+     185: aaload
+     186: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     189: putstatic     #33                 // Field lx/game/af.n:Ljavax/microedition/lcdui/Image;
+     192: aload_1
+     193: iconst_1
+     194: aaload
+     195: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     198: putstatic     #34                 // Field lx/game/af.o:Ljavax/microedition/lcdui/Image;
+     201: aload_1
+     202: iconst_2
+     203: aaload
+     204: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     207: putstatic     #35                 // Field lx/game/af.p:Ljavax/microedition/lcdui/Image;
+     210: aload_1
+     211: iconst_3
+     212: aaload
+     213: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     216: putstatic     #36                 // Field lx/game/af.q:Ljavax/microedition/lcdui/Image;
+     219: goto          630
+     222: aload_1
+     223: iconst_0
+     224: aaload
+     225: invokestatic  #64                 // Method lx/game/af.b:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+     228: pop
+     229: new           #14                 // class lx/game/m
+     232: dup
+     233: aload_1
+     234: iconst_1
+     235: aaload
+     236: iconst_1
+     237: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     240: putstatic     #52                 // Field lx/game/y.bD:Llx/game/m;
+     243: goto          630
+     246: aload_1
+     247: arraylength
+     248: ifle          257
+     251: aload_1
+     252: iconst_0
+     253: aaload
+     254: invokestatic  #75                 // Method lx/game/y.a:(Ljava/lang/String;)V
+     257: aload_1
+     258: arraylength
+     259: iconst_1
+     260: if_icmple     278
+     263: aload_1
+     264: iconst_1
+     265: aaload
+     266: astore_2
+     267: new           #10                 // class lx/game/b
+     270: dup
+     271: aload_2
+     272: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     275: putstatic     #51                 // Field lx/game/u.a:Llx/game/b;
+     278: aload_1
+     279: arraylength
+     280: iconst_2
+     281: if_icmple     290
+     284: aload_1
+     285: iconst_2
+     286: aaload
+     287: invokestatic  #68                 // Method lx/game/as.a:(Ljava/lang/String;)V
+     290: aload_1
+     291: arraylength
+     292: iconst_3
+     293: if_icmple     356
+     296: aload_1
+     297: iconst_3
+     298: aaload
+     299: astore_2
+     300: new           #10                 // class lx/game/b
+     303: dup
+     304: aload_2
+     305: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     308: dup
+     309: putstatic     #41                 // Field lx/game/j.a:Llx/game/b;
+     312: getfield      #39                 // Field lx/game/b.b:I
+     315: dup
+     316: putstatic     #47                 // Field lx/game/j.h:I
+     319: newarray       int
+     321: putstatic     #42                 // Field lx/game/j.b:[I
+     324: getstatic     #47                 // Field lx/game/j.h:I
+     327: newarray       int
+     329: putstatic     #43                 // Field lx/game/j.c:[I
+     332: getstatic     #47                 // Field lx/game/j.h:I
+     335: newarray       int
+     337: putstatic     #44                 // Field lx/game/j.d:[I
+     340: getstatic     #47                 // Field lx/game/j.h:I
+     343: newarray       int
+     345: putstatic     #45                 // Field lx/game/j.e:[I
+     348: getstatic     #47                 // Field lx/game/j.h:I
+     351: newarray       int
+     353: putstatic     #46                 // Field lx/game/j.f:[I
+     356: aload_1
+     357: arraylength
+     358: iconst_4
+     359: if_icmple     368
+     362: aload_1
+     363: iconst_4
+     364: aaload
+     365: invokestatic  #67                 // Method lx/game/ag.a:(Ljava/lang/String;)V
+     368: aload_1
+     369: arraylength
+     370: iconst_5
+     371: if_icmple     389
+     374: aload_1
+     375: iconst_5
+     376: aaload
+     377: astore_2
+     378: new           #10                 // class lx/game/b
+     381: dup
+     382: aload_2
+     383: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     386: putstatic     #50                 // Field lx/game/t.a:Llx/game/b;
+     389: aload_1
+     390: arraylength
+     391: bipush        6
+     393: if_icmple     403
+     396: aload_1
+     397: bipush        6
+     399: aaload
+     400: invokestatic  #70                 // Method lx/game/l.a:(Ljava/lang/String;)V
+     403: aload_1
+     404: arraylength
+     405: bipush        7
+     407: if_icmple     424
+     410: new           #10                 // class lx/game/b
+     413: dup
+     414: aload_1
+     415: bipush        7
+     417: aaload
+     418: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     421: putstatic     #37                 // Field lx/game/as.b:Llx/game/b;
+     424: aload_1
+     425: arraylength
+     426: bipush        8
+     428: if_icmple     445
+     431: new           #10                 // class lx/game/b
+     434: dup
+     435: aload_1
+     436: bipush        8
+     438: aaload
+     439: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     442: putstatic     #38                 // Field lx/game/as.c:Llx/game/b;
+     445: aload_1
+     446: arraylength
+     447: bipush        9
+     449: if_icmple     630
+     452: aload_1
+     453: bipush        9
+     455: aaload
+     456: astore_2
+     457: new           #10                 // class lx/game/b
+     460: dup
+     461: aload_2
+     462: invokespecial #69                 // Method lx/game/b."<init>":(Ljava/lang/String;)V
+     465: putstatic     #20                 // Field lx/game/ad.a:Llx/game/b;
+     468: goto          630
+     471: new           #14                 // class lx/game/m
+     474: dup
+     475: aload_1
+     476: iconst_0
+     477: aaload
+     478: iconst_1
+     479: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     482: putstatic     #25                 // Field lx/game/af.T:Llx/game/m;
+     485: new           #14                 // class lx/game/m
+     488: dup
+     489: aload_1
+     490: iconst_2
+     491: aaload
+     492: iconst_1
+     493: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     496: putstatic     #26                 // Field lx/game/af.U:Llx/game/m;
+     499: new           #14                 // class lx/game/m
+     502: dup
+     503: aload_1
+     504: iconst_3
+     505: aaload
+     506: iconst_1
+     507: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     510: putstatic     #22                 // Field lx/game/af.Q:Llx/game/m;
+     513: new           #14                 // class lx/game/m
+     516: dup
+     517: aload_1
+     518: iconst_4
+     519: aaload
+     520: iconst_1
+     521: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     524: putstatic     #23                 // Field lx/game/af.R:Llx/game/m;
+     527: new           #19                 // class lx/game/y
+     530: dup
+     531: invokespecial #74                 // Method lx/game/y."<init>":()V
+     534: dup
+     535: putstatic     #27                 // Field lx/game/af.V:Llx/game/y;
+     538: aload_1
+     539: iconst_1
+     540: aaload
+     541: iconst_1
+     542: invokevirtual #72                 // Method lx/game/m.a:(Ljava/lang/String;I)V
+     545: getstatic     #27                 // Field lx/game/af.V:Llx/game/y;
+     548: new           #4                  // class java/lang/StringBuffer
+     551: dup
+     552: invokespecial #54                 // Method java/lang/StringBuffer."<init>":()V
+     555: getstatic     #32                 // Field lx/game/af.ac:Ljava/lang/String;
+     558: invokevirtual #56                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     561: aload_1
+     562: iconst_5
+     563: aaload
+     564: invokevirtual #56                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+     567: invokevirtual #57                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     570: invokestatic  #63                 // Method lx/game/af.a:(Ljava/lang/String;)[Ljava/lang/String;
+     573: putfield      #48                 // Field lx/game/m.L:[Ljava/lang/String;
+     576: goto          630
+     579: goto          630
+     582: getstatic     #24                 // Field lx/game/af.S:[Llx/game/m;
+     585: iconst_0
+     586: new           #14                 // class lx/game/m
+     589: dup
+     590: aload_1
+     591: iconst_0
+     592: aaload
+     593: iconst_1
+     594: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     597: aastore
+     598: getstatic     #24                 // Field lx/game/af.S:[Llx/game/m;
+     601: iconst_1
+     602: new           #14                 // class lx/game/m
+     605: dup
+     606: aload_1
+     607: iconst_1
+     608: aaload
+     609: iconst_1
+     610: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     613: aastore
+     614: getstatic     #24                 // Field lx/game/af.S:[Llx/game/m;
+     617: iconst_2
+     618: new           #14                 // class lx/game/m
+     621: dup
+     622: aload_1
+     623: iconst_2
+     624: aaload
+     625: iconst_1
+     626: invokespecial #71                 // Method lx/game/m."<init>":(Ljava/lang/String;I)V
+     629: aastore
+     630: iinc          0, 1
+     633: goto          20
+     636: return
+     637: iconst_2
+     638: anewarray     #3                  // class java/lang/String
+     641: dup
+     642: iconst_0
+     643: new           #4                  // class java/lang/StringBuffer
+     646: dup
+     647: invokespecial #54                 // Method java/lang/StringBuffer."<init>":()V
+     650: iload_0
+     651: invokevirtual #55                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+     654: invokevirtual #57                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+     657: aastore
+     658: dup
+     659: iconst_1
+     660: aload_1
+     661: aastore
+     662: astore_0
+     663: getstatic     #49                 // Field a:Ljava/util/Vector;
+     666: aload_0
+     667: invokevirtual #59                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+     670: return
+
+  static {};
+    Code:
+       0: new           #5                  // class java/util/Vector
+       3: dup
+       4: invokespecial #58                 // Method java/util/Vector."<init>":()V
+       7: putstatic     #49                 // Field a:Ljava/util/Vector;
+      10: return
+}

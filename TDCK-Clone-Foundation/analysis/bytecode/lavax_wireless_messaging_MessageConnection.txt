@@ -1,0 +1,14 @@
+Compiled from "MessageConnection.java"
+public class lavax.wireless.messaging.MessageConnection {
+  public static void send(javax.wireless.messaging.Message) throws java.lang.Exception;
+    Code:
+       0: ldc2_w        #12                 // long 800l
+       3: invokestatic  #19                 // Method java/lang/Thread.sleep:(J)V
+       6: return
+
+  public lavax.wireless.messaging.MessageConnection();
+    Code:
+       0: aload_0
+       1: invokespecial #24                 // Method java/lang/Object."<init>":()V
+       4: return
+}

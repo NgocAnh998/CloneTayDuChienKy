@@ -1,0 +1,108 @@
+public final class lx.game.u {
+  static lx.game.b a;
+
+  java.lang.String b;
+
+  int c;
+
+  int d;
+
+  int e;
+
+  int f;
+
+  int g;
+
+  int h;
+
+  int i;
+
+  int j;
+
+  int k;
+
+  int l;
+
+  int m;
+
+  int n;
+
+  public lx.game.u(int);
+    Code:
+       0: aload_0
+       1: invokespecial #18                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iload_1
+       6: putfield      #6                  // Field c:I
+       9: aload_0
+      10: getstatic     #4                  // Field a:Llx/game/b;
+      13: iload_1
+      14: iconst_1
+      15: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      18: putfield      #7                  // Field d:I
+      21: aload_0
+      22: getstatic     #4                  // Field a:Llx/game/b;
+      25: iload_1
+      26: iconst_2
+      27: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      30: putfield      #8                  // Field e:I
+      33: aload_0
+      34: getstatic     #4                  // Field a:Llx/game/b;
+      37: iload_1
+      38: iconst_5
+      39: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      42: putfield      #9                  // Field f:I
+      45: aload_0
+      46: getstatic     #4                  // Field a:Llx/game/b;
+      49: iload_1
+      50: bipush        6
+      52: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      55: putfield      #10                 // Field g:I
+      58: aload_0
+      59: getstatic     #4                  // Field a:Llx/game/b;
+      62: iload_1
+      63: bipush        9
+      65: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      68: putfield      #11                 // Field h:I
+      71: aload_0
+      72: getstatic     #4                  // Field a:Llx/game/b;
+      75: iload_1
+      76: bipush        10
+      78: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      81: putfield      #12                 // Field i:I
+      84: aload_0
+      85: getstatic     #4                  // Field a:Llx/game/b;
+      88: iload_1
+      89: bipush        11
+      91: invokevirtual #20                 // Method lx/game/b.b:(II)I
+      94: putfield      #13                 // Field j:I
+      97: aload_0
+      98: getstatic     #4                  // Field a:Llx/game/b;
+     101: iload_1
+     102: bipush        13
+     104: invokevirtual #20                 // Method lx/game/b.b:(II)I
+     107: putfield      #14                 // Field k:I
+     110: aload_0
+     111: getstatic     #4                  // Field a:Llx/game/b;
+     114: iload_1
+     115: bipush        14
+     117: invokevirtual #20                 // Method lx/game/b.b:(II)I
+     120: putfield      #15                 // Field l:I
+     123: aload_0
+     124: getstatic     #4                  // Field a:Llx/game/b;
+     127: iload_1
+     128: bipush        16
+     130: invokevirtual #20                 // Method lx/game/b.b:(II)I
+     133: putfield      #16                 // Field m:I
+     136: aload_0
+     137: aload_0
+     138: getfield      #8                  // Field e:I
+     141: putfield      #17                 // Field n:I
+     144: aload_0
+     145: getstatic     #4                  // Field a:Llx/game/b;
+     148: iconst_0
+     149: iload_1
+     150: invokevirtual #19                 // Method lx/game/b.a:(II)Ljava/lang/String;
+     153: putfield      #5                  // Field b:Ljava/lang/String;
+     156: return
+}

@@ -1,0 +1,94 @@
+public final class lx.game.i {
+  public static int a;
+
+  public static int b;
+
+  private static java.util.Vector c;
+
+  public lx.game.i();
+    Code:
+       0: aload_0
+       1: invokespecial #16                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void a(javax.microedition.lcdui.Graphics);
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_1
+       3: getstatic     #15                 // Field c:Ljava/util/Vector;
+       6: invokevirtual #21                 // Method java/util/Vector.size:()I
+       9: if_icmpge     81
+      12: getstatic     #15                 // Field c:Ljava/util/Vector;
+      15: iload_1
+      16: invokevirtual #19                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      19: checkcast     #6                  // class lx/game/al
+      22: astore_2
+      23: aload_0
+      24: aload_2
+      25: getfield      #9                  // Field lx/game/al.a:Ljava/lang/String;
+      28: getstatic     #13                 // Field a:I
+      31: getstatic     #14                 // Field b:I
+      34: iload_1
+      35: getstatic     #12                 // Field lx/game/c.i:I
+      38: imul
+      39: iadd
+      40: aload_2
+      41: getfield      #11                 // Field lx/game/al.c:I
+      44: invokestatic  #22                 // Method lx/game/af.b:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+      47: aload_2
+      48: dup
+      49: getfield      #10                 // Field lx/game/al.b:I
+      52: iconst_1
+      53: isub
+      54: putfield      #10                 // Field lx/game/al.b:I
+      57: aload_2
+      58: getfield      #10                 // Field lx/game/al.b:I
+      61: ifgt          75
+      64: getstatic     #15                 // Field c:Ljava/util/Vector;
+      67: iload_1
+      68: dup
+      69: iconst_1
+      70: isub
+      71: istore_1
+      72: invokevirtual #20                 // Method java/util/Vector.removeElementAt:(I)V
+      75: iinc          1, 1
+      78: goto          2
+      81: return
+
+  public static void a(java.lang.String, int);
+    Code:
+       0: new           #6                  // class lx/game/al
+       3: dup
+       4: aload_0
+       5: bipush        60
+       7: iload_1
+       8: invokespecial #23                 // Method lx/game/al."<init>":(Ljava/lang/String;II)V
+      11: astore_0
+      12: getstatic     #15                 // Field c:Ljava/util/Vector;
+      15: aload_0
+      16: invokevirtual #18                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      19: getstatic     #15                 // Field c:Ljava/util/Vector;
+      22: invokevirtual #21                 // Method java/util/Vector.size:()I
+      25: iconst_4
+      26: if_icmplt     36
+      29: getstatic     #15                 // Field c:Ljava/util/Vector;
+      32: iconst_0
+      33: invokevirtual #20                 // Method java/util/Vector.removeElementAt:(I)V
+      36: return
+
+  public static void a(java.lang.String);
+    Code:
+       0: aload_0
+       1: ldc           #1                  // int 6993918
+       3: invokestatic  #24                 // Method a:(Ljava/lang/String;I)V
+       6: return
+
+  static {};
+    Code:
+       0: new           #3                  // class java/util/Vector
+       3: dup
+       4: invokespecial #17                 // Method java/util/Vector."<init>":()V
+       7: putstatic     #15                 // Field c:Ljava/util/Vector;
+      10: return
+}

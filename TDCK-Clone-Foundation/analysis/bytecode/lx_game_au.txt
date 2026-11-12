@@ -1,0 +1,244 @@
+public final class lx.game.au {
+  static boolean a;
+
+  private static java.lang.String c;
+
+  private static java.lang.String d;
+
+  private static java.lang.String e;
+
+  private static java.lang.String f;
+
+  private static int g;
+
+  private static java.lang.String h;
+
+  private static java.lang.String i;
+
+  private static java.lang.String j;
+
+  static boolean b;
+
+  private static int k;
+
+  public lx.game.au();
+    Code:
+       0: aload_0
+       1: invokespecial #35                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static java.lang.String a();
+    Code:
+       0: ldc           #1                  // String
+       2: areturn
+
+  public static java.lang.String b();
+    Code:
+       0: ldc           #6                  // String QQ trong trò chơi tâm
+       2: areturn
+
+  public static boolean c();
+    Code:
+       0: getstatic     #22                 // Field a:Z
+       3: ireturn
+
+  public static void _a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: ifnull        15
+       4: aload_0
+       5: invokevirtual #36                 // Method java/lang/String.length:()I
+       8: ifle          15
+      11: aload_0
+      12: putstatic     #24                 // Field c:Ljava/lang/String;
+      15: aload_1
+      16: ifnull        30
+      19: aload_1
+      20: invokevirtual #36                 // Method java/lang/String.length:()I
+      23: ifle          30
+      26: aload_1
+      27: putstatic     #25                 // Field d:Ljava/lang/String;
+      30: aload_2
+      31: ifnull        45
+      34: aload_2
+      35: invokevirtual #36                 // Method java/lang/String.length:()I
+      38: ifle          45
+      41: aload_2
+      42: putstatic     #26                 // Field e:Ljava/lang/String;
+      45: aload_3
+      46: ifnull        60
+      49: aload_3
+      50: invokevirtual #36                 // Method java/lang/String.length:()I
+      53: ifle          60
+      56: aload_3
+      57: putstatic     #27                 // Field f:Ljava/lang/String;
+      60: iload         4
+      62: ifle          70
+      65: iload         4
+      67: putstatic     #28                 // Field g:I
+      70: aload         5
+      72: ifnull        88
+      75: aload         5
+      77: invokevirtual #36                 // Method java/lang/String.length:()I
+      80: ifle          88
+      83: aload         5
+      85: putstatic     #29                 // Field h:Ljava/lang/String;
+      88: aload         6
+      90: ifnull        106
+      93: aload         6
+      95: invokevirtual #36                 // Method java/lang/String.length:()I
+      98: ifle          106
+     101: aload         6
+     103: putstatic     #30                 // Field i:Ljava/lang/String;
+     106: aload         7
+     108: ifnull        124
+     111: aload         7
+     113: invokevirtual #36                 // Method java/lang/String.length:()I
+     116: ifle          124
+     119: aload         7
+     121: putstatic     #31                 // Field j:Ljava/lang/String;
+     124: aload         8
+     126: ifnull        135
+     129: aload         8
+     131: invokevirtual #36                 // Method java/lang/String.length:()I
+     134: pop
+     135: aload         9
+     137: ifnull        146
+     140: aload         9
+     142: invokevirtual #36                 // Method java/lang/String.length:()I
+     145: pop
+     146: getstatic     #30                 // Field i:Ljava/lang/String;
+     149: bipush        43
+     151: invokestatic  #40                 // Method lx/game/af.a:(Ljava/lang/String;C)Ljava/lang/String;
+     154: putstatic     #30                 // Field i:Ljava/lang/String;
+     157: return
+
+  public static void a(int);
+    Code:
+       0: iload_0
+       1: getstatic     #32                 // Field k:I
+       4: if_icmpne     16
+       7: iconst_1
+       8: putstatic     #22                 // Field a:Z
+      11: iconst_0
+      12: putstatic     #23                 // Field b:Z
+      15: return
+      16: invokestatic  #39                 // Method lx/game/af.a:()V
+      19: iconst_1
+      20: putstatic     #23                 // Field b:Z
+      23: new           #9                  // class _b/e
+      26: dup
+      27: getstatic     #19                 // Field lx/game/XMidlet.a:Llx/game/XMidlet;
+      30: getstatic     #21                 // Field lx/game/XMidlet.c:Llx/game/af;
+      33: getstatic     #24                 // Field c:Ljava/lang/String;
+      36: getstatic     #25                 // Field d:Ljava/lang/String;
+      39: getstatic     #26                 // Field e:Ljava/lang/String;
+      42: getstatic     #27                 // Field f:Ljava/lang/String;
+      45: getstatic     #28                 // Field g:I
+      48: getstatic     #29                 // Field h:Ljava/lang/String;
+      51: getstatic     #30                 // Field i:Ljava/lang/String;
+      54: getstatic     #31                 // Field j:Ljava/lang/String;
+      57: invokespecial #33                 // Method _b/e."<init>":(Ljavax/microedition/midlet/MIDlet;Ljavax/microedition/lcdui/Displayable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      60: dup
+      61: astore_1
+      62: new           #17                 // class lx/game/ai
+      65: dup
+      66: invokespecial #41                 // Method lx/game/ai."<init>":()V
+      69: invokevirtual #34                 // Method _b/e.a:(Llx/game/ai;)V
+      72: getstatic     #20                 // Field lx/game/XMidlet.b:Ljavax/microedition/lcdui/Display;
+      75: aload_1
+      76: invokevirtual #38                 // Method javax/microedition/lcdui/Display.setCurrent:(Ljavax/microedition/lcdui/Displayable;)V
+      79: return
+      80: astore_1
+      81: aload_1
+      82: invokevirtual #37                 // Method java/lang/Throwable.printStackTrace:()V
+      85: return
+    Exception table:
+       from    to  target type
+          16    80    80   Class java/lang/Exception
+
+  static {};
+    Code:
+       0: ldc           #2                  // String 001
+       2: putstatic     #24                 // Field c:Ljava/lang/String;
+       5: ldc           #2                  // String 001
+       7: putstatic     #25                 // Field d:Ljava/lang/String;
+      10: ldc           #3                  // String 01
+      12: putstatic     #26                 // Field e:Ljava/lang/String;
+      15: ldc           #5                  // String 101
+      17: putstatic     #27                 // Field f:Ljava/lang/String;
+      20: iconst_2
+      21: putstatic     #28                 // Field g:I
+      24: ldc           #7                  // String [đạo cụ]
+      26: putstatic     #29                 // Field h:Ljava/lang/String;
+      29: ldc           #8                  // String cp
+      31: putstatic     #30                 // Field i:Ljava/lang/String;
+      34: ldc           #4                  // String 010-12345678
+      36: putstatic     #31                 // Field j:Ljava/lang/String;
+      39: iconst_m1
+      40: putstatic     #32                 // Field k:I
+      43: return
+
+  public static void a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: getstatic     #19                 // Field lx/game/XMidlet.a:Llx/game/XMidlet;
+       3: invokestatic  #122                // Method _b/bq.mread:(Ljavax/microedition/midlet/MIDlet;)V
+       6: aload         6
+       8: invokevirtual #36                 // Method java/lang/String.length:()I
+      11: istore        10
+      13: iconst_1
+      14: istore        11
+      16: iconst_0
+      17: istore        12
+      19: goto          54
+      22: aload         6
+      24: iload         12
+      26: invokevirtual #126                // Method java/lang/String.charAt:(I)C
+      29: istore        13
+      31: iload         13
+      33: bipush        48
+      35: if_icmplt     45
+      38: iload         13
+      40: bipush        57
+      42: if_icmple     51
+      45: iconst_0
+      46: istore        11
+      48: goto          61
+      51: iinc          12, 1
+      54: iload         12
+      56: iload         10
+      58: if_icmplt     22
+      61: iload         11
+      63: ifeq          104
+      66: aload         6
+      68: invokestatic  #132                // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+      71: istore        12
+      73: iload         12
+      75: invokestatic  #134                // Method _b/bq.a:(I)V
+      78: aload_0
+      79: aload_1
+      80: aload_2
+      81: aload_3
+      82: iload         4
+      84: aload         5
+      86: getstatic     #138                // Field _b/bq.v:[Ljava/lang/String;
+      89: iload         12
+      91: aaload
+      92: aload         7
+      94: aload         8
+      96: aload         9
+      98: invokestatic  #140                // Method _a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     101: goto          123
+     104: aload_0
+     105: aload_1
+     106: aload_2
+     107: aload_3
+     108: iload         4
+     110: aload         5
+     112: aload         6
+     114: aload         7
+     116: aload         8
+     118: aload         9
+     120: invokestatic  #140                // Method _a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     123: return
+}

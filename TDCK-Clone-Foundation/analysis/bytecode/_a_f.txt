@@ -1,0 +1,45 @@
+public final class _a.f {
+  public _a.h a;
+
+  public _a.j a;
+
+  public _a.s[] a;
+
+  public _a.f(_a.h, _a.j);
+    Code:
+       0: aload_0
+       1: invokespecial #11                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #6                  // Field a:L_a/h;
+       9: aload_0
+      10: aload_2
+      11: putfield      #7                  // Field a:L_a/j;
+      14: aload_0
+      15: aload_1
+      16: getfield      #9                  // Field _a/h.b:I
+      19: anewarray     #4                  // class _a/s
+      22: putfield      #8                  // Field a:[L_a/s;
+      25: return
+
+  public final java.lang.String toString();
+    Code:
+       0: ldc           #1                  // String
+       2: areturn
+
+  private void a();
+    Code:
+       0: aload_0
+       1: aconst_null
+       2: putfield      #8                  // Field a:[L_a/s;
+       5: aload_0
+       6: getfield      #6                  // Field a:L_a/h;
+       9: invokevirtual #10                 // Method _a/h.a:()V
+      12: aload_0
+      13: aconst_null
+      14: putfield      #6                  // Field a:L_a/h;
+      17: aload_0
+      18: aconst_null
+      19: putfield      #7                  // Field a:L_a/j;
+      22: return
+}

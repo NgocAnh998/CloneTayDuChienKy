@@ -1,0 +1,529 @@
+public class lx.game.ar {
+  java.lang.String[] bG;
+
+  lx.game.r[] bH;
+
+  lx.game.ak[] bI;
+
+  lx.game.f[] bJ;
+
+  lx.game.at[] bK;
+
+  public lx.game.ar();
+    Code:
+       0: aload_0
+       1: invokespecial #43                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public lx.game.ar(byte[], java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #43                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: invokespecial #50                 // Method a:([B)V
+       9: return
+
+  private void a(byte[]);
+    Code:
+       0: new           #4                  // class java/io/ByteArrayInputStream
+       3: dup
+       4: aload_1
+       5: invokespecial #36                 // Method java/io/ByteArrayInputStream."<init>":([B)V
+       8: astore_2
+       9: new           #5                  // class java/io/DataInputStream
+      12: dup
+      13: aload_2
+      14: invokespecial #37                 // Method java/io/DataInputStream."<init>":(Ljava/io/InputStream;)V
+      17: astore_2
+      18: iconst_4
+      19: newarray       byte
+      21: dup
+      22: iconst_0
+      23: aload_1
+      24: iconst_0
+      25: baload
+      26: bastore
+      27: dup
+      28: iconst_1
+      29: aload_1
+      30: iconst_1
+      31: baload
+      32: bastore
+      33: dup
+      34: iconst_2
+      35: aload_1
+      36: iconst_2
+      37: baload
+      38: bastore
+      39: dup
+      40: iconst_3
+      41: aload_1
+      42: iconst_3
+      43: baload
+      44: bastore
+      45: astore_1
+      46: new           #8                  // class java/lang/String
+      49: dup
+      50: aload_1
+      51: invokespecial #44                 // Method java/lang/String."<init>":([B)V
+      54: astore_3
+      55: iconst_0
+      56: istore        4
+      58: aload_3
+      59: ldc           #2                  // String LXA2
+      61: invokevirtual #45                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      64: ifeq          117
+      67: iconst_1
+      68: istore        4
+      70: aload_2
+      71: aload_1
+      72: invokevirtual #39                 // Method java/io/DataInputStream.read:([B)I
+      75: pop
+      76: aload_2
+      77: invokevirtual #42                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+      80: pop
+      81: aload_2
+      82: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+      85: istore_3
+      86: aload_0
+      87: iload_3
+      88: anewarray     #8                  // class java/lang/String
+      91: putfield      #20                 // Field bG:[Ljava/lang/String;
+      94: iconst_0
+      95: istore_1
+      96: iload_1
+      97: iload_3
+      98: if_icmpge     117
+     101: aload_0
+     102: getfield      #20                 // Field bG:[Ljava/lang/String;
+     105: iload_1
+     106: aload_2
+     107: invokevirtual #42                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     110: aastore
+     111: iinc          1, 1
+     114: goto          96
+     117: aload_2
+     118: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     121: istore_1
+     122: aload_0
+     123: iload_1
+     124: anewarray     #15                 // class lx/game/r
+     127: putfield      #21                 // Field bH:[Llx/game/r;
+     130: iconst_0
+     131: istore_3
+     132: iload_3
+     133: iload_1
+     134: if_icmpge     227
+     137: aload_0
+     138: getfield      #21                 // Field bH:[Llx/game/r;
+     141: iload_3
+     142: new           #15                 // class lx/game/r
+     145: dup
+     146: invokespecial #53                 // Method lx/game/r."<init>":()V
+     149: aastore
+     150: aload_0
+     151: getfield      #21                 // Field bH:[Llx/game/r;
+     154: iload_3
+     155: aaload
+     156: aload_2
+     157: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     160: putfield      #31                 // Field lx/game/r.a:S
+     163: aload_0
+     164: getfield      #21                 // Field bH:[Llx/game/r;
+     167: iload_3
+     168: aaload
+     169: aload_2
+     170: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     173: putfield      #32                 // Field lx/game/r.b:S
+     176: aload_0
+     177: getfield      #21                 // Field bH:[Llx/game/r;
+     180: iload_3
+     181: aaload
+     182: aload_2
+     183: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     186: putfield      #33                 // Field lx/game/r.c:S
+     189: aload_0
+     190: getfield      #21                 // Field bH:[Llx/game/r;
+     193: iload_3
+     194: aaload
+     195: aload_2
+     196: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     199: putfield      #34                 // Field lx/game/r.d:S
+     202: iload         4
+     204: ifeq          221
+     207: aload_0
+     208: getfield      #21                 // Field bH:[Llx/game/r;
+     211: iload_3
+     212: aaload
+     213: aload_2
+     214: invokevirtual #40                 // Method java/io/DataInputStream.readByte:()B
+     217: i2s
+     218: putfield      #35                 // Field lx/game/r.e:S
+     221: iinc          3, 1
+     224: goto          132
+     227: aload_2
+     228: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     231: istore_3
+     232: aload_0
+     233: iload_3
+     234: anewarray     #11                 // class lx/game/ak
+     237: putfield      #22                 // Field bI:[Llx/game/ak;
+     240: iconst_0
+     241: istore_1
+     242: iload_1
+     243: iload_3
+     244: if_icmpge     517
+     247: aload_2
+     248: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     251: istore        5
+     253: aload_0
+     254: getfield      #22                 // Field bI:[Llx/game/ak;
+     257: iload_1
+     258: new           #11                 // class lx/game/ak
+     261: dup
+     262: invokespecial #49                 // Method lx/game/ak."<init>":()V
+     265: aastore
+     266: aload_0
+     267: getfield      #22                 // Field bI:[Llx/game/ak;
+     270: iload_1
+     271: aaload
+     272: getfield      #16                 // Field lx/game/ak.a:Llx/game/r;
+     275: aload_2
+     276: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     279: putfield      #31                 // Field lx/game/r.a:S
+     282: aload_0
+     283: getfield      #22                 // Field bI:[Llx/game/ak;
+     286: iload_1
+     287: aaload
+     288: getfield      #16                 // Field lx/game/ak.a:Llx/game/r;
+     291: aload_2
+     292: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     295: putfield      #32                 // Field lx/game/r.b:S
+     298: aload_0
+     299: getfield      #22                 // Field bI:[Llx/game/ak;
+     302: iload_1
+     303: aaload
+     304: getfield      #16                 // Field lx/game/ak.a:Llx/game/r;
+     307: aload_2
+     308: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     311: putfield      #33                 // Field lx/game/r.c:S
+     314: aload_0
+     315: getfield      #22                 // Field bI:[Llx/game/ak;
+     318: iload_1
+     319: aaload
+     320: getfield      #16                 // Field lx/game/ak.a:Llx/game/r;
+     323: aload_2
+     324: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     327: putfield      #34                 // Field lx/game/r.d:S
+     330: aload_0
+     331: getfield      #22                 // Field bI:[Llx/game/ak;
+     334: iload_1
+     335: aaload
+     336: getfield      #17                 // Field lx/game/ak.b:Llx/game/r;
+     339: aload_2
+     340: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     343: putfield      #31                 // Field lx/game/r.a:S
+     346: aload_0
+     347: getfield      #22                 // Field bI:[Llx/game/ak;
+     350: iload_1
+     351: aaload
+     352: getfield      #17                 // Field lx/game/ak.b:Llx/game/r;
+     355: aload_2
+     356: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     359: putfield      #32                 // Field lx/game/r.b:S
+     362: aload_0
+     363: getfield      #22                 // Field bI:[Llx/game/ak;
+     366: iload_1
+     367: aaload
+     368: getfield      #17                 // Field lx/game/ak.b:Llx/game/r;
+     371: aload_2
+     372: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     375: putfield      #33                 // Field lx/game/r.c:S
+     378: aload_0
+     379: getfield      #22                 // Field bI:[Llx/game/ak;
+     382: iload_1
+     383: aaload
+     384: getfield      #17                 // Field lx/game/ak.b:Llx/game/r;
+     387: aload_2
+     388: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     391: putfield      #34                 // Field lx/game/r.d:S
+     394: aload_0
+     395: getfield      #22                 // Field bI:[Llx/game/ak;
+     398: iload_1
+     399: aaload
+     400: iload         5
+     402: anewarray     #3                  // class "[S"
+     405: putfield      #18                 // Field lx/game/ak.c:[[S
+     408: iconst_0
+     409: istore        6
+     411: iload         6
+     413: iload         5
+     415: if_icmpge     511
+     418: aload_0
+     419: getfield      #22                 // Field bI:[Llx/game/ak;
+     422: iload_1
+     423: aaload
+     424: getfield      #18                 // Field lx/game/ak.c:[[S
+     427: iload         6
+     429: iconst_4
+     430: newarray       short
+     432: aastore
+     433: aload_0
+     434: getfield      #22                 // Field bI:[Llx/game/ak;
+     437: iload_1
+     438: aaload
+     439: getfield      #18                 // Field lx/game/ak.c:[[S
+     442: iload         6
+     444: aaload
+     445: iconst_0
+     446: aload_2
+     447: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     450: sastore
+     451: aload_0
+     452: getfield      #22                 // Field bI:[Llx/game/ak;
+     455: iload_1
+     456: aaload
+     457: getfield      #18                 // Field lx/game/ak.c:[[S
+     460: iload         6
+     462: aaload
+     463: iconst_1
+     464: aload_2
+     465: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     468: sastore
+     469: aload_0
+     470: getfield      #22                 // Field bI:[Llx/game/ak;
+     473: iload_1
+     474: aaload
+     475: getfield      #18                 // Field lx/game/ak.c:[[S
+     478: iload         6
+     480: aaload
+     481: iconst_2
+     482: aload_2
+     483: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     486: sastore
+     487: aload_0
+     488: getfield      #22                 // Field bI:[Llx/game/ak;
+     491: iload_1
+     492: aaload
+     493: getfield      #18                 // Field lx/game/ak.c:[[S
+     496: iload         6
+     498: aaload
+     499: iconst_3
+     500: aload_2
+     501: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     504: sastore
+     505: iinc          6, 1
+     508: goto          411
+     511: iinc          1, 1
+     514: goto          242
+     517: aload_2
+     518: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     521: istore_1
+     522: aload_0
+     523: iload_1
+     524: anewarray     #14                 // class lx/game/f
+     527: putfield      #23                 // Field bJ:[Llx/game/f;
+     530: iconst_0
+     531: istore        5
+     533: iload         5
+     535: iload_1
+     536: if_icmpge     617
+     539: aload_0
+     540: getfield      #23                 // Field bJ:[Llx/game/f;
+     543: iload         5
+     545: new           #14                 // class lx/game/f
+     548: dup
+     549: invokespecial #52                 // Method lx/game/f."<init>":()V
+     552: aastore
+     553: aload_0
+     554: getfield      #23                 // Field bJ:[Llx/game/f;
+     557: iload         5
+     559: aaload
+     560: aload_2
+     561: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     564: newarray       int
+     566: putfield      #30                 // Field lx/game/f.a:[I
+     569: iconst_0
+     570: istore        6
+     572: iload         6
+     574: aload_0
+     575: getfield      #23                 // Field bJ:[Llx/game/f;
+     578: iload         5
+     580: aaload
+     581: getfield      #30                 // Field lx/game/f.a:[I
+     584: arraylength
+     585: if_icmpge     611
+     588: aload_0
+     589: getfield      #23                 // Field bJ:[Llx/game/f;
+     592: iload         5
+     594: aaload
+     595: getfield      #30                 // Field lx/game/f.a:[I
+     598: iload         6
+     600: aload_2
+     601: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     604: iastore
+     605: iinc          6, 1
+     608: goto          572
+     611: iinc          5, 1
+     614: goto          533
+     617: iload         4
+     619: ifeq          904
+     622: iconst_0
+     623: istore        5
+     625: iload         5
+     627: aload_0
+     628: getfield      #22                 // Field bI:[Llx/game/ak;
+     631: arraylength
+     632: if_icmpge     904
+     635: aload_2
+     636: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     639: dup
+     640: istore        6
+     642: ifle          662
+     645: aload_0
+     646: getfield      #22                 // Field bI:[Llx/game/ak;
+     649: iload         5
+     651: aaload
+     652: new           #10                 // class java/util/Vector
+     655: dup
+     656: invokespecial #47                 // Method java/util/Vector."<init>":()V
+     659: putfield      #19                 // Field lx/game/ak.d:Ljava/util/Vector;
+     662: iconst_0
+     663: istore_1
+     664: iload_1
+     665: iload         6
+     667: if_icmpge     898
+     670: new           #13                 // class lx/game/at
+     673: dup
+     674: invokespecial #51                 // Method lx/game/at."<init>":()V
+     677: dup
+     678: astore_3
+     679: aload_2
+     680: invokevirtual #42                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     683: putfield      #24                 // Field lx/game/at.c:Ljava/lang/String;
+     686: aload_3
+     687: aload_2
+     688: invokevirtual #42                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     691: putfield      #25                 // Field lx/game/at.d:Ljava/lang/String;
+     694: aload_3
+     695: aload_2
+     696: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     699: putfield      #26                 // Field lx/game/at.e:I
+     702: aload_3
+     703: new           #15                 // class lx/game/r
+     706: dup
+     707: invokespecial #53                 // Method lx/game/r."<init>":()V
+     710: putfield      #28                 // Field lx/game/at.g:Llx/game/r;
+     713: aload_3
+     714: getfield      #28                 // Field lx/game/at.g:Llx/game/r;
+     717: aload_2
+     718: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     721: putfield      #31                 // Field lx/game/r.a:S
+     724: aload_3
+     725: getfield      #28                 // Field lx/game/at.g:Llx/game/r;
+     728: aload_2
+     729: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     732: putfield      #32                 // Field lx/game/r.b:S
+     735: aload_3
+     736: getfield      #28                 // Field lx/game/at.g:Llx/game/r;
+     739: aload_2
+     740: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     743: putfield      #33                 // Field lx/game/r.c:S
+     746: aload_3
+     747: getfield      #28                 // Field lx/game/at.g:Llx/game/r;
+     750: aload_2
+     751: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     754: putfield      #34                 // Field lx/game/r.d:S
+     757: aload_3
+     758: getfield      #29                 // Field lx/game/at.h:[I
+     761: iconst_0
+     762: aload_2
+     763: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     766: iastore
+     767: aload_3
+     768: getfield      #29                 // Field lx/game/at.h:[I
+     771: iconst_1
+     772: aload_2
+     773: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     776: iastore
+     777: aload_3
+     778: getfield      #29                 // Field lx/game/at.h:[I
+     781: iconst_2
+     782: aload_2
+     783: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     786: iastore
+     787: aload_3
+     788: getfield      #29                 // Field lx/game/at.h:[I
+     791: iconst_3
+     792: aload_2
+     793: invokevirtual #41                 // Method java/io/DataInputStream.readShort:()S
+     796: iastore
+     797: aload_3
+     798: getfield      #29                 // Field lx/game/at.h:[I
+     801: iconst_0
+     802: iaload
+     803: ifne          861
+     806: aload_3
+     807: getfield      #29                 // Field lx/game/at.h:[I
+     810: iconst_1
+     811: iaload
+     812: ifne          861
+     815: aload_3
+     816: getfield      #29                 // Field lx/game/at.h:[I
+     819: iconst_2
+     820: iaload
+     821: ifne          861
+     824: aload_3
+     825: getfield      #29                 // Field lx/game/at.h:[I
+     828: iconst_3
+     829: iaload
+     830: ifne          861
+     833: aload_3
+     834: getfield      #29                 // Field lx/game/at.h:[I
+     837: iconst_0
+     838: iconst_m1
+     839: iastore
+     840: aload_3
+     841: getfield      #29                 // Field lx/game/at.h:[I
+     844: iconst_1
+     845: iconst_m1
+     846: iastore
+     847: aload_3
+     848: getfield      #29                 // Field lx/game/at.h:[I
+     851: iconst_2
+     852: iconst_m1
+     853: iastore
+     854: aload_3
+     855: getfield      #29                 // Field lx/game/at.h:[I
+     858: iconst_3
+     859: iconst_m1
+     860: iastore
+     861: aload_3
+     862: getfield      #24                 // Field lx/game/at.c:Ljava/lang/String;
+     865: ldc           #1                  // String -1
+     867: invokevirtual #45                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     870: ifeq          878
+     873: aload_3
+     874: iconst_m1
+     875: putfield      #27                 // Field lx/game/at.f:I
+     878: aload_0
+     879: getfield      #22                 // Field bI:[Llx/game/ak;
+     882: iload         5
+     884: aaload
+     885: getfield      #19                 // Field lx/game/ak.d:Ljava/util/Vector;
+     888: aload_3
+     889: invokevirtual #48                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+     892: iinc          1, 1
+     895: goto          664
+     898: iinc          5, 1
+     901: goto          625
+     904: aload_2
+     905: invokevirtual #38                 // Method java/io/DataInputStream.close:()V
+     908: return
+     909: invokevirtual #46                 // Method java/lang/Throwable.printStackTrace:()V
+     912: return
+    Exception table:
+       from    to  target type
+           0   908   909   Class java/lang/Exception
+}

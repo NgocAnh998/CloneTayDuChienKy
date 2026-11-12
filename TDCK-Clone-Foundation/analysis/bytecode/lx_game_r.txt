@@ -1,0 +1,49 @@
+public final class lx.game.r {
+  short a;
+
+  short b;
+
+  short c;
+
+  short d;
+
+  short e;
+
+  public lx.game.r();
+    Code:
+       0: aload_0
+       1: invokespecial #7                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public lx.game.r(int, int, int, int);
+    Code:
+       0: aload_0
+       1: invokespecial #7                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iload_1
+       6: iload_2
+       7: iload_3
+       8: iload         4
+      10: invokevirtual #8                  // Method a:(IIII)V
+      13: return
+
+  public final void a(int, int, int, int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: i2s
+       3: putfield      #3                  // Field a:S
+       6: aload_0
+       7: iload_2
+       8: i2s
+       9: putfield      #4                  // Field b:S
+      12: aload_0
+      13: iload_3
+      14: i2s
+      15: putfield      #5                  // Field c:S
+      18: aload_0
+      19: iload         4
+      21: i2s
+      22: putfield      #6                  // Field d:S
+      25: return
+}

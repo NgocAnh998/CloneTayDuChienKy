@@ -1,0 +1,800 @@
+public final class lx.game.aq {
+  static java.util.Vector a;
+
+  private boolean g;
+
+  private int h;
+
+  private int i;
+
+  private int j;
+
+  private int k;
+
+  private int l;
+
+  private int m;
+
+  private int n;
+
+  byte b;
+
+  private java.lang.String[] o;
+
+  private int[][] p;
+
+  private java.lang.String q;
+
+  private boolean r;
+
+  private int s;
+
+  private lx.game.ap t;
+
+  java.lang.String c;
+
+  int d;
+
+  private int u;
+
+  java.lang.String e;
+
+  java.lang.String f;
+
+  public lx.game.aq(java.lang.String, java.lang.String, int);
+    Code:
+       0: aload_0
+       1: invokespecial #48                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_1
+       6: putfield      #27                 // Field g:Z
+       9: aload_0
+      10: iconst_4
+      11: putfield      #39                 // Field s:I
+      14: aload_0
+      15: ldc           #3                  // String Xác nhận
+      17: putfield      #25                 // Field e:Ljava/lang/String;
+      20: aload_0
+      21: ldc           #4                  // String Trở về
+      23: putfield      #26                 // Field f:Ljava/lang/String;
+      26: sipush        160
+      29: bipush        120
+      31: invokestatic  #65                 // Method lx/game/af.e:(II)I
+      34: istore_3
+      35: getstatic     #45                 // Field lx/game/c.k:I
+      38: sipush        160
+      41: isub
+      42: iconst_2
+      43: idiv
+      44: istore        4
+      46: getstatic     #46                 // Field lx/game/c.l:I
+      49: iload_3
+      50: isub
+      51: iconst_2
+      52: idiv
+      53: istore        5
+      55: aload_0
+      56: aload_1
+      57: aload_2
+      58: iload         4
+      60: iload         5
+      62: sipush        160
+      65: iload_3
+      66: iconst_0
+      67: invokespecial #69                 // Method a:(Ljava/lang/String;Ljava/lang/String;IIIII)V
+      70: return
+
+  public lx.game.aq(java.lang.String, java.lang.String, int, int, int, int, int);
+    Code:
+       0: aload_0
+       1: invokespecial #48                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_1
+       6: putfield      #27                 // Field g:Z
+       9: aload_0
+      10: iconst_4
+      11: putfield      #39                 // Field s:I
+      14: aload_0
+      15: ldc           #3                  // String Xác nhận
+      17: putfield      #25                 // Field e:Ljava/lang/String;
+      20: aload_0
+      21: ldc           #4                  // String Trở về
+      23: putfield      #26                 // Field f:Ljava/lang/String;
+      26: aload_0
+      27: aload_1
+      28: aload_2
+      29: iload_3
+      30: iload         4
+      32: iload         5
+      34: iload         6
+      36: iload         7
+      38: invokespecial #69                 // Method a:(Ljava/lang/String;Ljava/lang/String;IIIII)V
+      41: return
+
+  private void a(java.lang.String, java.lang.String, int, int, int, int, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #37                 // Field q:Ljava/lang/String;
+       5: aload_0
+       6: iload         5
+       8: putfield      #33                 // Field m:I
+      11: aload_0
+      12: iload         6
+      14: putfield      #34                 // Field n:I
+      17: iload         7
+      19: iconst_1
+      20: if_icmpne     28
+      23: aload_0
+      24: iconst_1
+      25: putfield      #38                 // Field r:Z
+      28: new           #9                  // class lx/game/ab
+      31: dup
+      32: aload_2
+      33: iload         5
+      35: getstatic     #42                 // Field lx/game/c.h:I
+      38: iconst_1
+      39: ishl
+      40: isub
+      41: invokespecial #59                 // Method lx/game/ab."<init>":(Ljava/lang/String;I)V
+      44: astore_1
+      45: aload_0
+      46: aload_1
+      47: getfield      #14                 // Field lx/game/ab.a:[Ljava/lang/String;
+      50: putfield      #35                 // Field o:[Ljava/lang/String;
+      53: aload_0
+      54: aload_1
+      55: getfield      #15                 // Field lx/game/ab.b:[[I
+      58: putfield      #36                 // Field p:[[I
+      61: aload_0
+      62: iload_3
+      63: putfield      #29                 // Field i:I
+      66: aload_0
+      67: iload         4
+      69: putfield      #30                 // Field j:I
+      72: aload_0
+      73: iload         5
+      75: putfield      #31                 // Field k:I
+      78: aload_0
+      79: iload         6
+      81: putfield      #32                 // Field l:I
+      84: aload_0
+      85: getfield      #29                 // Field i:I
+      88: iconst_m1
+      89: if_icmpne     106
+      92: aload_0
+      93: getstatic     #45                 // Field lx/game/c.k:I
+      96: aload_0
+      97: getfield      #31                 // Field k:I
+     100: isub
+     101: iconst_2
+     102: idiv
+     103: putfield      #29                 // Field i:I
+     106: aload_0
+     107: getfield      #30                 // Field j:I
+     110: iconst_m1
+     111: if_icmpne     128
+     114: aload_0
+     115: getstatic     #46                 // Field lx/game/c.l:I
+     118: aload_0
+     119: getfield      #32                 // Field l:I
+     122: isub
+     123: iconst_2
+     124: idiv
+     125: putfield      #30                 // Field j:I
+     128: return
+
+  public static void a(lx.game.aq);
+    Code:
+       0: getstatic     #22                 // Field a:Ljava/util/Vector;
+       3: aload_0
+       4: invokevirtual #52                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+       7: return
+
+  public static void a(int);
+    Code:
+       0: getstatic     #22                 // Field a:Ljava/util/Vector;
+       3: invokevirtual #55                 // Method java/util/Vector.size:()I
+       6: ifle          139
+       9: getstatic     #22                 // Field a:Ljava/util/Vector;
+      12: getstatic     #22                 // Field a:Ljava/util/Vector;
+      15: invokevirtual #55                 // Method java/util/Vector.size:()I
+      18: iconst_1
+      19: isub
+      20: invokevirtual #53                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      23: checkcast     #12                 // class lx/game/aq
+      26: dup
+      27: astore_1
+      28: getfield      #23                 // Field c:Ljava/lang/String;
+      31: ifnonnull     45
+      34: aload_1
+      35: iload_0
+      36: invokevirtual #70                 // Method b:(I)Z
+      39: ifne          139
+      42: goto          125
+      45: aload_1
+      46: iload_0
+      47: invokevirtual #70                 // Method b:(I)Z
+      50: pop
+      51: iload_0
+      52: lookupswitch  { // 2
+                     6: 80
+                     7: 125
+               default: 139
+          }
+      80: aload_1
+      81: getfield      #23                 // Field c:Ljava/lang/String;
+      84: invokevirtual #50                 // Method java/lang/String.length:()I
+      87: ifle          139
+      90: getstatic     #16                 // Field lx/game/af.s:Ljava/util/Vector;
+      93: invokevirtual #55                 // Method java/util/Vector.size:()I
+      96: ifne          139
+      99: aload_1
+     100: aload_1
+     101: getfield      #41                 // Field u:I
+     104: invokespecial #72                 // Method c:(I)Z
+     107: ifne          117
+     110: aload_1
+     111: getfield      #24                 // Field d:I
+     114: ifne          139
+     117: aload_1
+     118: getfield      #23                 // Field c:Ljava/lang/String;
+     121: invokestatic  #66                 // Method lx/game/af.f:(Ljava/lang/String;)V
+     124: return
+     125: getstatic     #22                 // Field a:Ljava/util/Vector;
+     128: getstatic     #22                 // Field a:Ljava/util/Vector;
+     131: invokevirtual #55                 // Method java/util/Vector.size:()I
+     134: iconst_1
+     135: isub
+     136: invokevirtual #54                 // Method java/util/Vector.removeElementAt:(I)V
+     139: return
+
+  public static void a(javax.microedition.lcdui.Graphics);
+    Code:
+       0: getstatic     #22                 // Field a:Ljava/util/Vector;
+       3: invokevirtual #55                 // Method java/util/Vector.size:()I
+       6: ifle          30
+       9: getstatic     #22                 // Field a:Ljava/util/Vector;
+      12: getstatic     #22                 // Field a:Ljava/util/Vector;
+      15: invokevirtual #55                 // Method java/util/Vector.size:()I
+      18: iconst_1
+      19: isub
+      20: invokevirtual #53                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      23: checkcast     #12                 // class lx/game/aq
+      26: aload_0
+      27: invokevirtual #71                 // Method b:(Ljavax/microedition/lcdui/Graphics;)V
+      30: return
+
+  public final void b(javax.microedition.lcdui.Graphics);
+    Code:
+       0: aload_0
+       1: getfield      #38                 // Field r:Z
+       4: ifeq          105
+       7: aload_0
+       8: aload_0
+       9: getfield      #33                 // Field m:I
+      12: aload_0
+      13: getfield      #39                 // Field s:I
+      16: idiv
+      17: putfield      #31                 // Field k:I
+      20: aload_0
+      21: aload_0
+      22: getfield      #34                 // Field n:I
+      25: aload_0
+      26: getfield      #39                 // Field s:I
+      29: idiv
+      30: putfield      #32                 // Field l:I
+      33: aload_0
+      34: dup
+      35: getfield      #39                 // Field s:I
+      38: iconst_1
+      39: isub
+      40: putfield      #39                 // Field s:I
+      43: aload_0
+      44: getfield      #39                 // Field s:I
+      47: iconst_1
+      48: if_icmpgt     77
+      51: aload_0
+      52: iconst_1
+      53: putfield      #39                 // Field s:I
+      56: aload_0
+      57: aload_0
+      58: getfield      #33                 // Field m:I
+      61: putfield      #31                 // Field k:I
+      64: aload_0
+      65: aload_0
+      66: getfield      #34                 // Field n:I
+      69: putfield      #32                 // Field l:I
+      72: aload_0
+      73: iconst_0
+      74: putfield      #38                 // Field r:Z
+      77: aload_0
+      78: getstatic     #45                 // Field lx/game/c.k:I
+      81: aload_0
+      82: getfield      #31                 // Field k:I
+      85: isub
+      86: iconst_2
+      87: idiv
+      88: putfield      #29                 // Field i:I
+      91: aload_0
+      92: getstatic     #46                 // Field lx/game/c.l:I
+      95: aload_0
+      96: getfield      #32                 // Field l:I
+      99: isub
+     100: iconst_2
+     101: idiv
+     102: putfield      #30                 // Field j:I
+     105: iconst_0
+     106: istore        4
+     108: aload_0
+     109: getfield      #37                 // Field q:Ljava/lang/String;
+     112: ifnull        138
+     115: aload_0
+     116: getfield      #29                 // Field i:I
+     119: getstatic     #42                 // Field lx/game/c.h:I
+     122: iconst_2
+     123: idiv
+     124: iadd
+     125: istore_2
+     126: aload_0
+     127: getfield      #30                 // Field j:I
+     130: getstatic     #44                 // Field lx/game/c.j:I
+     133: iadd
+     134: istore_3
+     135: goto          154
+     138: aload_0
+     139: getfield      #29                 // Field i:I
+     142: getstatic     #42                 // Field lx/game/c.h:I
+     145: iconst_2
+     146: idiv
+     147: iadd
+     148: istore_2
+     149: aload_0
+     150: getfield      #30                 // Field j:I
+     153: istore_3
+     154: aload_0
+     155: getfield      #27                 // Field g:Z
+     158: ifeq          181
+     161: aload_1
+     162: aload_0
+     163: getfield      #29                 // Field i:I
+     166: aload_0
+     167: getfield      #30                 // Field j:I
+     170: aload_0
+     171: getfield      #31                 // Field k:I
+     174: aload_0
+     175: getfield      #32                 // Field l:I
+     178: invokestatic  #64                 // Method lx/game/af.b:(Ljavax/microedition/lcdui/Graphics;IIII)V
+     181: aload_1
+     182: aload_0
+     183: getfield      #29                 // Field i:I
+     186: iconst_3
+     187: iadd
+     188: aload_0
+     189: getfield      #30                 // Field j:I
+     192: aload_0
+     193: getfield      #31                 // Field k:I
+     196: bipush        6
+     198: isub
+     199: aload_0
+     200: getfield      #32                 // Field l:I
+     203: invokevirtual #57                 // Method javax/microedition/lcdui/Graphics.setClip:(IIII)V
+     206: aload_0
+     207: getfield      #37                 // Field q:Ljava/lang/String;
+     210: ifnull        253
+     213: aload_1
+     214: ldc           #2                  // int 2730751
+     216: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     219: aload_1
+     220: aload_0
+     221: getfield      #37                 // Field q:Ljava/lang/String;
+     224: aload_0
+     225: getfield      #29                 // Field i:I
+     228: aload_0
+     229: getfield      #31                 // Field k:I
+     232: aload_0
+     233: getfield      #37                 // Field q:Ljava/lang/String;
+     236: invokestatic  #67                 // Method lx/game/af.n:(Ljava/lang/String;)I
+     239: isub
+     240: iconst_2
+     241: idiv
+     242: iadd
+     243: aload_0
+     244: getfield      #30                 // Field j:I
+     247: iconst_2
+     248: iadd
+     249: iconst_0
+     250: invokestatic  #63                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+     253: iload         4
+     255: getstatic     #44                 // Field lx/game/c.j:I
+     258: imul
+     259: aload_0
+     260: getfield      #32                 // Field l:I
+     263: getstatic     #44                 // Field lx/game/c.j:I
+     266: iconst_3
+     267: imul
+     268: isub
+     269: if_icmpge     278
+     272: iinc          4, 1
+     275: goto          253
+     278: aload_0
+     279: iload         4
+     281: putfield      #41                 // Field u:I
+     284: aload_0
+     285: getfield      #28                 // Field h:I
+     288: aload_0
+     289: getfield      #35                 // Field o:[Ljava/lang/String;
+     292: arraylength
+     293: iload         4
+     295: isub
+     296: if_icmplt     311
+     299: aload_0
+     300: aload_0
+     301: getfield      #35                 // Field o:[Ljava/lang/String;
+     304: arraylength
+     305: iload         4
+     307: isub
+     308: putfield      #28                 // Field h:I
+     311: aload_0
+     312: getfield      #28                 // Field h:I
+     315: ifgt          323
+     318: aload_0
+     319: iconst_0
+     320: putfield      #28                 // Field h:I
+     323: aload_0
+     324: getfield      #28                 // Field h:I
+     327: istore        5
+     329: iload         5
+     331: aload_0
+     332: getfield      #28                 // Field h:I
+     335: iload         4
+     337: iadd
+     338: if_icmpge     472
+     341: iload         5
+     343: aload_0
+     344: getfield      #35                 // Field o:[Ljava/lang/String;
+     347: arraylength
+     348: if_icmpge     466
+     351: aload_1
+     352: iconst_0
+     353: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     356: iload         5
+     358: aload_0
+     359: getfield      #35                 // Field o:[Ljava/lang/String;
+     362: arraylength
+     363: if_icmpge     466
+     366: iconst_0
+     367: istore        6
+     369: iconst_0
+     370: istore        7
+     372: iload         7
+     374: aload_0
+     375: getfield      #35                 // Field o:[Ljava/lang/String;
+     378: iload         5
+     380: aaload
+     381: invokevirtual #50                 // Method java/lang/String.length:()I
+     384: if_icmpge     466
+     387: aload_0
+     388: getfield      #35                 // Field o:[Ljava/lang/String;
+     391: iload         5
+     393: aaload
+     394: iload         7
+     396: invokevirtual #49                 // Method java/lang/String.charAt:(I)C
+     399: istore        8
+     401: aload_0
+     402: getfield      #36                 // Field p:[[I
+     405: ifnull        422
+     408: aload_1
+     409: aload_0
+     410: getfield      #36                 // Field p:[[I
+     413: iload         5
+     415: aaload
+     416: iload         7
+     418: iaload
+     419: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     422: aload_1
+     423: iload         8
+     425: iload_2
+     426: iload         6
+     428: iadd
+     429: iload_3
+     430: iload         5
+     432: getstatic     #44                 // Field lx/game/c.j:I
+     435: imul
+     436: iadd
+     437: aload_0
+     438: getfield      #28                 // Field h:I
+     441: getstatic     #44                 // Field lx/game/c.j:I
+     444: imul
+     445: isub
+     446: iconst_0
+     447: invokestatic  #62                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;CIII)V
+     450: iload         6
+     452: iload         8
+     454: invokestatic  #60                 // Method lx/game/af.a:(C)I
+     457: iadd
+     458: istore        6
+     460: iinc          7, 1
+     463: goto          372
+     466: iinc          5, 1
+     469: goto          329
+     472: aload_1
+     473: invokestatic  #61                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;)V
+     476: aload_1
+     477: ldc           #2                  // int 2730751
+     479: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     482: getstatic     #47                 // Field lx/game/c.m:Z
+     485: ifeq          594
+     488: aload_0
+     489: getfield      #25                 // Field e:Ljava/lang/String;
+     492: ifnull        525
+     495: aload_1
+     496: aload_0
+     497: getfield      #26                 // Field f:Ljava/lang/String;
+     500: aload_0
+     501: getfield      #29                 // Field i:I
+     504: iconst_2
+     505: iadd
+     506: aload_0
+     507: getfield      #30                 // Field j:I
+     510: aload_0
+     511: getfield      #32                 // Field l:I
+     514: iadd
+     515: getstatic     #43                 // Field lx/game/c.i:I
+     518: isub
+     519: iconst_3
+     520: isub
+     521: iconst_0
+     522: invokestatic  #63                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+     525: aload_0
+     526: getfield      #26                 // Field f:Ljava/lang/String;
+     529: ifnull        697
+     532: aload_0
+     533: iload         4
+     535: invokespecial #72                 // Method c:(I)Z
+     538: ifne          548
+     541: aload_0
+     542: getfield      #24                 // Field d:I
+     545: ifne          697
+     548: aload_1
+     549: aload_0
+     550: getfield      #25                 // Field e:Ljava/lang/String;
+     553: aload_0
+     554: getfield      #29                 // Field i:I
+     557: aload_0
+     558: getfield      #31                 // Field k:I
+     561: iadd
+     562: aload_0
+     563: getfield      #25                 // Field e:Ljava/lang/String;
+     566: invokestatic  #67                 // Method lx/game/af.n:(Ljava/lang/String;)I
+     569: isub
+     570: iconst_2
+     571: isub
+     572: aload_0
+     573: getfield      #30                 // Field j:I
+     576: aload_0
+     577: getfield      #32                 // Field l:I
+     580: iadd
+     581: getstatic     #43                 // Field lx/game/c.i:I
+     584: isub
+     585: iconst_3
+     586: isub
+     587: iconst_0
+     588: invokestatic  #63                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+     591: goto          697
+     594: aload_0
+     595: getfield      #25                 // Field e:Ljava/lang/String;
+     598: ifnull        647
+     601: aload_0
+     602: iload         4
+     604: invokespecial #72                 // Method c:(I)Z
+     607: ifne          617
+     610: aload_0
+     611: getfield      #24                 // Field d:I
+     614: ifne          647
+     617: aload_1
+     618: aload_0
+     619: getfield      #25                 // Field e:Ljava/lang/String;
+     622: aload_0
+     623: getfield      #29                 // Field i:I
+     626: iconst_2
+     627: iadd
+     628: aload_0
+     629: getfield      #30                 // Field j:I
+     632: aload_0
+     633: getfield      #32                 // Field l:I
+     636: iadd
+     637: getstatic     #43                 // Field lx/game/c.i:I
+     640: isub
+     641: iconst_3
+     642: isub
+     643: iconst_0
+     644: invokestatic  #63                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+     647: aload_0
+     648: getfield      #26                 // Field f:Ljava/lang/String;
+     651: ifnull        697
+     654: aload_1
+     655: aload_0
+     656: getfield      #26                 // Field f:Ljava/lang/String;
+     659: aload_0
+     660: getfield      #29                 // Field i:I
+     663: aload_0
+     664: getfield      #31                 // Field k:I
+     667: iadd
+     668: aload_0
+     669: getfield      #26                 // Field f:Ljava/lang/String;
+     672: invokestatic  #67                 // Method lx/game/af.n:(Ljava/lang/String;)I
+     675: isub
+     676: iconst_2
+     677: isub
+     678: aload_0
+     679: getfield      #30                 // Field j:I
+     682: aload_0
+     683: getfield      #32                 // Field l:I
+     686: iadd
+     687: getstatic     #43                 // Field lx/game/c.i:I
+     690: isub
+     691: iconst_3
+     692: isub
+     693: iconst_0
+     694: invokestatic  #63                 // Method lx/game/af.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+     697: aload_0
+     698: getfield      #38                 // Field r:Z
+     701: ifne          873
+     704: aload_0
+     705: getfield      #35                 // Field o:[Ljava/lang/String;
+     708: arraylength
+     709: iload         4
+     711: if_icmple     873
+     714: aload_0
+     715: getfield      #40                 // Field t:Llx/game/ap;
+     718: ifnonnull     764
+     721: aload_0
+     722: new           #11                 // class lx/game/ap
+     725: dup
+     726: aload_0
+     727: getfield      #29                 // Field i:I
+     730: aload_0
+     731: getfield      #31                 // Field k:I
+     734: iadd
+     735: iconst_5
+     736: isub
+     737: aload_0
+     738: getfield      #30                 // Field j:I
+     741: bipush        16
+     743: iadd
+     744: iload         4
+     746: getstatic     #44                 // Field lx/game/c.j:I
+     749: imul
+     750: aload_0
+     751: getfield      #35                 // Field o:[Ljava/lang/String;
+     754: arraylength
+     755: iload         4
+     757: isub
+     758: invokespecial #68                 // Method lx/game/ap."<init>":(IIII)V
+     761: putfield      #40                 // Field t:Llx/game/ap;
+     764: aload_0
+     765: getfield      #40                 // Field t:Llx/game/ap;
+     768: ifnull        873
+     771: aload_0
+     772: getfield      #40                 // Field t:Llx/game/ap;
+     775: aload_1
+     776: aload_0
+     777: getfield      #28                 // Field h:I
+     780: istore_2
+     781: astore_1
+     782: astore_0
+     783: aload_1
+     784: ldc           #1                  // int 544140
+     786: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     789: aload_1
+     790: aload_0
+     791: getfield      #17                 // Field lx/game/ap.a:I
+     794: aload_0
+     795: getfield      #18                 // Field lx/game/ap.b:I
+     798: aload_0
+     799: getfield      #17                 // Field lx/game/ap.a:I
+     802: aload_0
+     803: getfield      #18                 // Field lx/game/ap.b:I
+     806: aload_0
+     807: getfield      #19                 // Field lx/game/ap.c:I
+     810: iadd
+     811: invokevirtual #56                 // Method javax/microedition/lcdui/Graphics.drawLine:(IIII)V
+     814: iload_2
+     815: bipush        100
+     817: imul
+     818: aload_0
+     819: getfield      #21                 // Field lx/game/ap.e:I
+     822: idiv
+     823: istore_2
+     824: aload_0
+     825: getfield      #19                 // Field lx/game/ap.c:I
+     828: aload_0
+     829: getfield      #20                 // Field lx/game/ap.d:I
+     832: isub
+     833: iload_2
+     834: invokestatic  #65                 // Method lx/game/af.e:(II)I
+     837: istore_2
+     838: aload_1
+     839: ldc           #2                  // int 2730751
+     841: invokevirtual #58                 // Method javax/microedition/lcdui/Graphics.setColor:(I)V
+     844: aload_1
+     845: aload_0
+     846: getfield      #17                 // Field lx/game/ap.a:I
+     849: aload_0
+     850: getfield      #18                 // Field lx/game/ap.b:I
+     853: iload_2
+     854: iadd
+     855: aload_0
+     856: getfield      #17                 // Field lx/game/ap.a:I
+     859: aload_0
+     860: getfield      #18                 // Field lx/game/ap.b:I
+     863: iload_2
+     864: iadd
+     865: aload_0
+     866: getfield      #20                 // Field lx/game/ap.d:I
+     869: iadd
+     870: invokevirtual #56                 // Method javax/microedition/lcdui/Graphics.drawLine:(IIII)V
+     873: return
+
+  private boolean c(int);
+    Code:
+       0: aload_0
+       1: getfield      #24                 // Field d:I
+       4: iconst_1
+       5: if_icmpne     31
+       8: aload_0
+       9: getfield      #35                 // Field o:[Ljava/lang/String;
+      12: ifnull        31
+      15: aload_0
+      16: getfield      #28                 // Field h:I
+      19: aload_0
+      20: getfield      #35                 // Field o:[Ljava/lang/String;
+      23: arraylength
+      24: iload_1
+      25: isub
+      26: if_icmplt     31
+      29: iconst_1
+      30: ireturn
+      31: iconst_0
+      32: ireturn
+
+  public final boolean b(int);
+    Code:
+       0: iload_1
+       1: lookupswitch  { // 6
+                     1: 60
+                     2: 73
+                     6: 86
+                     7: 86
+                    50: 60
+                    56: 73
+               default: 88
+          }
+      60: aload_0
+      61: dup
+      62: getfield      #28                 // Field h:I
+      65: iconst_1
+      66: isub
+      67: putfield      #28                 // Field h:I
+      70: goto          88
+      73: aload_0
+      74: dup
+      75: getfield      #28                 // Field h:I
+      78: iconst_1
+      79: iadd
+      80: putfield      #28                 // Field h:I
+      83: goto          88
+      86: iconst_0
+      87: ireturn
+      88: iconst_1
+      89: ireturn
+
+  static {};
+    Code:
+       0: new           #7                  // class java/util/Vector
+       3: dup
+       4: invokespecial #51                 // Method java/util/Vector."<init>":()V
+       7: putstatic     #22                 // Field a:Ljava/util/Vector;
+      10: return
+}

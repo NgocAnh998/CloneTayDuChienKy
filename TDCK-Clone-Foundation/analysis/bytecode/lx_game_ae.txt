@@ -1,0 +1,490 @@
+public final class lx.game.ae extends lx.game.m {
+  int N;
+
+  int O;
+
+  private int ai;
+
+  int P;
+
+  private java.lang.String aj;
+
+  int Q;
+
+  lx.game.as R;
+
+  int S;
+
+  int T;
+
+  int U;
+
+  int V;
+
+  int W;
+
+  int X;
+
+  boolean Y;
+
+  int Z;
+
+  private int ak;
+
+  boolean aa;
+
+  boolean ab;
+
+  byte ac;
+
+  int ad;
+
+  int ae;
+
+  int af;
+
+  int ag;
+
+  int ah;
+
+  public lx.game.ae(java.lang.String, int);
+    Code:
+       0: aload_0
+       1: invokespecial #40                 // Method lx/game/m."<init>":()V
+       4: aload_0
+       5: aconst_null
+       6: putfield      #14                 // Field R:Llx/game/as;
+       9: aload_0
+      10: bipush        20
+      12: putfield      #17                 // Field V:I
+      15: aload_0
+      16: iconst_5
+      17: putfield      #18                 // Field W:I
+      20: aload_0
+      21: iconst_m1
+      22: putfield      #21                 // Field ac:B
+      25: aload_0
+      26: aload_1
+      27: putfield      #27                 // Field aj:Ljava/lang/String;
+      30: aload_0
+      31: new           #6                  // class java/lang/StringBuffer
+      34: dup
+      35: invokespecial #33                 // Method java/lang/StringBuffer."<init>":()V
+      38: aload_0
+      39: getfield      #27                 // Field aj:Ljava/lang/String;
+      42: invokevirtual #34                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      45: ldc           #2                  // String .png
+      47: invokevirtual #34                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      50: invokevirtual #35                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      53: new           #6                  // class java/lang/StringBuffer
+      56: dup
+      57: invokespecial #33                 // Method java/lang/StringBuffer."<init>":()V
+      60: aload_0
+      61: getfield      #27                 // Field aj:Ljava/lang/String;
+      64: invokevirtual #34                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      67: ldc           #1                  // String .act
+      69: invokevirtual #34                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+      72: invokevirtual #35                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+      75: iconst_0
+      76: invokevirtual #42                 // Method lx/game/m.a:(Ljava/lang/String;Ljava/lang/String;I)V
+      79: return
+
+  public final void f(int);
+    Code:
+       0: aload_0
+       1: iconst_1
+       2: putfield      #29                 // Field lx/game/m.a:B
+       5: aload_0
+       6: iconst_0
+       7: putfield      #19                 // Field aa:Z
+      10: aload_0
+      11: iconst_1
+      12: putfield      #20                 // Field ab:Z
+      15: aload_0
+      16: iconst_0
+      17: putfield      #31                 // Field lx/game/m.x:I
+      20: aload_0
+      21: iload_1
+      22: putfield      #13                 // Field Q:I
+      25: iload_1
+      26: lookupswitch  { // 1
+                    -1: 44
+               default: 68
+          }
+      44: aload_0
+      45: getfield      #26                 // Field ai:I
+      48: iconst_3
+      49: if_icmpne     60
+      52: aload_0
+      53: iconst_0
+      54: invokevirtual #41                 // Method lx/game/m.a:(I)V
+      57: goto          73
+      60: aload_0
+      61: iconst_1
+      62: invokevirtual #41                 // Method lx/game/m.a:(I)V
+      65: goto          73
+      68: aload_0
+      69: iload_1
+      70: invokevirtual #41                 // Method lx/game/m.a:(I)V
+      73: aload_0
+      74: getfield      #21                 // Field ac:B
+      77: tableswitch   { // 0 to 6
+                     0: 120
+                     1: 120
+                     2: 143
+                     3: 227
+                     4: 227
+                     5: 200
+                     6: 207
+               default: 227
+          }
+     120: aload_0
+     121: bipush        7
+     123: bipush        14
+     125: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     128: putfield      #22                 // Field ad:I
+     131: aload_0
+     132: bipush        9
+     134: bipush        15
+     136: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     139: putfield      #23                 // Field ae:I
+     142: return
+     143: aload_0
+     144: iconst_5
+     145: putfield      #22                 // Field ad:I
+     148: aload_0
+     149: iconst_5
+     150: putfield      #23                 // Field ae:I
+     153: iconst_0
+     154: bipush        100
+     156: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     159: bipush        50
+     161: if_icmple     172
+     164: aload_0
+     165: iconst_m1
+     166: putfield      #24                 // Field af:I
+     169: goto          177
+     172: aload_0
+     173: iconst_1
+     174: putfield      #24                 // Field af:I
+     177: iconst_0
+     178: bipush        100
+     180: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     183: bipush        50
+     185: if_icmple     194
+     188: aload_0
+     189: iconst_m1
+     190: putfield      #25                 // Field ag:I
+     193: return
+     194: aload_0
+     195: iconst_1
+     196: putfield      #25                 // Field ag:I
+     199: return
+     200: aload_0
+     201: bipush        -5
+     203: putfield      #23                 // Field ae:I
+     206: return
+     207: aload_0
+     208: bipush        -4
+     210: iconst_4
+     211: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     214: putfield      #15                 // Field S:I
+     217: aload_0
+     218: bipush        -4
+     220: iconst_4
+     221: invokestatic  #39                 // Method lx/game/af.h:(II)I
+     224: putfield      #16                 // Field T:I
+     227: return
+
+  public final void c();
+    Code:
+       0: aload_0
+       1: getfield      #31                 // Field lx/game/m.x:I
+       4: aload_0
+       5: getfield      #32                 // Field lx/game/m.y:I
+       8: if_icmplt     145
+      11: aload_0
+      12: getfield      #21                 // Field ac:B
+      15: tableswitch   { // 0 to 9
+                     0: 68
+                     1: 68
+                     2: 81
+                     3: 81
+                     4: 81
+                     5: 108
+                     6: 81
+                     7: 81
+                     8: 87
+                     9: 95
+               default: 108
+          }
+      68: aload_0
+      69: iconst_0
+      70: putfield      #31                 // Field lx/game/m.x:I
+      73: aload_0
+      74: getfield      #12                 // Field P:I
+      77: ifle          116
+      80: return
+      81: aload_0
+      82: iconst_0
+      83: putfield      #31                 // Field lx/game/m.x:I
+      86: return
+      87: aload_0
+      88: iconst_0
+      89: putfield      #31                 // Field lx/game/m.x:I
+      92: goto          116
+      95: aload_0
+      96: aload_0
+      97: getfield      #32                 // Field lx/game/m.y:I
+     100: iconst_3
+     101: isub
+     102: putfield      #31                 // Field lx/game/m.x:I
+     105: goto          116
+     108: aload_0
+     109: aload_0
+     110: getfield      #32                 // Field lx/game/m.y:I
+     113: putfield      #31                 // Field lx/game/m.x:I
+     116: aload_0
+     117: getfield      #28                 // Field ak:I
+     120: ifle          133
+     123: aload_0
+     124: dup
+     125: getfield      #28                 // Field ak:I
+     128: iconst_1
+     129: isub
+     130: putfield      #28                 // Field ak:I
+     133: aload_0
+     134: getfield      #28                 // Field ak:I
+     137: ifgt          145
+     140: aload_0
+     141: iconst_1
+     142: putfield      #19                 // Field aa:Z
+     145: return
+
+  public static void a(int, int, int, int);
+    Code:
+       0: aconst_null
+       1: astore_3
+       2: iload_0
+       3: tableswitch   { // 0 to 9
+                     0: 56
+                     1: 57
+                     2: 98
+                     3: 142
+                     4: 186
+                     5: 223
+                     6: 259
+                     7: 295
+                     8: 336
+                     9: 374
+               default: 409
+          }
+      56: return
+      57: new           #7                  // class lx/game/ae
+      60: dup
+      61: ldc           #3                  // String /cz
+      63: iconst_0
+      64: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+      67: dup
+      68: astore_3
+      69: iload_1
+      70: putfield      #10                 // Field N:I
+      73: aload_3
+      74: iload_2
+      75: putfield      #11                 // Field O:I
+      78: aload_3
+      79: iconst_5
+      80: putfield      #21                 // Field ac:B
+      83: aload_3
+      84: iconst_1
+      85: invokevirtual #37                 // Method f:(I)V
+      88: aload_3
+      89: iconst_1
+      90: putfield      #30                 // Field lx/game/m.b:B
+      93: aload_3
+      94: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+      97: return
+      98: new           #7                  // class lx/game/ae
+     101: dup
+     102: ldc           #3                  // String /cz
+     104: iconst_0
+     105: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     108: dup
+     109: astore_3
+     110: iload_1
+     111: putfield      #10                 // Field N:I
+     114: aload_3
+     115: iload_2
+     116: bipush        20
+     118: isub
+     119: putfield      #11                 // Field O:I
+     122: aload_3
+     123: iconst_5
+     124: putfield      #21                 // Field ac:B
+     127: aload_3
+     128: iconst_2
+     129: invokevirtual #37                 // Method f:(I)V
+     132: aload_3
+     133: iconst_1
+     134: putfield      #30                 // Field lx/game/m.b:B
+     137: aload_3
+     138: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     141: return
+     142: new           #7                  // class lx/game/ae
+     145: dup
+     146: ldc           #3                  // String /cz
+     148: iconst_0
+     149: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     152: dup
+     153: astore_3
+     154: iload_1
+     155: putfield      #10                 // Field N:I
+     158: aload_3
+     159: iload_2
+     160: bipush        50
+     162: isub
+     163: putfield      #11                 // Field O:I
+     166: aload_3
+     167: iconst_5
+     168: putfield      #21                 // Field ac:B
+     171: aload_3
+     172: iconst_0
+     173: invokevirtual #37                 // Method f:(I)V
+     176: aload_3
+     177: iconst_1
+     178: putfield      #30                 // Field lx/game/m.b:B
+     181: aload_3
+     182: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     185: return
+     186: new           #7                  // class lx/game/ae
+     189: dup
+     190: ldc           #5                  // String /sji
+     192: iconst_0
+     193: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     196: dup
+     197: astore_3
+     198: iload_1
+     199: putfield      #10                 // Field N:I
+     202: aload_3
+     203: iload_2
+     204: putfield      #11                 // Field O:I
+     207: aload_3
+     208: bipush        16
+     210: invokevirtual #37                 // Method f:(I)V
+     213: aload_3
+     214: iconst_1
+     215: putfield      #30                 // Field lx/game/m.b:B
+     218: aload_3
+     219: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     222: return
+     223: new           #7                  // class lx/game/ae
+     226: dup
+     227: ldc           #4                  // String /lizi
+     229: iconst_0
+     230: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     233: dup
+     234: astore_3
+     235: iload_1
+     236: putfield      #10                 // Field N:I
+     239: aload_3
+     240: iload_2
+     241: putfield      #11                 // Field O:I
+     244: aload_3
+     245: iconst_2
+     246: putfield      #21                 // Field ac:B
+     249: aload_3
+     250: iconst_0
+     251: invokevirtual #37                 // Method f:(I)V
+     254: aload_3
+     255: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     258: return
+     259: new           #7                  // class lx/game/ae
+     262: dup
+     263: ldc           #5                  // String /sji
+     265: iconst_0
+     266: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     269: dup
+     270: astore_3
+     271: iload_1
+     272: putfield      #10                 // Field N:I
+     275: aload_3
+     276: iload_2
+     277: putfield      #11                 // Field O:I
+     280: aload_3
+     281: iconst_0
+     282: putfield      #26                 // Field ai:I
+     285: aload_3
+     286: iconst_m1
+     287: invokevirtual #37                 // Method f:(I)V
+     290: aload_3
+     291: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     294: return
+     295: new           #7                  // class lx/game/ae
+     298: dup
+     299: ldc           #5                  // String /sji
+     301: iconst_0
+     302: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     305: dup
+     306: astore_3
+     307: iload_1
+     308: putfield      #10                 // Field N:I
+     311: aload_3
+     312: iload_2
+     313: putfield      #11                 // Field O:I
+     316: aload_3
+     317: iconst_0
+     318: putfield      #26                 // Field ai:I
+     321: aload_3
+     322: iconst_0
+     323: invokevirtual #37                 // Method f:(I)V
+     326: aload_3
+     327: iconst_1
+     328: putfield      #30                 // Field lx/game/m.b:B
+     331: aload_3
+     332: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     335: return
+     336: new           #7                  // class lx/game/ae
+     339: dup
+     340: ldc           #4                  // String /lizi
+     342: iconst_0
+     343: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     346: dup
+     347: astore_3
+     348: iload_1
+     349: putfield      #10                 // Field N:I
+     352: aload_3
+     353: iload_2
+     354: iconst_5
+     355: isub
+     356: putfield      #11                 // Field O:I
+     359: aload_3
+     360: iconst_3
+     361: invokevirtual #37                 // Method f:(I)V
+     364: aload_3
+     365: iconst_1
+     366: putfield      #30                 // Field lx/game/m.b:B
+     369: aload_3
+     370: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     373: return
+     374: new           #7                  // class lx/game/ae
+     377: dup
+     378: ldc           #4                  // String /lizi
+     380: iconst_0
+     381: invokespecial #36                 // Method "<init>":(Ljava/lang/String;I)V
+     384: dup
+     385: astore_3
+     386: iload_1
+     387: putfield      #10                 // Field N:I
+     390: aload_3
+     391: iload_2
+     392: putfield      #11                 // Field O:I
+     395: aload_3
+     396: iconst_1
+     397: putfield      #30                 // Field lx/game/m.b:B
+     400: aload_3
+     401: iconst_1
+     402: invokevirtual #37                 // Method f:(I)V
+     405: aload_3
+     406: invokestatic  #38                 // Method lx/game/af.a:(Ljava/lang/Object;)V
+     409: return
+}

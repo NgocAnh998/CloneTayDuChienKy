@@ -1,0 +1,395 @@
+public final class _a.e {
+  public _a.l a;
+
+  public _a.f a;
+
+  public int a;
+
+  public int b;
+
+  int c;
+
+  public int d;
+
+  boolean a;
+
+  public boolean b;
+
+  boolean c;
+
+  public _a.e(_a.l);
+    Code:
+       0: aload_0
+       1: invokespecial #37                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #11                 // Field a:L_a/l;
+       9: return
+
+  public final void a(int, java.lang.Object);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: getfield      #22                 // Field _a/l.a:[Ljava/lang/Object;
+       7: aload_0
+       8: getfield      #12                 // Field b:I
+      11: iload_1
+      12: iadd
+      13: aload_2
+      14: aastore
+      15: return
+
+  public final java.lang.Object a(int);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: getfield      #22                 // Field _a/l.a:[Ljava/lang/Object;
+       7: aload_0
+       8: getfield      #12                 // Field b:I
+      11: iload_1
+      12: iadd
+      13: aaload
+      14: areturn
+
+  public final int a(java.lang.Object);
+    Code:
+       0: aload_0
+       1: invokevirtual #25                 // Method a:()I
+       4: istore_2
+       5: aload_0
+       6: iload_2
+       7: iconst_1
+       8: iadd
+       9: invokevirtual #31                 // Method b:(I)V
+      12: aload_0
+      13: iload_2
+      14: aload_1
+      15: invokevirtual #28                 // Method a:(ILjava/lang/Object;)V
+      18: iconst_1
+      19: ireturn
+
+  private int a(java.lang.Object, java.lang.Object);
+    Code:
+       0: aload_0
+       1: invokevirtual #25                 // Method a:()I
+       4: istore_3
+       5: aload_0
+       6: iload_3
+       7: iconst_2
+       8: iadd
+       9: invokevirtual #31                 // Method b:(I)V
+      12: aload_0
+      13: iload_3
+      14: aload_1
+      15: invokevirtual #28                 // Method a:(ILjava/lang/Object;)V
+      18: aload_0
+      19: iload_3
+      20: iconst_1
+      21: iadd
+      22: aload_2
+      23: invokevirtual #28                 // Method a:(ILjava/lang/Object;)V
+      26: iconst_2
+      27: ireturn
+
+  private int b();
+    Code:
+       0: aload_0
+       1: aconst_null
+       2: invokevirtual #29                 // Method a:(Ljava/lang/Object;)I
+       5: ireturn
+
+  public final void a(int, int, int);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: aload_0
+       5: getfield      #12                 // Field b:I
+       8: iload_1
+       9: iadd
+      10: aload_0
+      11: getfield      #12                 // Field b:I
+      14: iload_2
+      15: iadd
+      16: iload_3
+      17: invokevirtual #33                 // Method _a/l.a:(III)V
+      20: return
+
+  public final void a(int, int);
+    Code:
+       0: goto          21
+       3: aload_0
+       4: getfield      #11                 // Field a:L_a/l;
+       7: getfield      #22                 // Field _a/l.a:[Ljava/lang/Object;
+      10: aload_0
+      11: getfield      #12                 // Field b:I
+      14: iload_1
+      15: iadd
+      16: aconst_null
+      17: aastore
+      18: iinc          1, 1
+      21: iload_1
+      22: iload_2
+      23: if_icmple     3
+      26: return
+
+  public final void a(int);
+    Code:
+       0: aload_0
+       1: invokevirtual #25                 // Method a:()I
+       4: iload_1
+       5: if_icmpge     13
+       8: aload_0
+       9: iload_1
+      10: invokevirtual #31                 // Method b:(I)V
+      13: aload_0
+      14: iload_1
+      15: aload_0
+      16: invokevirtual #25                 // Method a:()I
+      19: iconst_1
+      20: isub
+      21: invokevirtual #26                 // Method a:(II)V
+      24: return
+
+  public final void b(int);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: aload_0
+       5: getfield      #12                 // Field b:I
+       8: iload_1
+       9: iadd
+      10: invokevirtual #32                 // Method _a/l.a:(I)V
+      13: return
+
+  public final void c(int);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: aload_0
+       5: getfield      #12                 // Field b:I
+       8: iload_1
+       9: iadd
+      10: invokevirtual #34                 // Method _a/l.b:(I)V
+      13: return
+
+  public final _a.s a(int);
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: aload_0
+       5: getfield      #12                 // Field b:I
+       8: iload_1
+       9: iadd
+      10: istore_2
+      11: dup
+      12: astore_1
+      13: getfield      #21                 // Field _a/l.a:Ljava/util/Vector;
+      16: invokevirtual #40                 // Method java/util/Vector.size:()I
+      19: istore_3
+      20: goto          56
+      23: aload_1
+      24: getfield      #21                 // Field _a/l.a:Ljava/util/Vector;
+      27: iload_3
+      28: invokevirtual #38                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      31: checkcast     #5                  // class _a/s
+      34: dup
+      35: astore        4
+      37: getfield      #23                 // Field _a/s.a:I
+      40: iload_2
+      41: if_icmpne     47
+      44: aload         4
+      46: areturn
+      47: aload         4
+      49: getfield      #23                 // Field _a/s.a:I
+      52: iload_2
+      53: if_icmplt     63
+      56: iinc          3, -1
+      59: iload_3
+      60: ifge          23
+      63: new           #5                  // class _a/s
+      66: dup
+      67: invokespecial #35                 // Method _a/s."<init>":()V
+      70: dup
+      71: astore        4
+      73: aload_1
+      74: putfield      #24                 // Field _a/s.a:L_a/l;
+      77: aload         4
+      79: iload_2
+      80: putfield      #23                 // Field _a/s.a:I
+      83: aload_1
+      84: getfield      #21                 // Field _a/l.a:Ljava/util/Vector;
+      87: aload         4
+      89: iload_3
+      90: iconst_1
+      91: iadd
+      92: invokevirtual #39                 // Method java/util/Vector.insertElementAt:(Ljava/lang/Object;I)V
+      95: aload         4
+      97: areturn
+
+  public final int a();
+    Code:
+       0: aload_0
+       1: getfield      #11                 // Field a:L_a/l;
+       4: dup
+       5: astore_1
+       6: getfield      #19                 // Field _a/l.a:I
+       9: aload_0
+      10: getfield      #12                 // Field b:I
+      13: isub
+      14: ireturn
+
+  public final void a();
+    Code:
+       0: aload_0
+       1: invokevirtual #30                 // Method b:()Z
+       4: ifeq          96
+       7: aload_0
+       8: iconst_0
+       9: putfield      #9                  // Field a:I
+      12: aload_0
+      13: getfield      #10                 // Field a:L_a/f;
+      16: getfield      #14                 // Field _a/f.a:L_a/h;
+      19: getfield      #17                 // Field _a/h.a:Z
+      22: ifeq          82
+      25: aload_0
+      26: dup
+      27: getfield      #12                 // Field b:I
+      30: aload_0
+      31: getfield      #13                 // Field d:I
+      34: iadd
+      35: putfield      #12                 // Field b:I
+      38: aload_0
+      39: aload_0
+      40: getfield      #10                 // Field a:L_a/f;
+      43: getfield      #14                 // Field _a/f.a:L_a/h;
+      46: getfield      #18                 // Field _a/h.c:I
+      49: invokevirtual #31                 // Method b:(I)V
+      52: aload_0
+      53: getfield      #13                 // Field d:I
+      56: aload_0
+      57: getfield      #10                 // Field a:L_a/f;
+      60: getfield      #14                 // Field _a/f.a:L_a/h;
+      63: getfield      #16                 // Field _a/h.a:I
+      66: invokestatic  #36                 // Method java/lang/Math.min:(II)I
+      69: istore_1
+      70: aload_0
+      71: aload_0
+      72: getfield      #13                 // Field d:I
+      75: ineg
+      76: iconst_0
+      77: iload_1
+      78: invokevirtual #27                 // Method a:(III)V
+      81: return
+      82: aload_0
+      83: aload_0
+      84: getfield      #10                 // Field a:L_a/f;
+      87: getfield      #14                 // Field _a/f.a:L_a/h;
+      90: getfield      #18                 // Field _a/h.c:I
+      93: invokevirtual #31                 // Method b:(I)V
+      96: return
+
+  public final void b();
+    Code:
+       0: aload_0
+       1: invokevirtual #30                 // Method b:()Z
+       4: ifeq          21
+       7: aload_0
+       8: aload_0
+       9: getfield      #10                 // Field a:L_a/f;
+      12: getfield      #14                 // Field _a/f.a:L_a/h;
+      15: getfield      #18                 // Field _a/h.c:I
+      18: invokevirtual #31                 // Method b:(I)V
+      21: return
+
+  public final void b(int, int);
+    Code:
+       0: aload_0
+       1: getfield      #10                 // Field a:L_a/f;
+       4: getfield      #14                 // Field _a/f.a:L_a/h;
+       7: getfield      #16                 // Field _a/h.a:I
+      10: istore_3
+      11: aload_0
+      12: getfield      #13                 // Field d:I
+      15: iload_3
+      16: isub
+      17: dup
+      18: istore        4
+      20: ifge          26
+      23: iconst_0
+      24: istore        4
+      26: iload_2
+      27: iconst_m1
+      28: if_icmpne     41
+      31: iload         4
+      33: istore_2
+      34: aload_0
+      35: iload_1
+      36: iload_2
+      37: iadd
+      38: invokevirtual #31                 // Method b:(I)V
+      41: iload         4
+      43: iload_2
+      44: if_icmple     50
+      47: iload_2
+      48: istore        4
+      50: aload_0
+      51: aload_0
+      52: getfield      #13                 // Field d:I
+      55: ineg
+      56: iload_3
+      57: iadd
+      58: iload_1
+      59: iload         4
+      61: invokevirtual #27                 // Method a:(III)V
+      64: iload_2
+      65: iload         4
+      67: isub
+      68: dup
+      69: istore_3
+      70: ifle          86
+      73: aload_0
+      74: iload_1
+      75: iload         4
+      77: iadd
+      78: iload_1
+      79: iload_2
+      80: iadd
+      81: iconst_1
+      82: isub
+      83: invokevirtual #26                 // Method a:(II)V
+      86: return
+
+  public final _a.j a();
+    Code:
+       0: aload_0
+       1: invokevirtual #30                 // Method b:()Z
+       4: ifeq          15
+       7: aload_0
+       8: getfield      #10                 // Field a:L_a/f;
+      11: getfield      #15                 // Field _a/f.a:L_a/j;
+      14: areturn
+      15: aload_0
+      16: getfield      #11                 // Field a:L_a/l;
+      19: getfield      #20                 // Field _a/l.a:L_a/j;
+      22: areturn
+
+  public final boolean a();
+    Code:
+       0: aload_0
+       1: invokevirtual #30                 // Method b:()Z
+       4: ifeq          9
+       7: iconst_0
+       8: ireturn
+       9: iconst_1
+      10: ireturn
+
+  public final boolean b();
+    Code:
+       0: aload_0
+       1: getfield      #10                 // Field a:L_a/f;
+       4: ifnull        9
+       7: iconst_1
+       8: ireturn
+       9: iconst_0
+      10: ireturn
+}

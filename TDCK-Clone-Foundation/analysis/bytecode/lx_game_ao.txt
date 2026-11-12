@@ -1,0 +1,199 @@
+public final class lx.game.ao {
+  private byte[] a;
+
+  private java.lang.String[] b;
+
+  private int[] c;
+
+  private int[] d;
+
+  private int e;
+
+  public lx.game.ao(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #20                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: invokespecial #28                 // Method b:(Ljava/lang/String;)V
+       9: return
+
+  private void b(java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #27                 // Method lx/game/af.e:(Ljava/lang/String;)[B
+       5: putfield      #10                 // Field a:[B
+       8: aload_0
+       9: getfield      #10                 // Field a:[B
+      12: ifnull        206
+      15: iconst_0
+      16: istore_1
+      17: iload_1
+      18: aload_0
+      19: getfield      #10                 // Field a:[B
+      22: arraylength
+      23: if_icmpge     47
+      26: aload_0
+      27: getfield      #10                 // Field a:[B
+      30: iload_1
+      31: aload_0
+      32: getfield      #10                 // Field a:[B
+      35: iload_1
+      36: baload
+      37: iconst_m1
+      38: ixor
+      39: i2b
+      40: bastore
+      41: iinc          1, 1
+      44: goto          17
+      47: new           #1                  // class java/io/ByteArrayInputStream
+      50: dup
+      51: aload_0
+      52: getfield      #10                 // Field a:[B
+      55: invokespecial #15                 // Method java/io/ByteArrayInputStream."<init>":([B)V
+      58: astore_1
+      59: new           #2                  // class java/io/DataInputStream
+      62: dup
+      63: aload_1
+      64: invokespecial #16                 // Method java/io/DataInputStream."<init>":(Ljava/io/InputStream;)V
+      67: astore_1
+      68: aload_0
+      69: aload_1
+      70: invokevirtual #18                 // Method java/io/DataInputStream.readInt:()I
+      73: putfield      #14                 // Field e:I
+      76: aload_0
+      77: aload_0
+      78: getfield      #14                 // Field e:I
+      81: anewarray     #5                  // class java/lang/String
+      84: putfield      #11                 // Field b:[Ljava/lang/String;
+      87: aload_0
+      88: aload_0
+      89: getfield      #14                 // Field e:I
+      92: newarray       int
+      94: putfield      #12                 // Field c:[I
+      97: aload_0
+      98: aload_0
+      99: getfield      #14                 // Field e:I
+     102: newarray       int
+     104: putfield      #13                 // Field d:[I
+     107: iconst_0
+     108: istore_2
+     109: iconst_0
+     110: istore_3
+     111: iload_3
+     112: aload_0
+     113: getfield      #11                 // Field b:[Ljava/lang/String;
+     116: arraylength
+     117: if_icmpge     155
+     120: aload_0
+     121: getfield      #11                 // Field b:[Ljava/lang/String;
+     124: iload_3
+     125: aload_1
+     126: invokevirtual #19                 // Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+     129: aastore
+     130: aload_0
+     131: getfield      #12                 // Field c:[I
+     134: iload_3
+     135: aload_1
+     136: invokevirtual #18                 // Method java/io/DataInputStream.readInt:()I
+     139: iastore
+     140: iload_2
+     141: aload_0
+     142: getfield      #12                 // Field c:[I
+     145: iload_3
+     146: iaload
+     147: iadd
+     148: istore_2
+     149: iinc          3, 1
+     152: goto          111
+     155: aload_0
+     156: getfield      #10                 // Field a:[B
+     159: arraylength
+     160: iload_2
+     161: isub
+     162: istore_3
+     163: iconst_0
+     164: istore_2
+     165: iload_2
+     166: aload_0
+     167: getfield      #13                 // Field d:[I
+     170: arraylength
+     171: if_icmpge     196
+     174: aload_0
+     175: getfield      #13                 // Field d:[I
+     178: iload_2
+     179: iload_3
+     180: iastore
+     181: iload_3
+     182: aload_0
+     183: getfield      #12                 // Field c:[I
+     186: iload_2
+     187: iaload
+     188: iadd
+     189: istore_3
+     190: iinc          2, 1
+     193: goto          165
+     196: aload_1
+     197: invokevirtual #17                 // Method java/io/DataInputStream.close:()V
+     200: return
+     201: aconst_null
+     202: astore_1
+     203: invokevirtual #26                 // Method java/lang/Throwable.printStackTrace:()V
+     206: return
+    Exception table:
+       from    to  target type
+          47   200   201   Class java/io/IOException
+
+  public final byte[] a(java.lang.String);
+    Code:
+       0: aload_1
+       1: bipush        47
+       3: invokevirtual #22                 // Method java/lang/String.lastIndexOf:(I)I
+       6: istore_2
+       7: aload_1
+       8: iload_2
+       9: iconst_1
+      10: iadd
+      11: aload_1
+      12: invokevirtual #23                 // Method java/lang/String.length:()I
+      15: invokevirtual #24                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+      18: astore_1
+      19: iconst_0
+      20: istore_2
+      21: iload_2
+      22: aload_0
+      23: getfield      #11                 // Field b:[Ljava/lang/String;
+      26: arraylength
+      27: if_icmpge     77
+      30: aload_0
+      31: getfield      #11                 // Field b:[Ljava/lang/String;
+      34: iload_2
+      35: aaload
+      36: aload_1
+      37: invokevirtual #21                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      40: ifeq          71
+      43: aload_0
+      44: getfield      #12                 // Field c:[I
+      47: iload_2
+      48: iaload
+      49: newarray       byte
+      51: astore_1
+      52: aload_0
+      53: getfield      #10                 // Field a:[B
+      56: aload_0
+      57: getfield      #13                 // Field d:[I
+      60: iload_2
+      61: iaload
+      62: aload_1
+      63: iconst_0
+      64: aload_1
+      65: arraylength
+      66: invokestatic  #25                 // Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+      69: aload_1
+      70: areturn
+      71: iinc          2, 1
+      74: goto          21
+      77: aconst_null
+      78: areturn
+}

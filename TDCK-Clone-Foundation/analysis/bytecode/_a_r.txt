@@ -1,0 +1,39 @@
+public class _a.r implements _a.j {
+  public _a.r();
+    Code:
+       0: aload_0
+       1: invokespecial #4                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void a(java.lang.Object, java.lang.Object);
+    Code:
+       0: return
+
+  public java.lang.Object a(java.lang.Object);
+    Code:
+       0: aconst_null
+       1: areturn
+
+  public final java.lang.Object b(java.lang.Object);
+    Code:
+       0: aconst_null
+       1: areturn
+
+  public final void a(boolean, boolean);
+    Code:
+       0: return
+
+  public final int a();
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public final java.lang.Object a(int);
+    Code:
+       0: aconst_null
+       1: areturn
+
+  public final void a(int, java.lang.Object);
+    Code:
+       0: return
+}

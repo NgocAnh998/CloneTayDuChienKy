@@ -1,0 +1,9 @@
+public final class lx.game.f {
+  int[] a;
+
+  public lx.game.f();
+    Code:
+       0: aload_0
+       1: invokespecial #3                  // Method java/lang/Object."<init>":()V
+       4: return
+}

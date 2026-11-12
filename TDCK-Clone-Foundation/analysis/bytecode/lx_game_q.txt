@@ -1,0 +1,136 @@
+public final class lx.game.q {
+  java.util.Vector a;
+
+  public lx.game.q();
+    Code:
+       0: aload_0
+       1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: new           #3                  // class java/util/Vector
+       8: dup
+       9: invokespecial #14                 // Method java/util/Vector."<init>":()V
+      12: putfield      #11                 // Field a:Ljava/util/Vector;
+      15: return
+
+  public final int a(java.lang.String);
+    Code:
+       0: iconst_0
+       1: istore_2
+       2: iload_2
+       3: aload_0
+       4: getfield      #11                 // Field a:Ljava/util/Vector;
+       7: invokevirtual #19                 // Method java/util/Vector.size:()I
+      10: if_icmpge     42
+      13: aload_0
+      14: getfield      #11                 // Field a:Ljava/util/Vector;
+      17: iload_2
+      18: invokevirtual #16                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      21: checkcast     #6                  // class lx/game/aj
+      24: getfield      #8                  // Field lx/game/aj.a:Ljava/lang/String;
+      27: aload_1
+      28: invokevirtual #13                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      31: ifeq          36
+      34: iload_2
+      35: ireturn
+      36: iinc          2, 1
+      39: goto          2
+      42: iconst_m1
+      43: ireturn
+
+  public final javax.microedition.lcdui.Image a(java.lang.String, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #23                 // Method a:(Ljava/lang/String;)I
+       5: dup
+       6: istore_3
+       7: iconst_m1
+       8: if_icmpne     44
+      11: aload_1
+      12: invokestatic  #21                 // Method lx/game/af.c:(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+      15: astore_3
+      16: iload_2
+      17: iconst_2
+      18: if_icmpne     23
+      21: aload_3
+      22: areturn
+      23: new           #6                  // class lx/game/aj
+      26: dup
+      27: aload_1
+      28: aload_3
+      29: iload_2
+      30: invokespecial #22                 // Method lx/game/aj."<init>":(Ljava/lang/String;Ljava/lang/Object;I)V
+      33: astore_1
+      34: aload_0
+      35: getfield      #11                 // Field a:Ljava/util/Vector;
+      38: aload_1
+      39: invokevirtual #15                 // Method java/util/Vector.addElement:(Ljava/lang/Object;)V
+      42: aload_3
+      43: areturn
+      44: aload_0
+      45: getfield      #11                 // Field a:Ljava/util/Vector;
+      48: iload_3
+      49: invokevirtual #16                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      52: checkcast     #6                  // class lx/game/aj
+      55: getfield      #9                  // Field lx/game/aj.b:Ljava/lang/Object;
+      58: checkcast     #4                  // class javax/microedition/lcdui/Image
+      61: areturn
+
+  public final int a(java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #23                 // Method a:(Ljava/lang/String;)I
+       5: dup
+       6: istore_1
+       7: iconst_m1
+       8: if_icmpeq     39
+      11: aload_2
+      12: iconst_2
+      13: invokestatic  #20                 // Method lx/game/af.a:(Ljava/lang/String;I)Ljavax/microedition/lcdui/Image;
+      16: astore_3
+      17: new           #6                  // class lx/game/aj
+      20: dup
+      21: aload_2
+      22: aload_3
+      23: iconst_1
+      24: invokespecial #22                 // Method lx/game/aj."<init>":(Ljava/lang/String;Ljava/lang/Object;I)V
+      27: astore_2
+      28: aload_0
+      29: getfield      #11                 // Field a:Ljava/util/Vector;
+      32: aload_2
+      33: iload_1
+      34: invokevirtual #18                 // Method java/util/Vector.setElementAt:(Ljava/lang/Object;I)V
+      37: iload_1
+      38: ireturn
+      39: iconst_m1
+      40: ireturn
+
+  public final void a();
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_1
+       3: aload_0
+       4: getfield      #11                 // Field a:Ljava/util/Vector;
+       7: invokevirtual #19                 // Method java/util/Vector.size:()I
+      10: if_icmpge     48
+      13: aload_0
+      14: getfield      #11                 // Field a:Ljava/util/Vector;
+      17: iload_1
+      18: invokevirtual #16                 // Method java/util/Vector.elementAt:(I)Ljava/lang/Object;
+      21: checkcast     #6                  // class lx/game/aj
+      24: getfield      #10                 // Field lx/game/aj.c:I
+      27: ifne          42
+      30: aload_0
+      31: getfield      #11                 // Field a:Ljava/util/Vector;
+      34: iload_1
+      35: dup
+      36: iconst_1
+      37: isub
+      38: istore_1
+      39: invokevirtual #17                 // Method java/util/Vector.removeElementAt:(I)V
+      42: iinc          1, 1
+      45: goto          2
+      48: return
+}
