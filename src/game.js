@@ -140,7 +140,7 @@
     // enemies
     for(const e of enemies){if(!e.alive)continue;ctx.save();if(e.hit>0)ctx.globalAlpha=.55+.45*Math.sin(performance.now()*.08);drawCharacter(e.x,e.y,"#9b4b3c","賊");ctx.restore();ctx.fillStyle="#241b1a";ctx.fillRect(e.x-16,e.y-25,32,4);ctx.fillStyle="#d84d43";ctx.fillRect(e.x-16,e.y-25,32*Math.max(0,e.hp/e.maxHp),4);}
     // player shadow, dash trail and body
-    if(player.dash>0){ctx.globalAlpha=.22;drawCharacter(player.x-player.facing==="left"?12:0,player.y,"#f3bd65","悟");ctx.globalAlpha=1;}
+    if(player.dash>0){ctx.globalAlpha=.22;drawCharacter(player.x-(player.facing==="left"?12:player.facing==="right"?-12:0),player.y-(player.facing==="up"?12:player.facing==="down"?-12:0),"#f3bd65","悟");ctx.globalAlpha=1;}
     drawCharacter(player.x,player.y,"#d94e31","悟",player.invuln>0);
     if(player.attack>0){ctx.strokeStyle=player.skill>0?"#ffb34d":"#ffe0a0";ctx.lineWidth=player.skill>0?8:5;ctx.globalAlpha=.8;ctx.beginPath();const a=player.facing==="up"?-Math.PI/2:player.facing==="down"?Math.PI/2:player.facing==="left"?Math.PI:0;ctx.arc(player.x,player.y,player.skill>0?65:42,a-.8,a+.8);ctx.stroke();ctx.globalAlpha=1;}
     for(const p of particles){ctx.globalAlpha=Math.max(0,p.life*2);ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,4,4);}ctx.globalAlpha=1;
