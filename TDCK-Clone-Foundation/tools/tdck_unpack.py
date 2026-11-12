@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse, json, struct, zipfile, shutil
 from pathlib import Path
 from collections import Counter
+from parse_ms import parse_script
 
 class Reader:
     def __init__(self, data: bytes): self.data=data; self.pos=0
@@ -147,13 +148,20 @@ def main():
     acts=[]
     for p in sorted(sprite_src.glob('*.act')):
         acts.append(parse_act(p))
+    ms_records=[parse_script(p, dec) for p in sorted(dec.rglob('*.ms'))]
+    ms_scenes=[record['scene'] for record in ms_records if record['scene'] is not None]
+    ms_scenes.sort(key=lambda scene:(int(scene['mapId']),scene['script']))
+    ms_opcodes=Counter()
+    for record in ms_records: ms_opcodes.update(record['opcodeCounts'])
     inventory=Counter(p.suffix.lower() for p in raw.rglob('*') if p.is_file())
     (out/'analysis').mkdir(exist_ok=True)
     (out/'analysis/map-index.json').write_text(json.dumps(maps,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'analysis/act-index.json').write_text(json.dumps(acts,ensure_ascii=False,indent=2),encoding='utf-8')
+    ms_index={'format':'TDCK-MS-index-v1','scriptCount':len(ms_records),'sceneCount':len(ms_scenes),'headerNote':'Six-byte header is retained as opaque data; its semantics are not yet verified.','confirmedSceneFields':{'009':'title','002':'mapPath','013':'spawn'},'opcodeCounts':dict(sorted(ms_opcodes.items())),'scenes':ms_scenes,'scripts':ms_records}
+    (out/'analysis/ms-index.json').write_text(json.dumps(ms_index,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'analysis/inventory.json').write_text(json.dumps({"entries":sum(inventory.values()),"extensions":dict(inventory)},ensure_ascii=False,indent=2),encoding='utf-8')
     print(f"Extracted {sum(inventory.values())} files to {out}")
-    print(f"Parsed maps: {len(maps)}; ACT files: {len(acts)}; decoded MS scripts: {len(list(dec.rglob('*.ms')))}")
+    print(f"Parsed maps: {len(maps)}; ACT files: {len(acts)}; decoded MS scripts: {len(ms_records)}; scene records: {len(ms_scenes)}")
     print(f"Map parser exact-consumption check: PASS for all {len(maps)} maps")
     complete=sum(1 for a in acts if a['unparsedTailBytes']==0)
     print(f"ACT parser consumed fully: {complete}/{len(acts)} (legacy tail bytes preserved in JSON)")
