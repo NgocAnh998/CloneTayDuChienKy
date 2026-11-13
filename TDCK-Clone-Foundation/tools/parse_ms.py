@@ -2,8 +2,10 @@
 """Index TDCK .ms scripts without guessing undocumented opcodes.
 
 The first six bytes are preserved as opaque header fields. The payload is
-UTF-8 text split by '|'. Three repeated scene fields are interpreted:
-009 = title, 002 = map resource path, 013 = spawn x,y,direction.
+UTF-8 text split by '|'. Only three scene fields are currently interpreted,
+where their meaning is supported by repeated, directly inspectable examples:
+009 = scene title, 002 = map resource path, 013 = spawn x,y,direction.
+All other commands remain raw and are counted, not assigned invented meaning.
 """
 from __future__ import annotations
 import argparse
@@ -26,11 +28,11 @@ def parse_script(path: Path, root: Path, include_commands: bool = False) -> dict
         opcode = token[:3] if len(token) >= 3 and token[:3].isdigit() else None
         commands.append({"opcode": opcode, "raw": token})
 
-    fields = {}
+    fields: dict[str, str] = {}
     for command in commands:
-        opcode = command["opcode"]
-        if opcode in SCENE_FIELDS and SCENE_FIELDS[opcode] not in fields:
-            fields[SCENE_FIELDS[opcode]] = command["raw"][3:]
+        op = command["opcode"]
+        if op in SCENE_FIELDS and SCENE_FIELDS[op] not in fields:
+            fields[SCENE_FIELDS[op]] = command["raw"][3:]
 
     scene = None
     map_match = re.fullmatch(r"/?(?:map/)?(\d+)\.map", fields.get("mapPath", ""))
@@ -39,11 +41,8 @@ def parse_script(path: Path, root: Path, include_commands: bool = False) -> dict
         values = fields.get("spawn", "").split(",")
         if len(values) >= 2:
             try:
-                spawn = {
-                    "x": int(values[0]),
-                    "y": int(values[1]),
-                    "direction": int(values[2]) if len(values) > 2 else None,
-                }
+                spawn = {"x": int(values[0]), "y": int(values[1]),
+                         "direction": int(values[2]) if len(values) > 2 else None}
             except ValueError:
                 spawn = None
         scene = {
@@ -77,24 +76,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path, help="Decoded .ms root directory")
     parser.add_argument("--out", type=Path, required=True, help="Output JSON path")
-    parser.add_argument("--include-commands", action="store_true",
-                        help="Include every raw pipe-delimited command (large output)")
+    parser.add_argument("--include-commands", action="store_true", help="Include every raw pipe-delimited command (large output)")
     args = parser.parse_args()
     source = args.source.resolve()
-    files = sorted(source.rglob("*.ms"), key=lambda p: p.relative_to(source).as_posix())
-    records = [parse_script(path, source, args.include_commands) for path in files]
-    scenes = [record["scene"] for record in records if record["scene"] is not None]
-    scenes.sort(key=lambda scene: (int(scene["mapId"]), scene["script"]))
-    opcodes = Counter()
+    scripts = sorted(source.rglob("*.ms"), key=lambda p: p.relative_to(source).as_posix())
+    records = [parse_script(p, source, include_commands=args.include_commands) for p in scripts]
+    scenes = [r["scene"] for r in records if r["scene"] is not None]
+    scenes.sort(key=lambda s: (int(s["mapId"]), s["script"]))
+    aggregate = Counter()
     for record in records:
-        opcodes.update(record["opcodeCounts"])
+        aggregate.update(record["opcodeCounts"])
     output = {
         "format": "TDCK-MS-index-v1",
         "scriptCount": len(records),
         "sceneCount": len(scenes),
         "headerNote": "Six-byte header is retained as opaque data; its semantics are not yet verified.",
         "confirmedSceneFields": SCENE_FIELDS,
-        "opcodeCounts": dict(sorted(opcodes.items())),
+        "opcodeCounts": dict(sorted(aggregate.items())),
         "scenes": scenes,
         "scripts": records,
     }

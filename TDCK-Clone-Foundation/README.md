@@ -13,7 +13,7 @@ Mở trực tiếp `game-prototype.html` bằng Chrome hoặc Edge. Bản thử 
 - Mở `viewer/index.html` để xem 124 bản đồ cùng object descriptors.
 - Mở `viewer/sprites.html` để xem các nhóm ACT, sequence và các phần sprite được ghép từ atlas.
 
-Cả hai file đều tự nhúng dữ liệu và ảnh, không cần Internet, Node.js hoặc server. Trong `game-prototype.html`, chọn **Cảnh gốc** để tải tên cảnh, map và tọa độ xuất hiện từ script `.ms`; dropdown **Map** vẫn cho phép kiểm tra map riêng.
+Cả hai file đều tự nhúng dữ liệu và ảnh, không cần Internet, Node.js hoặc server. Trong `game-prototype.html`, chọn **Cảnh gốc** để tải tên cảnh, map và tọa độ xuất hiện lấy từ script `.ms`; dropdown **Map** vẫn cho phép kiểm tra map riêng.
 
 ## Nội dung chính
 
@@ -25,10 +25,8 @@ Cả hai file đều tự nhúng dữ liệu và ảnh, không cần Internet, N
 - `build/assets/ui/`: ảnh UI, logo và icon gốc.
 - `build/analysis/map-index.json`: cấu trúc đã parse của 124 map.
 - `build/analysis/act-index.json`: cấu trúc đã parse của 123 ACT; byte legacy chưa đọc được vẫn được lưu lại.
-- `build/analysis/ms-index.json`: chỉ mục 820 script, thống kê opcode và 127 định nghĩa cảnh được nhận diện từ các trường lặp lại trong script.
 - `analysis/REVERSE_ENGINEERING_REPORT.md`: báo cáo chi tiết và các giới hạn hiện tại.
 - `analysis/bytecode/`: kết quả `javap` để tra cứu bytecode.
-- `tools/parse_ms.py`: lập chỉ mục script `.ms`; giữ header sáu byte ở dạng opaque, không tự gán nghĩa cho opcode chưa xác minh.
 - `tools/`: scripts tái tạo dữ liệu và preview.
 
 ## Chạy lại bộ trích xuất
@@ -48,4 +46,4 @@ Khi chạy lại bộ trích xuất, đặt JAR ở đường dẫn phù hợp h
 
 ## Trạng thái trung thực
 
-Đây là bộ nền tảng reverse-engineering, **không phải game clone hoàn chỉnh**. Parser map đã qua kiểm tra 124/124; 110/123 ACT được đọc trọn vẹn; `.ms` đã được XOR đúng như bytecode gốc và 820 payload đều đọc được UTF-8 sau header sáu byte, nhưng header và interpreter semantic chưa được giải nghĩa đầy đủ. 127 định nghĩa cảnh được lập chỉ mục, trong đó 126 cảnh có map hiện diện. 10 file `.dat` chưa được giải mã cấu trúc. Xem báo cáo trong `analysis/REVERSE_ENGINEERING_REPORT.md`.
+Đây là bộ nền tảng reverse-engineering, **không phải game clone hoàn chỉnh**. Parser map đã qua kiểm tra 124/124; 110/123 ACT được đọc trọn vẹn; `.ms` đã được XOR đúng như bytecode gốc; 820 file đều đọc được payload UTF-8 sau header sáu byte, nhưng header và interpreter semantic vẫn chưa được giải nghĩa đầy đủ. Chỉ ba opcode trường cảnh lặp lại đã được dùng để lấy tên/map/tọa độ. 10 file `.dat` chưa được giải mã cấu trúc. Xem báo cáo trong `analysis/REVERSE_ENGINEERING_REPORT.md`.

@@ -32,7 +32,7 @@ Tất cả **820/820** file `.ms` được giải mã XOR `0x01` và phần payl
 
 Trong các script khởi tạo cảnh, ba trường lặp lại đã được nhận diện bằng đối chiếu dữ liệu: `009` chứa tên hiển thị; `002` chứa đường dẫn `.map`; `013` chứa bộ ba tọa độ xuất hiện `x,y,direction`. Bộ chỉ mục tìm thấy **127 định nghĩa cảnh**. Có **126 cảnh** trỏ tới map hiện có trong JAR; một script (`script/5012.ms`, tên `Vô Giới Chi Thế`) tham chiếu `5012.map` nhưng file map đó không có trong gói hiện tại, nên không đưa vào danh sách cảnh có thể mở trong prototype. Script `00.ms` trỏ `/00.map` được đối chiếu với map `0.map` theo ID số.
 
-`tools/parse_ms.py` thống kê opcode theo từng file và toàn bộ tập script, không tự suy diễn ý nghĩa cho opcode chưa xác minh. Mặc định index chỉ lưu metadata gọn; thêm `--include-commands` để xuất từng token thô vào JSON khi cần phân tích sâu hơn. `game-prototype.html` hiện có dropdown **Cảnh gốc**: chọn cảnh sẽ nạp đúng map và tọa độ xuất hiện từ script, còn dropdown **Map** dùng để duyệt map độc lập. Đây là bước tích hợp dữ liệu cảnh; chưa phải interpreter thực thi đầy đủ các lệnh script như NPC, hội thoại, điều kiện, nhiệm vụ hay chuyển cảnh.
+`tools/parse_ms.py` thống kê opcode theo từng file và toàn bộ tập script, không tự suy diễn ý nghĩa cho opcode chưa xác minh. Mặc định index chỉ lưu metadata gọn; thêm `--include-commands` để xuất từng token thô vào JSON khi cần phân tích sâu hơn. `game-prototype.html` hiện có dropdown **Cảnh gốc**: chọn cảnh sẽ nạp đúng map và tọa độ spawn từ script, còn dropdown **Map** dùng để duyệt map độc lập. Đây là bước tích hợp dữ liệu cảnh; chưa phải interpreter thực thi đầy đủ các lệnh script như NPC, hội thoại, điều kiện, nhiệm vụ hay chuyển cảnh.
 
 ## 4. Định dạng `.map` — PARSER ĐÃ KIỂM THỬ 124/124
 
@@ -126,3 +126,31 @@ Phần input di chuyển, tốc độ, giới hạn biên và camera hiện là 
 5. Viết bộ runtime Phaser 3/JavaScript dùng dữ liệu thực; sau đó mới so sánh từng cảnh trong game gốc để tinh chỉnh.
 
 **Kết luận trạng thái:** đã có nền tảng trích xuất/đọc dữ liệu được kiểm chứng cho map và phần lớn animation, cùng runtime thử nghiệm chạy bằng tài nguyên thật. Chưa phải bản clone chơi hoàn chỉnh; gameplay và interpreter script vẫn là các phần cần reverse-engineer tiếp.
+
+## 10. Đợt phân tích `.dat` — parser cấu trúc nhị phân bước đầu
+
+Đã kiểm kê và đọc được đủ **10/10 bảng `.dat`** trong JAR: `ach`, `armEx1`, `armEx2`, `attack`, `exception`, `exp`, `goods`, `mission`, `skill`, `sprite`.
+
+### Header chung quan sát được
+
+Các file đều có cấu trúc đầu file nhất quán:
+
+1. `u16` big-endian: `tableMarker` (giữ nguyên, chưa gán ý nghĩa nghiệp vụ).
+2. `u16` big-endian: số record.
+3. `u8`: số field.
+4. Mảng descriptor, mỗi field một mã kiểu dữ liệu.
+5. Các record nhị phân liên tiếp theo thứ tự descriptor.
+
+Các mã kiểu xuất hiện trong 10 file là `1`, `2`, `4`; parser đang đọc lần lượt thành signed byte, signed short big-endian và signed int big-endian. Kích thước record được suy ra bằng tổng kích thước các kiểu.
+
+### Kết quả đã xác minh mạnh
+
+- `exp.dat`: marker `2`, 200 record, 2 field `[2, 4]`; phần record chiếm chính xác 1.200/1.200 byte sau header. Các dòng đầu là `[level=1, exp=25]`, `[2,40]`, `[3,65]`; không còn trailer. Đây là bảng có thể parse trọn vẹn theo cấu trúc hiện tại.
+- Chín bảng còn lại đều parse được phần record cố định mà không vượt kích thước file; tuy nhiên còn trailer dữ liệu phía sau. Trailer có nội dung UTF-8 và dấu `;` ở nhiều bảng (ví dụ tên/mô tả nhiệm vụ, kỹ năng, vật phẩm, thành tựu, trạng thái và nhân vật), nhưng ranh giới giữa các nhóm chuỗi/chỉ số tham chiếu chưa được giải nghĩa.
+
+### Công cụ và đầu ra
+
+- `tools/parse_dat.py`: đọc header, descriptor, record và giữ nguyên trailer; từ chối mã kiểu chưa biết thay vì tự đoán.
+- `analysis/dat-index.json`: dữ liệu xuất từ cả 10 bảng, gồm record dạng mảng, metadata, trailer thô dạng UTF-8 để tra cứu.
+
+**Giới hạn quan trọng:** `tableMarker` chưa được gán tên bảng theo logic game; các vị trí trong record chưa được đặt tên thành `id`, `name`, `damage`, `price`, v.v. Các đoạn text UTF-8 là góc nhìn phục vụ điều tra, không phải khẳng định đã giải mã xong string table. Bước kế tiếp là truy vết nơi game nạp `/data/` và đối chiếu cách các record được truy cập trong bytecode, sau đó mới đặt tên field và liên kết chuỗi.
